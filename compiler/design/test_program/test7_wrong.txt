@@ -1,0 +1,10 @@
+const c1 = 5999999999999999, c2 = , c3 = 'a';
+var i, day, month, year, zday, m, y1, y2 : integer
+begin
+  read(day, month, year);
+  y1 := year * 100;
+  write("   year now: ", y1);
+  i:=1;
+  write("   assign: ", i);
+  write("   expressionnn: ", c3+c1+i+(day*month)+-30/2+-(-(1+2)));
+end

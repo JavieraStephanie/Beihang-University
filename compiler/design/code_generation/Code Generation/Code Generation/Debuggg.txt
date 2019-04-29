@@ -1,0 +1,166 @@
+﻿  ////////////////////If cons declaration valid: enter(constant);////////////////////
+    
+  ////////////////////If var declaration valid: enter(variable);/////////////////////
+  
+  ////////////////////Printout the PCODE/////////////////////
+  procedure listcode;
+
+			//////////////////////////If ident found: //////////////////////////////////
+				///////Look if Identifier has been defined: i := position(id);//////////
+				/////////If it's a constant: gen(lit,0,val);////////////////////
+				/////////If it's a variable: gen(lod,lev-level,adr);////////////
+				/////////If it's a procedure: error(21)///////////
+
+			//////////////////////If number found: gen(lit,0,num);//////////////////////
+
+			/////////////////////If '(' found: Look for expression//////////////////////
+					///////If ')' doesn't exist, error(22)//////////
+					////////////test(fsys,[lparen],23)//////////////
+
+	  procedure factor( fsys : symset );
+          var i : integer;
+          begin
+            test( facbegsys, fsys, 24 );
+            while sym in facbegsys do
+              begin
+                if sym = ident
+                then begin
+                       with table[i] do
+                           case kind of
+                             constant : gen(lit,0,val);
+                             variable : gen(lod,lev-level,adr);
+                             prosedure: error(21)
+                           end;
+                       getsym
+                     end
+                else if sym = number
+                then begin
+                       if num > amax
+                       then begin
+                           error(30);
+                           num := 0
+                         end;
+                       gen(lit,0,num);
+                       getsym
+                  end
+                else if sym = lparen
+                then begin
+                    getsym;
+                    expression([rparen]+fsys);
+                    if sym = rparen
+                    then getsym
+                    else error(22)
+                  end;
+                test(fsys,[lparen],23)
+              end
+          end; { factor }
+	  /////////////////////////////////Check term///////////////////////////////////////////
+			//////////////////////If it's * or /, continue looking for the next val/////////
+	 begin { procedure term( fsys : symset);   
+                var mulop: symbol ;    }
+          while sym in [times,slash] do
+            begin
+              mulop := sym;
+              getsym;
+              factor( fsys+[times,slash] );
+              if mulop = times
+              then gen( opr,0,4 )
+              else gen( opr,0,5)
+            end
+        end; { term }
+	  /////////////////////////////////Check expression////////////////////////////////////
+			//////////////////////If it's + or -
+      begin { procedure expression( fsys: symset);  
+              var addop : symbol; }
+        if sym in [plus, minus]
+        then begin
+               addop := sym;
+               getsym;
+               term( fsys+[plus,minus]);
+               if addop = minus
+               then gen(opr,0,1)
+             end
+        while sym in [plus,minus] do
+          begin
+            addop := sym;
+            {* 读下一个符号 *}
+            getsym;
+            term( fsys+[plus,minus] );
+            if addop = plus
+            then gen( opr,0,2)
+            else gen( opr,0,3)
+          end
+      end; { expression }
+		/////////////////////If it's a times expression: gen( opr,0,4 )//////////////////////
+		/////////////////////If it's a div expression: gen( opr,0,5)/////////////////////////
+		/////////////////////If it's a minus expression: ( opr,0,3)//////////////////////////
+		/////////////////////If it's a negative num expression: ( opr,0,1)///////////////////
+		/////////////////////If it's a plus expression: gen( opr,0,2)////////////////////////
+    
+	///////////////////////////////If checking condition/////////////////////////////////////
+			//////If the relational op is = : gen(opr,0,8);///////////
+			//////If the relational op is <> : gen(opr,0,9);//////////
+			//////If the relational op is < : gen(opr,0,10);//////////
+			//////If the relational op is >= : gen(opr,0,11);/////////
+			//////If the relational op is > : gen(opr,0,12);//////////
+			//////If the relational op is <= : gen(opr,0,13);/////////
+
+	/////////////////////////////////If checking assignment:////////////////////////////////////////
+			//////Look if Identifier has been defined: i := position(id);///////////
+			/////If table[i] is const or procedure, then can't assign value/////////
+                 else if table[i].kind <> variable {error(12); i := 0}
+			/////If everything works fine: gen(sto,lev-level,adr)///////////////////
+
+	  /////////////////////////////////////If call valid:///////////////////////////////////////////
+			//////Look if Identifier has been defined: i := position(id);///////////
+			///////////////If it's a proc: gen(cal,lev-level,adr)///////////////////
+
+	  //////////////////////////If if valid, condition([thensym,dosym]+fsys);,
+								there needs to be 'then'///////////////////////////////
+			///////If then found: cx1 := cx; gen(jpc,0,0); statement(fsys); code[cx1].a := cx///////
+
+	  ////////If begin valid, basically just continue until 'end' found/////////////////////////////
+	  ////////If read valid, while getting the idents (until ')' found)://////////////////////////// 
+			//////Look if Identifier has been defined: i := position(id);///////////
+			/////If table[i] is const or procedure, then can't assign value/////////
+                 else if table[i].kind <> variable {error(12); i := 0}
+			/////If everything works fine: gen(red,lev-level,adr)///////////////////
+
+	  ////////If write valid, while getting the expression (until ')' found): gen(wrt,0,0);/////////
+
+  begin  {   procedure block( lev,tx : integer; fsys : symset );    
+                var  dx : integer;  /* data allocation index */
+                     tx0: integer;  /*initial table index */
+                     cx0: integer;  /* initial code index */              }
+    dx := 3;
+    tx0 := tx;
+    table[tx].adr := cx;
+    gen(jmp,0,0); { jump from declaration part to statement part }
+    if lev > levmax
+    then error(32);
+    repeat
+	  ////////////////////If 'const' found: check const declaration////////////////////
+	  /////////////////////If 'var' found: check var declaration///////////////////////
+	  ///////////////////////If 'proc' found: enter(prosedure);////////////////////////
+			//////block(lev+1,tx,[semicolon]+fsys);///////////
+			//////if ';' found: test( statbegsys+[ident,procsym],fsys,6)///////////
+
+    until not ( sym in declbegsys );
+    code[table[tx0].adr].a := cx;  { back enter statement code's start adr. }
+    with table[tx0] do
+      begin
+        adr := cx; { code's start address }
+      end;
+    cx0 := cx;
+    gen(int,0,dx); { topstack point to operation area }
+    statement( [semicolon,endsym]+fsys);
+    gen(opr,0,0); { return }
+    test( fsys, [],8 );
+    listcode;
+  end { block };
+
+begin { main }   
+  declbegsys := [ constsym, varsym, procsym ];
+  statbegsys := [ beginsym, callsym, ifsym, whilesym];
+  facbegsys := [ ident, number, lparen ];
+end.  

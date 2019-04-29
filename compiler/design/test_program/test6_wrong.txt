@@ -1,0 +1,8 @@
+const c1 := 1, c2=2, =3;
+var y1, year  integer;
+begin
+  read(year);
+  write(i;
+  y1 := year / 0;
+  write "   year now: ", y1);
+end.

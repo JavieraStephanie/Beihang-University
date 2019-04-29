@@ -1,0 +1,35 @@
+procedure level1a;
+	procedure level2a;
+		procedure level3a;
+			begin
+				write("level 3a");
+				write("force an error ", 3 / 0);
+			end;
+		begin
+			level3a;
+		end;
+	begin
+		level2a;
+	end;
+
+procedure level1b;
+	procedure level2b;
+		procedure level3b;
+			procedure level4b;
+				begin
+					write("level 4b");
+				end;
+			begin
+				level1a;
+				level4b;
+			end;
+		begin
+			level3b;
+		end;
+	begin
+		level2b;
+	end;
+begin
+	write(1+2);
+	level1b;
+end.

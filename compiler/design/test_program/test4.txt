@@ -1,0 +1,18 @@
+var i : integer;
+begin
+read(i);
+write("i: ", i);
+if i<>2  then write("i<>2  ", i);
+if i<2  then write("i<2  ", i);
+if i>2 then write("i>2  ", i);
+if 2>i  then write("2>i  ", i);
+if i=3  then write("i=3  ", i);
+if i<=2  then write("i<=2  ", i);
+if 2>=i  then write("2>=i  ", i);
+
+if 1 >2 then write("1>2  ") else
+if 1>=2  then  write("1>=2  ")else
+if 1<2 then write("if_else_1<2   ")else
+if 2>1 then write("if_else_2>1   ")else
+write("no compare  ");
+end.

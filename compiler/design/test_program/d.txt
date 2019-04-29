@@ -1,0 +1,48 @@
+const hundred = 100,thousand = -1000;
+var x,y:integer;a,b:char;m,n:real;arr:array[10] of char; 
+
+procedure pro1(var z:integer);
+    const m2=10;
+    var y:integer;
+    begin
+        y:=0;
+        repeat
+            begin
+                z:=z+1;
+                y:=y+1;
+            end
+        until y>m-1
+    end;
+
+function fun1(var k:integer):integer;
+    var p:integer;
+    begin
+        for p:=1 to 10
+        do k:=k+1;
+        fun1:=k;
+    end;
+
+function fun2(var l:integer):integer;
+    begin
+        l:=l*l+1;
+        if l<hundred then l:=fun2(l);
+        fun2 := l;
+    end;
+    
+begin
+    read(x,y,a, b, m,n);
+write(-6/(-(-0*7-3)));
+arr['b'-'a'+1]:='a';
+write(arr[2]);
+    m:=m+1;  
+    if m+n>=m*n then x:=x+1 else x:=x+2; 
+    arr[0]:=a;
+    arr[1]:=b;
+    pro1(y);
+    x:=fun2(x);
+    write(" ",x);
+    if x<y 
+        then write("",arr[0]) ;
+        else write("123",arr[1]);
+end.
+

@@ -1,0 +1,50 @@
+{% extends 'music/base.html' %}
+{% block title %}All Albums{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid songs-container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" {% if filter_by == 'all' %}class="active"{% endif %}><a href="{% url 'albums' 'all' %}">View All</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Album Title</th>
+                                <th>Artist</th>
+                                <th>Favorite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for album in album_list %}
+                                <tr>
+                                    <td><a href="{% url 'albumdetail' album.artist.id album.id %}">{{ album.album_title }}</a></td>
+                                    <td>{{ album.artist }}</td>
+                                    <td>
+                                        <a href="{% url 'favorite' album.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star {% if album.is_favorite %}active{% endif %}"></span></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

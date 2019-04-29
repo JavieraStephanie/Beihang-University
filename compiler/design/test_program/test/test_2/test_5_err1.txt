@@ -1,0 +1,89 @@
+const ctest0=9;
+var vtesti,i:integer;
+    vtestr:real;
+    vtestarray:array[10] of integer;
+  procedure test0()
+    const ctesta='0';
+    var vtesta:integer;
+    begin
+    end;
+  procedure test1();
+    const ctestb='a',ctestc=12,ctestd=+12,cteste=-12,ctestf=+12,ctestaa=12.34,ctestab=+12.34,ctestac=-12.34;
+    var vtestb,vtestc:real;
+        vtestd:char;
+        vteste:array[10] of real;
+    begin
+    end;
+  procedure test2();
+    var v1,v2,v3:integer;
+    procedure test1(a:integer);
+      begin
+        write("call test1 success ");
+        write(a);
+        a:=12;
+      end;
+    procedure test2(var a:integer);
+      begin
+        write("call test2 success ");
+        write(a);
+        a:=20;
+      end;
+    procedure test4(var a,b:integer;c,d:integer);
+      begin
+        write("call test4 success ");
+        write(a);
+        write(b);
+        write(c);
+        write(d);
+        a:=999;
+        b:=1234;
+        c:=435;
+        d:=989
+      end;
+    begin
+      v1:=4;
+      v2:=5;
+      v3:=6;
+      test1(vtesti);
+      write(vtesti);
+      test2(vtesti);
+      write(vtesti);
+      test4(vtesti,v1,v2,v3);
+      write(vtesti);
+      write(v1);
+      write(v2);
+      write(v3)
+    end;
+  procedure test3();
+    function test0():real;
+      begin
+        test0:=10.0;
+      end;
+    begin
+    end;
+  procedure test4();
+	var vtemp0:real;
+        vtemp1:char;
+        vtemp2:integer;
+		vtesta:integer;
+    begin
+      vtesta:=12+14;
+      write(vtesta);
+	  read(vtemp1);
+      write(vtemp1);
+      read(vtemp0,vtemp2);
+      write(vtemp0);
+      write(vtemp2);
+    end;
+begin
+  vtesti:=10;
+  for i:=0 to 1 do 
+  begin vtestarray[i]:=i;write(vtestarray[i]) end;
+  for i:=4 downto 2 do 
+  begin vtestarray[i]:=i;write(vtestarray[i]) end;
+  test0();
+  test1();
+  test2();
+  test3();
+  test4()
+end.

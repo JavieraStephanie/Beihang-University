@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splittertb_isim_beh.exe" -prj "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splittertb_beh.prj" "work.splittertb" "work.glbl" 

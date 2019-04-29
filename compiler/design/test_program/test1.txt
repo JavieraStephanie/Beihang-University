@@ -1,0 +1,11 @@
+var i : integer;
+
+procedure prtout;
+begin
+	i:=1;
+	write(i);
+end;
+
+begin
+  prtout();
+end.

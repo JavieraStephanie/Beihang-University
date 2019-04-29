@@ -1,0 +1,15 @@
+var i, a, b : integer;
+
+procedure prtout;
+var c, x1, x2: integer;
+begin
+	i:=1;
+	begin
+		write(1);
+	end;
+end;
+
+begin
+  write(2);
+  prtout();
+end.

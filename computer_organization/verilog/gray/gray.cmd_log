@@ -1,0 +1,99 @@
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 gray.ngc gray.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o gray_map.ncd gray.ngd gray.pcf 
+par -w -intstyle ise -ol high -t 1 gray_map.ncd gray.ncd gray.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml gray.twx gray.ncd -o gray.twr gray.pcf 
+bitgen -intstyle ise -f gray.ut gray.ncd 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 
+xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/gray/gray.syr" 

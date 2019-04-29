@@ -1,0 +1,94 @@
+const year      = 1998, foo       = -10, achar     = 'a', ninenum   = '9';
+
+var ch                  : char;
+    bdate               : integer;
+    i                   : integer;
+    line                : array[1..81] of char;
+    sfile               : string;
+    yesno               : boolean;
+    firstname, surname  : name;
+
+procedure times();
+    begin
+        i := 1;
+        write('i= ', i);
+        i := i * 10;
+        write('i times 10= ', i);
+    end
+
+procedure myname();
+    begin
+        write('Please enter your first name: ');
+        read(firstname);
+   
+        write('Please enter your surname: ');
+        read(surname);
+
+        write('Please enter your birthdate: ');
+        read(bdate);
+ 
+        write(message, ' ', firstname, ' ', surname);
+        write('I born in', bdate, ',', year);
+    end
+
+procedure conditions();
+    begin
+        if 1<>0 then
+            write('Not equal working well');
+        if 0=0
+            write('Equal working well');
+        if 2>=1
+            write('Bigger or equal than working well');
+	if bdate > 15
+            write('My birthdate is after the 15th of the month');
+        else
+            write('My birtdate is before the 15th of the month');
+    end
+
+function times ( i : integer ): integer;
+    var it : integer;
+    begin
+        it := 50;
+        it = it + i;
+        write('i= ', i);
+        it := it - i;
+        write('i= ', i);
+        it := it * i;
+        write('i= ', i);
+        it := it / i;
+        write('i= ', i);
+        times := it;
+    end;
+
+procedure repeatthis();
+    var a: integer;
+    begin
+        a := 10;
+        repeat
+            write('value of a: ', a);
+            a := a + 1;
+        until a = 20;
+    end
+
+procedure forloop;
+    var a: integer;
+    begin
+        for a := 10  to 20 do
+   
+        begin
+            write('value of a: ', a);
+        end;
+    end
+
+begin
+    myname(20);
+
+    mathfunc();
+
+    conditions();
+
+    write(times(2));
+
+    repeatthis();
+    forloop();
+end.

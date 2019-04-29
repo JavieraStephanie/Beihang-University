@@ -1,0 +1,70 @@
+const ctest0=9;
+var vtesti,i:integer;
+    vtestr:real;
+    vtestarray:array[10] of integer;
+  procedure test4();
+    var vtestf:real;
+      vtesta:integer;
+    function aaaa(n:integer):integer;
+     var temp:integer;
+      begin
+        if n>=1 then 
+        begin 
+         temp:=aaaa(n-1)+1;
+         aaaa:=temp;
+         write(temp) 
+        end
+        else begin aaaa:=1; end
+      end;
+    begin
+      vtesta:=-12;
+      write(vtesta);
+      vtesta:=aaaa(4);
+      write(vtesta);
+    end;
+  procedure test5();
+    begin
+      if 12<=10 then write("false6 ") else write("true6 ")
+    end;
+  procedure test6();
+    var vtemp0:integer;
+    begin
+      vtemp0:=0;
+      repeat
+		begin
+		  vtemp0:=vtemp0+1;
+		  write("vtemp0 is ",vtemp0);
+		end
+      until vtemp0>1
+    end;
+  procedure test7();
+    procedure test70();
+      begin
+        write("call success 70");
+      end;
+    begin
+      test70();
+    end;
+  procedure test8();
+    var vtemp0:real;
+        vtemp1:char;
+        vtemp2:integer;
+    begin
+      read(vtemp1);
+      write(vtemp1);
+      read(vtemp0,vtemp2);
+      write(vtemp0);
+      write(vtemp2);
+    end;
+begin
+  test8();
+  vtesti:=10;
+  for i:=0 to 1 do 
+  begin vtestarray[i]:=i;write(vtestarray[i]) end;
+  for i:=3 downto 2 do 
+  begin vtestarray[i]:=i;write(vtestarray[i]) end;
+  test4();
+  test5();
+  test6();
+  test7()
+end.

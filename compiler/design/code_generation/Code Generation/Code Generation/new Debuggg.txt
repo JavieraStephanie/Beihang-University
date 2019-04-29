@@ -1,0 +1,520 @@
+﻿/////////List of error messages/////////
+procedure errormsg;
+
+procedure endskip;
+  begin                 { underline skipped part of input }
+    while errpos < cc do
+      begin
+        write( psout, '-');
+        errpos := errpos + 1
+      end;
+    skipflag := false
+  end { endskip };
+
+/////////Get next ch////////
+procedure nextch;  { read next character; process line end }
+
+///////////Fatal Error messages list///////////////
+procedure fatal( n: integer );
+
+///////////Basically the parse void////////////////
+procedure insymbol;  {reads next symbol}
+  /////////////////Get integer number////////////////////
+  procedure readscale;
+
+  /////////////////Get real number///////////////////////
+  procedure adjustscale;
+
+  /////////////////Dun think we need dis/////////////////
+  procedure options;
+    procedure switch( var b: boolean );
+
+  ///////////////////////The start of get symbol/////////////////////////
+		////////////////Ident/Keyword/////////////////////
+		////////////////Int/Real number///////////////////
+		////////////////Becomes/Colon/////////////////////
+		////////////////LEQ/NEQ/LSS///////////////////////
+		////////////////BEQ/GTR///////////////////////////
+		////////////////PERIOD////////////////////////////
+		////////////////CHAR/STRING///////////////////////
+		////////////////LPARENT///////////////////////////
+		////////////////SYMBOLS///////////////////////////
+
+/////////////////////Store data to valtab////////////////////////
+procedure enter(x0:alfa; x1:objecttyp; x2:types; x3:integer );
+
+/////////////////////Store data to atab//////////////////////////
+procedure enterarray( tp: types; l,h: integer );
+
+////////////////////Store data to btab///////////////////////////
+procedure enterblock;
+
+////////////////////Store data to rconst/////////////////////////
+procedure enterreal( x: real );
+
+////////////////////Store to code array//////////////////////////
+procedure emit( fct: integer );
+
+////////////////////Store to code array (2)//////////////////////
+procedure emit1( fct, b: integer );
+
+////////////////////Store to code array (3)//////////////////////
+procedure emit2( fct, a, b: integer );
+
+//////////////////////////Print values/////////////////////////////
+procedure printtables;
+	/////////////////////Set instruction List (fctString)/////////////////////////
+
+procedure block( fsys: symset; isfun: boolean; level: integer );
+  
+  /////////////////////Used when there's a wrong symbol found in a statement///////////////////////
+		///////////////Printout the error info, skipflag = true; //////////////////////////////////
+		///////////////keep skipping until a valid symbol is found/////////////////////////////////
+		///////////////if skipflag true then endskip///////////////////////////////////////////////
+  procedure skip( fsys:symset; n:integer);
+
+  /////////////////////See if it's a correct symbol, if not then skip()////////////////////////////
+  procedure test( s1,s2: symset; n:integer );
+
+  /////////////////////Just to see if there's a ';'////////////////////////////////////////////////
+  procedure testsemicolon;
+
+  /////////////////////Store data to valtab (2)////////////////////////////////////////////////////
+  procedure enter( id: alfa; k:objecttyp );
+
+  /////////////////////////Find if ident is defined///////////////////////////
+  /////////////////////////If var found, store in table///////////////////////
+  /////////////////////////If const found, store in table/////////////////////
+
+  /////////////////////////Check constant///////////////////////////////////////////////////
+	///////////////////////If it's a char: c.tp := chars; c.i := inum;//////////////////////
+	///////////////////////else if it's an iden, see if it's defined////////////////////////
+	///////////////////////if its type is constant://///////////////////////////////////////
+	///////////////////////c.tp := tab[x].typ; if c.tp = reals 
+							then c.r := sign*rconst[tab[x].adr]
+                            else c.i := sign*tab[x].adr/////////////////////////////////////
+	///////////////////////else if it's an integer: c.tp := ints;c.i := sign*inum;//////////
+	///////////////////////else if it's a real: c.tp := reals; c.r := sign*rnum;////////////
+	///////////////////////else skip////////////////////////////////////////////////////////
+  procedure constant( fsys: symset; var c: conrec );
+
+////////////////////////Check variable type//////////////////////////////////
+procedure typ( fsys: symset; var tp: types; var rf,sz:integer );
+
+  /////////////////////////////Check if it's an array type///////////////////////////////
+  procedure arraytyp( var aref, arsz: integer );
+
+  /////////////////////////////Check parameter/////////////////////////////////////////////////////////
+		///////////////////////While it's an ident or 'var'////////////////////////////////////////////
+			///////////////////If 'var' then valpar = true else valpar = false/////////////////////////
+			///////////////////t0 = ti; entervariable, while comma, read next; entervar////////////////
+			///////////////////If ':' found, if next isn't ident then error(2)/////////////////////////
+				///////////////else see if iden defined, if yes but it's not constval//////////////////
+				///////////////error(29), else tp = typ, rf = ref, if valpar sz = adr else sz = 1//////
+			///////////////////else error(5)///////////////////////////////////////////////////////////
+			///////////////////while t0 < ti, t0++; tab[t0].type = type, ref = rf, adr = dx, //////////
+							lev = level, normal = valpar, dx = dx + sz/////////////////////////////////
+		///////////////////////If no ')', then if it's ';' parse, /////////////////////////////////////
+									else error(14), if ',', parse//////////////////////////////////////
+  procedure parameterlist; { formal parameter list  }
+
+////////////////////////////////Check constant declaration////////////////////////////
+	////////////////////////////Store the const type, and ref = 0;////////////////////
+	////////////////////////////If it's a real, enterreal(c.r), valtab[ti].adr = ci///
+	////////////////////////////Else valtab[ti].adr = c.i/////////////////////////////
+procedure constdec;
+
+  ////////////////////////////////Check type declaration//////////////////////////////
+  procedure typedeclaration;
+
+  ////////////////////////////////Check var declaration///////////////////////////////
+		//////////////////////////storeTable//////////////////////////////////////////
+		//////////////////////////valtab[ti].type, ref, level, adr, normal true///////
+  procedure variabledeclaration;
+
+  ////////////////////////////////Check proc declaration//////////////////////////////
+		//////////////////////////Store the data and normal = true////////////////////
+		//////////////////////////emit(32+ord(isfun))/////////////////////////////////
+  procedure procdeclaration;
+
+procedure statement( fsys:symset );
+  var i : integer;
+
+  procedure expression(fsys:symset; var x:item); forward;
+    procedure selector(fsys:symset; var v:item);
+    var x : item;
+        a,j : integer;
+    begin { sy in [lparent, lbrack, period] }
+      repeat
+        if sy = period
+        then begin
+               insymbol; { field selector }
+               if sy <> ident
+               then error(2)
+               else begin
+                      if v.typ <> records
+                      then error(31)
+                      else begin { search field identifier }
+                             j := btab[v.ref].last;
+                             tab[0].name := id;
+                             while tab[j].name <> id do
+                               j := tab[j].link;
+                             if j = 0
+                             then error(0);
+                             v.typ := tab[j].typ;
+                             v.ref := tab[j].ref;
+                             a := tab[j].adr;
+                             if a <> 0
+                             then emit1(9,a)
+                           end;
+                      insymbol
+                    end
+             end
+        else begin { array selector }
+               if sy <> lbrack
+               then error(11);
+               repeat
+                 insymbol;
+                 expression( fsys+[comma,rbrack],x);
+                 if v.typ <> arrays
+                 then error(28)
+                 else begin
+                        a := v.ref;
+                        if atab[a].inxtyp <> x.typ
+                        then error(26)
+                        else if atab[a].elsize = 1
+                             then emit1(20,a)
+                        else emit1(21,a);
+                        v.typ := atab[a].eltyp;
+                        v.ref := atab[a].elref
+                      end
+               until sy <> comma;
+               if sy = rbrack
+               then insymbol
+               else begin
+                      error(12);
+                      if sy = rparent
+                      then insymbol
+                    end
+             end
+      until not( sy in[lbrack, lparent, period]);
+      test( fsys,[],6)
+    end { selector };
+
+	///////////////////////If it's a funct/proc call statement/////////////////////////
+		///////////////////emit1(18,i); lastp := btab[tab[i].ref].lastpar;cp:=i;///////
+		///////////////////Then check the parameter, cp++;/////////////////////////////
+		///////////////////If tab[cp].normal check express until ',', ':' or ')' found/
+			///////////////if x.typ = tab[cp].typ//////////////////////////////////////
+				///////////If x.ref != tab[cp].ref error(36)///////////////////////////
+				///////////else if x.typ = array emit1(22,atab[x.ref].size)////////////
+				///////////else if x.typ = record emit1(22,btab[x.ref].vsize)//////////
+			///////////////else if x.typ=int and tab[cp].typ = real emit1(26,0)////////
+			///////////////else if x.typ != notyp error(36)////////////////////////////
+		///////////////////else if sy != ident error(2)////////////////////////////////
+		///////////////////else see if ident defined, if yes if tab[k].obj != var error(37)
+		///////////////////x.typ = tab[k].typ, x.ref = tab[k].ref//////////////////////
+		///////////////////if tab[l].normal emit2(0,tab[k].lev,tab[k].adr)/////////////
+		///////////////////else emit2(1,tab[k].lev,tab[k].adr)/////////////////////////
+		///////////////////If ')' is found read next, else error(4)////////////////////
+		///////////////////if cp < lastp error(39); emit1(19,btab[tab[i].ref].psize-1)/
+		///////////////////If tab[i].lev < level emit2(3,tab[i].lev, level)////////////
+    procedure call( fsys: symset; i:integer );
+
+	///////////////////////This is to check the result type of two different types var/////////////////
+		///////////////////If both type != int or real, error(33), resulttype = none///////////////////
+		///////////////////else If both got no type, resulttype is also none///////////////////////////
+		///////////////////else if both is int, resulttype is int//////////////////////////////////////
+		///////////////////else if a int, b real, resulttype is real, emit1(26,1)//////////////////////
+		///////////////////else resulttype is real, if b is int, emit1(26,0)///////////////////////////
+    function resulttype( a, b : types) :types;
+
+      procedure simpleexpression( fsys: symset; var x: item );
+        var y : item;
+            op : symbol;
+
+          procedure factor( fsys: symset; var x: item );
+            var i,f : integer;
+
+            procedure standfct( n: integer );
+              var ts : typset;
+              begin  { standard function no. n }
+                if sy = lparent
+                then insymbol
+                else error(9);
+                if n < 17
+                then begin
+                       expression( fsys+[rparent], x );
+                       case n of
+                       { abs, sqr } 0,2: begin
+                                           ts := [ints, reals];
+                                           tab[i].typ := x.typ;
+                                           if x.typ = reals
+                                           then n := n + 1
+                                         end;
+                       { odd, chr } 4,5: ts := [ints];
+                       { odr }        6: ts := [ints,bools,chars];
+                       { succ,pred } 7,8 : begin
+                                             ts := [ints, bools,chars];
+                                             tab[i].typ := x.typ
+                                           end;
+                       { round,trunc } 9,10,11,12,13,14,15,16:
+                       { sin,cos,... }     begin
+                                             ts := [ints,reals];
+                                             if x.typ = ints
+                                             then emit1(26,0)
+                                           end;
+                     end; { case }
+                     if x.typ in ts
+                     then emit1(8,n)
+                     else if x.typ <> notyp
+                          then error(48);
+                   end
+                else begin { n in [17,18] }
+                       if sy <> ident
+                       then error(2)
+                       else if id <> 'input    '
+                            then error(0)
+                       else insymbol;
+                       emit1(8,n);
+                     end;
+                x.typ := tab[i].typ;
+                if sy = rparent
+                then insymbol
+                else error(4)
+              end { standfct } ;
+			//////////////////////////////Check factor////////////////////////////////////////////////
+					//////////////////////If ident found, see if it's defined/////////////////////////
+						//////////////////If it's a const: if tab[i].x.typ = real: emit1(25,adr); 
+										else: emit1(24,adr);//////////////////////////////////////////
+						//////////////////If it's a var: store type and ref, then ////////////////////
+							//////////////if '[', '(' or '.'//////////////////////////////////////////
+										if normal then f:=0 else f:=1; emit2(f,lev, adr)//////////////
+										selector(fsys,tab[i].x) //////////////////////////////////////
+										if tab[i].x.type is constval then emit(34)////////////////////
+							//////////////else if tab[i].x.type is constval///////////////////////////
+								//////////if normal then f:=1 else f:=2///////////////////////////////
+								//////////else if normal then f:=0 else f:=1; emit2(f,lev,adr)////////
+						//////////////////If it's a constval or proc: error(44)///////////////////////
+						//////////////////If it's a funct: tab[i].x.type:=type////////////////////////
+							//////////////if tab[i].level != 0 then call(fsys,i) else standfct(adr)///
+					//////////////////////Else if char/int/real, see if it's defined//////////////////
+						//////////////////If it's a real, tab[i].x.type = real; enterreal(rnum)//////
+						//////////////////emit1(25,c1)////////////////////////////////////////////////
+						//////////////////Else if it's a char, tab[i].x.type = char else type = int///
+						//////////////////both will emit1(24,inum); tab[i].x.ref = 0;/////////////////
+					//////////////////////Else if '(', check expression until ')' found///////////////
+						//////////////////If not found, then error(4)/////////////////////////////////
+					//////////////////////Else if it's a 'not', check factor, if x.typ = bools ///////
+					//////////////////////then emit(35) else if x.typ != notyp then error(32)/////////
+            begin { factor }
+
+		 //////////////////////////////Check term//////////////////////////////////////////////////
+		 procedure term( fsys: symset; var x: item );
+				///////////////////////If * x.typ := resulttype(x.typ, y.typ) /////////////////////
+					///////////////////If x.typ = int: emit(57); else if real: emit(60);///////////
+				///////////////////////If / ///////////////////////////////////////////////////////
+					///////////////////if x.typ = ints: emit1(26,1); x.typ := reals;///////////////
+					///////////////////if y.typ = ints: emit1(26,0); y.typ := reals;///////////////
+					///////////////////if (x.typ = reals) and (y.typ = reals): emit(61);///////////
+
+		//////////////////////////////Check simple expression//////////////////////////////////////
+			//////////////////////////If it's a '+' or '-', op will be that////////////////////////
+			//////////////////////////Check term until the next '+' or '-' found///////////////////
+			//////////////////////////if it's a negative integer, emit(36)/////////////////////////
+			//////////////////////////if it's an int and it's a '+', emit(52), else (53)///////////
+			//////////////////////////else if it's a real and it's a '+', emit(54), else (55)//////
+        begin { simpleexpression }
+
+	  //////////////////////////////Check expression//////////////////////////////////////////////
+	  procedure expression( fsys: symset; var x: item );
+			////////////////////////if (x.typ == y.typ == constVal////////////////////////////////
+				////////////////////case (op): eql emit(45); neq emit(46); lss emit(47);//////////
+				////////////////////leq emit(48); gtr emit(49); geq emit(50);/////////////////////
+			////////////////////////Else if x.typ = int: x.typ := reals; emit1(26,1);/////////////
+			////////////////////////Else if y.typ = int: y.typ := reals; emit1(26,0);/////////////
+			////////////////////////If x.typ = y.typ = real///////////////////////////////////////
+				////////////////////case (op): eql emit(39); neq emit(40); lss emit(41);//////////
+				////////////////////leq emit(42); gtr emit(43); geq emit(44);/////////////////////
+
+	//////////////////////////////Check assign statement///////////////////////////////////////////
+	procedure assignment( lv, ad: integer );
+		//////////////////////////if valtab[i] is var or proc://///////////////////////////////////
+			//////////////////////x.typ := tab[i].typ; x.ref := tab[i].ref;////////////////////////
+			//////////////////////If tab[i].normal: f := 0; else f := 1;///////////////////////////
+			//////////////////////emit2(f,lv,ad);//////////////////////////////////////////////////
+			//////////////////////If x.typ = y.typ:////////////////////////////////////////////////
+				//////////////////If x.typ = constVal: then emit(38);//////////////////////////////
+				//////////////////Else if x.typ = array: emit1(23,atab[x.ref].size);///////////////
+				//////////////////Else emit1(23,btab[x.ref].vsize);////////////////////////////////
+			//////////////////////Else if (x.typ = reals )and (y.typ = ints)://////////////////////
+				//////////////////emit1(26,0); emit(38);///////////////////////////////////////////
+
+	//////////////////////////////Check compound statement/////////////////////////////////////////
+    procedure compoundstatement;
+
+	//////////////////////////////Check if statement///////////////////////////////////////////////
+	procedure ifstatement;
+		//////////////////////////lc1 = lc; if else found://///////////////////////////////////////
+			//////////////////////lc2 = lc; emit(10); code[lc1].y := lc; code[lc2].y := lc;////////
+		//////////////////////////else code[lc1].y := lc;//////////////////////////////////////////
+
+	//////////////////////////////Check repeat statement///////////////////////////////////////////
+	procedure repeatstatement;
+		//////////////////////////lc1 = lc; if until found:////////////////////////////////////////
+			//////////////////////Check expression; emit1(11,lc1);/////////////////////////////////
+
+	//////////////////////////////Check for statement///////////////////////////////////////////////
+	procedure forstatement;
+		//////////////////////////If ident found////////////////////////////////////////////////////
+			//////////////////////See if it's defined///////////////////////////////////////////////
+				//////////////////If not: cvt := ints///////////////////////////////////////////////
+				//////////////////If it is, and it's a var: 
+						   cvt := tab[i].typ;
+                           if not tab[i].normal
+                           then error(37)
+                           else emit2(0,tab[i].lev, tab[i].adr );
+                           if not ( cvt in [notyp, ints, bools, chars])
+                           then error(18)///////////////////////////////////////////////////////////
+		//////////////////////////If becomes found//////////////////////////////////////////////////
+			//////////////////////continue looking until to/downto/do found/////////////////////////
+		//////////////////////////If to/downto found////////////////////////////////////////////////
+			//////////////////////If downto: f = 16/////////////////////////////////////////////////
+		//////////////////////////lc1 = lc; emit(f); lc2 = lc; emit1(f+1,lc2); code[lc1].y := lc////
+
+    procedure standproc( n: integer );
+      var i,f : integer;
+          x,y : item;
+      begin
+        case n of
+          1,2 : begin { read }
+                  if not iflag
+                  then begin
+                         error(20);
+                         iflag := true
+                       end;
+                  if sy = lparent
+                  then begin
+                         repeat
+                           insymbol;
+                           if sy <> ident
+                           then error(2)
+                           else begin
+                                  i := loc(id);
+                                  insymbol;
+                                  if i <> 0
+                                  then if tab[i].obj <> vvariable
+                                       then error(37)
+                                       else begin
+                                              x.typ := tab[i].typ;
+                                              x.ref := tab[i].ref;
+                                              if tab[i].normal
+                                              then f := 0
+                                              else f := 1;
+                                              emit2(f,tab[i].lev,tab[i].adr);
+                                              if sy in [lbrack,lparent,period]
+                                              then selector( fsys+[comma,rparent],x);
+                                              if x.typ in [ints,reals,chars,notyp]
+                                              then emit1(27,ord(x.typ))
+                                              else error(41)
+                                            end
+                                end;
+                           test([comma,rparent],fsys,6);
+                         until sy <> comma;
+                         if sy = rparent
+                         then insymbol
+                         else error(4)
+                       end;
+                  if n = 2
+                  then emit(62)
+                end;
+          3,4 : begin { write }
+                  if sy = lparent
+                  then begin
+                         repeat
+                           insymbol;
+                           if sy = stringcon
+                           then begin
+                                  emit1(24,sleng);
+                                  emit1(28,inum);
+                                  insymbol
+                                end
+                           else begin
+                            expression(fsys+[comma,colon,rparent],x);
+                            if not( x.typ in stantyps )
+                            then error(41);
+                            if sy = colon
+                            then begin
+                              insymbol;
+                              expression( fsys+[comma,colon,rparent],y);
+                              if y.typ <> ints
+                              then error(43);
+                              {* 若sy是colon *}
+                              if sy = colon
+                              then begin
+                                if x.typ <> reals
+                                then error(42);
+                                insymbol;
+                                expression(fsys+[comma,rparent],y);
+                                if y.typ <> ints
+                                then error(43);
+                                emit(37)
+                                end
+                                else emit1(30,ord(x.typ))
+                              end
+                            else emit1(29,ord(x.typ))
+                          end
+                         until sy <> comma;
+                         if sy = rparent
+                         then insymbol
+                         else error(4)
+                       end;
+                  if n = 4
+                  then emit(63)
+                end; { write }
+        end { case };
+      end { standproc } ;
+	//////////////////////////////Check statement//////////////////////////////////////
+		//////////////////If ident found: see if it's defined//////////////////////////
+						if it's a var: assignment( tab[i].lev,tab[i].adr);
+						procedure: if tab[i].lev <> 0 then call(fsys,i) else standproc(tab[i].adr);
+						function: if tab[i].ref = display[level] then assignment(tab[i].lev+1,0) else error(45)
+		//////////////////If 'begin' found: compoundstatement//////////////////////////
+		//////////////////If 'if' found: ifstatement///////////////////////////////////
+		//////////////////If 'repeat' found: foundstatement////////////////////////////
+		//////////////////If 'for' found: forstatement/////////////////////////////////
+
+  ////////////////////////////////Check block//////////////////////////////////////////
+		//////////////////////////dx=5, prt=ti; if level>lmax fatal(5)/////////////////
+		//////////////////////////enterblock, prb=b, display[level] := b///////////////
+		//////////////////////////tab[prt].typ := notyp;tab[prt].ref := prb;///////////
+		//////////////////////////if '(' found and level>1 check param/////////////////
+		//////////////////////////btab[prb].lastpar := t;btab[prb].psize := dx;////////
+		//////////////////////////if it's 'function' and next is ':' next is ident/////
+			//////////////////////check if iden defined, if yes it's constval//////////
+				//////////////////tab[prt].typ = tab[x].typ; else error(15)////////////
+		//////////////////////////else if it's not ident, skip until ';' found/////////
+		//////////////////////////if const,type,var found, check, btab[prb].vsize = dx/
+		//////////////////////////tab[prt].adr = lc, checkstatement////////////////////
+  begin  { block }
+
+///////////////////////////MAIN INTERPRET FUNCTION//////////////////////////////
+procedure interpret;
+
+//////////////////////////DUNNO WAT DIS IS//////////////////////////////////////
+procedure enterids;
+
+
+begin  { main }
+  /////////////////////Starting index values///////////////////////////////////////////////////
+	///////////////////t := -1; a := 0; b := 1; sx := 0; c2 := 0; display[0] := 1;/////////////
+	///////////////////iflag := false; oflag := false; skipflag := false; prtables := false;///
+	///////////////////stackdump := false;/////////////////////////////////////////////////////
+
+  /////////////////////If not started with 'program' then error(3)/////////////////////////////
+	///////////////////Check the program statement format//////////////////////////////////////
+  /////////////////////enterids;///////////////////////////////////////////////////////////////
+  ////////////////////btab[1].last = ti, .lastpar = 1, psize = 0, vsize = 0;///////////////////
+  ////////////////////If no '.' found after the very last 'end' then error(2)//////////////////
+  ////////////////////emit(31); interpret//////////////////////////////////////////////////////
+

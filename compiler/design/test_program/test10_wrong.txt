@@ -1,0 +1,15 @@
+var i, i : integer;
+arr:array[-1] of integer;
+
+procedure prtout(2);
+var c, x1, x2: integer;
+begin
+	i:=1;
+	begin
+		write(i);
+	end;
+end;
+
+begin
+  write(2);
+end.

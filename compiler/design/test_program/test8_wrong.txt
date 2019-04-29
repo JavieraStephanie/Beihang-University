@@ -1,0 +1,16 @@
+var i : integer;
+begin
+  write("");
+  for i=0 to 1 do begin
+	write(1);
+	end;
+  for i:=1 to 0 begin
+	write(1);
+	end;
+  for i:=0  1 do begin
+	write(2);
+	end;
+  for i:=4 downto 1 do begin
+	write(4);
+	end;
+end.

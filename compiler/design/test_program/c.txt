@@ -1,0 +1,120 @@
+var i:integer;
+j:real;
+arr: array[10] of real;
+
+function f1():integer;
+begin
+f1:=1;
+end;
+
+begin
+
+for i:=0 to 1 do begin
+write(1);
+end;
+for i:=1 to 0 do begin
+write(1);
+end;
+for i:=0 downto 1 do begin
+write(2);
+end;
+for i:=4 downto 1 do begin
+write(4);
+end;
+arr[0]:=1.0;
+write(arr[0]);
+write(" ",-(-3)+(-(1*3+arr[0]))-(1)*4+f1());
+write("  ");
+if 1 >2 then write("1>2  ") else
+if 1>=2  then  write("1>=2  ") else
+if 1=2  then write("1=2  ") else
+if 1<2 then write("if_else_1<2   ")else
+write("no compare  ");
+if 1<2  then write("1<2  ");
+if 1<=2  then write("1<=2  ");
+if 2=2  then write("2=2  ");
+if 2>=1  then write("2>=1  ");
+if 2>1  then write("2>1  ");
+if 1<>2  then write("1<>2  ");
+
+begin
+begin
+begin
+begin
+end
+end
+end
+end;
+i:=1;
+repeat 
+begin
+write(i);
+write("   ");
+i:=i+1;
+end
+until i>3
+
+
+
+
+
+
+end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

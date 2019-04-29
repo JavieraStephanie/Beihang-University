@@ -1,0 +1,14 @@
+test1_err1:
+	1.line 49,51 数组越界
+	2.line 104 then后面的语句是复合语句，没有begin end
+test2_err2:
+	1.line 7 ,xe,ye 变量声明没有指明类型;
+	2.line 92,93 使用未声明标识符
+
+test2_err1:
+	1. line5:变量标识符与常量相同
+	2. line17 18变量声明在常量声明前面
+test2_err2:
+	1.line 5标识符错误,不允许出现_
+	2.line 16 函数声明缺少;
+	3.line 25 =应该为:=

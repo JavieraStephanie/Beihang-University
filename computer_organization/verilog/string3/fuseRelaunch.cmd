@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/HW/JiSuanJiZuCheng/Verilog/string3/string3tb_isim_beh.exe" -prj "D:/HW/JiSuanJiZuCheng/Verilog/string3/string3tb_beh.prj" "work.string3tb" "work.glbl" 

@@ -1,0 +1,19 @@
+输出：please enter a number(1~10),let us calculate fibo answer
+输入：6
+输出：fibo :13
+输出：fiboFor 13
+输出：!#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^`abcdefghijklmnopqrstuvwxyz{|}~
+输出：Please enter a number,let us find it in nums
+输入：8
+输出：pivot find in nums at 4
+输出：Please enter two numbers,let uss swap it
+输入：4
+输入：5
+输出：num1 = 4
+输出：num2 = 5
+输出：num1 = 5
+输出：num2 = 4
+输出：-9.0000000000000000E+000
+输出：-5.0000000000000000E+000
+输出：7.8539815000000004E+001
+输出：i = 55

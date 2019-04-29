@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\HW\JiSuanJiZuCheng\Verilog\gray\gray.ncd
+OUTFILE=D:\HW\JiSuanJiZuCheng\Verilog\gray\gray.bit
+FAMILY=Automotive Spartan3
+PART=xa3s50-4vqg100
+WORKINGDIR=D:\HW\JiSuanJiZuCheng\Verilog\gray
+LICENSE=WebPack
+USER_INFO=211427565_0_0_978

@@ -1,0 +1,13 @@
+输入：c12.3 14
+输出：
+01432
+call test1 success 
+1010
+call test2 success 
+1020
+call test4 success 
+2045699912345626
+c12.3 14
+
+1行1分
+错误版本2分
