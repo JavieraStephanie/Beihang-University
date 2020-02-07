@@ -1,0 +1,21 @@
+package elevator3;
+
+public interface SchedulableCarrier {
+	
+	public static void moveup (Integer dst) {
+		
+	}
+	
+	public static void movedown (Integer dst) {
+		
+	}
+	
+	public static Boolean turnon() {
+		
+	}
+	
+	public Boolean turnoff() {
+		
+	}
+
+}

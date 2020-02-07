@@ -1,0 +1,7 @@
+package taxi;
+
+public class Taxi {
+	private int taxinum;
+	private int review;
+	private Point curPos;
+}

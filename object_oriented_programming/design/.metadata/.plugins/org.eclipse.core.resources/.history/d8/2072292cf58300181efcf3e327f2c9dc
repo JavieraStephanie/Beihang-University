@@ -1,0 +1,21 @@
+package elevator;
+
+import java.util.ArrayList;
+
+public class Queue {
+	private ArrayList<Request> queue;
+	
+	public boolean addQueue (Request req) {
+		queue.add(req);
+		return true;
+	}
+	
+	public boolean removeQueue (int i) {
+		queue.remove(i);
+		return true;
+	}
+	
+	public Queue getQueue (int i) {
+		return queue.get(i);
+	}
+}

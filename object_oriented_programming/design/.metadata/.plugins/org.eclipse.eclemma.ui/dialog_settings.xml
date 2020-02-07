@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SessionExportWizard">
+		<item value="HTMLZIP" key="SessionExportPage1.format"/>
+		<list key="SessionExportPage1.destinations">
+			<item value="D:\HW\OOP\Elevator-ALS\JUnit Test Coverage\junit.zip"/>
+		</list>
+	</section>
+</section>

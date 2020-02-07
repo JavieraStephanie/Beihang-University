@@ -1,0 +1,15 @@
+package elevator;
+
+public class Scheduler {
+	
+	private Elevator elevator = new Elevator();
+	private Queue queue = new Queue();
+	
+	public void runElevator() {
+		while (queue.getQueueSize() > 0) {
+			Request curReq = queue.getQueue(0);
+			System.out.println(curReq.getFloor());
+		}
+	}
+
+}

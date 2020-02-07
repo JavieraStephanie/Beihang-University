@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_93dCoDzcEeiox7WeGRhoFg" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_u6k-MDzdEeiox7WeGRhoFg" name="InputHandler" visibility="public">
+    <ownedAttribute xmi:id="_yg6LsDzdEeiox7WeGRhoFg" name="regex" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yg8A4DzdEeiox7WeGRhoFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yhA5YDzdEeiox7WeGRhoFg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BQdwYDzeEeiox7WeGRhoFg" name="InputHandler" visibility="public">
+    <ownedAttribute xmi:id="_c3Wz4DzeEeiox7WeGRhoFg" name="regex" visibility="private">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c3Xa8DzeEeiox7WeGRhoFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c3Xa8TzeEeiox7WeGRhoFg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HzW1oDzeEeiox7WeGRhoFg" name="ElevatorSys" visibility="public">
+    <ownedOperation xmi:id="_Ucs7wDzeEeiox7WeGRhoFg" name="static void main ( String [*] )" isStatic="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PkgdwDzeEeiox7WeGRhoFg" memberEnd="_PkgdwTzeEeiox7WeGRhoFg _PkgdxDzeEeiox7WeGRhoFg" navigableOwnedEnd="_PkgdwTzeEeiox7WeGRhoFg _PkgdxDzeEeiox7WeGRhoFg">
+    <ownedEnd xmi:id="_PkgdwTzeEeiox7WeGRhoFg" name="elevatorSyss" type="_HzW1oDzeEeiox7WeGRhoFg" association="_PkgdwDzeEeiox7WeGRhoFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PkgdwjzeEeiox7WeGRhoFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PkgdwzzeEeiox7WeGRhoFg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_PkgdxDzeEeiox7WeGRhoFg" name="inputHandlers" type="_BQdwYDzeEeiox7WeGRhoFg" association="_PkgdwDzeEeiox7WeGRhoFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PkgdxTzeEeiox7WeGRhoFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PkgdxjzeEeiox7WeGRhoFg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yNx-4DzeEeiox7WeGRhoFg" name="CarryRequest" visibility="public">
+    <generalization xmi:id="_0UvrYDzeEeiox7WeGRhoFg" general="_BQdwYDzeEeiox7WeGRhoFg"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,6 @@
+package elevator;
+
+public interface ElevatorInterface {
+	boolean moveUP();
+	boolean moveDOWN();
+}

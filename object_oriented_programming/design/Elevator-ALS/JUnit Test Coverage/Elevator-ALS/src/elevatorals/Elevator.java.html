@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Elevator.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Elevator-ALS (Aug 5, 2018 12:51:45 PM)</a> &gt; <a href="../../index.html" class="el_group">Elevator-ALS</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">elevatorals</a> &gt; <span class="el_source">Elevator.java</span></div><h1>Elevator.java</h1><pre class="source lang-java linenums">package elevatorals;
+
+<span class="fc" id="L3">public class Elevator implements Movement{	</span>
+<span class="fc" id="L4">	private int curFloor = 1;</span>
+<span class="fc" id="L5">	private double elevTime = 0;</span>
+<span class="fc" id="L6">	private String direction = &quot;STILL&quot;;</span>
+<span class="fc" id="L7">	private double moveTime = 0.5;</span>
+<span class="fc" id="L8">	private double doorTime = 1.0;</span>
+	
+	public int getCurFloor() {
+<span class="fc" id="L11">		return this.curFloor;</span>
+	}
+	
+	public double getElevTime() {
+<span class="fc" id="L15">		return this.elevTime;</span>
+	}
+	
+	public String getDir() {
+<span class="fc" id="L19">		return this.direction;</span>
+	}
+	
+	public double getMoveTime() {
+<span class="nc" id="L23">		return this.moveTime;</span>
+	}
+	
+	public double getDoorTime() {
+<span class="fc" id="L27">		return this.doorTime;</span>
+	}
+	
+	public void setCurFloor(int floor) {
+<span class="nc" id="L31">		this.curFloor = floor;</span>
+<span class="nc" id="L32">	}</span>
+	
+	public void setDirection(String dir) {
+<span class="fc" id="L35">		this.direction = dir;</span>
+<span class="fc" id="L36">	}</span>
+	
+	public void addElevTime(double time) {
+<span class="fc" id="L39">		this.elevTime += time;</span>
+<span class="fc" id="L40">	}</span>
+	
+	public void print(Request req) {
+<span class="fc" id="L43">		String type = req.getType();</span>
+<span class="fc" id="L44">		int target = req.getFloor();</span>
+<span class="fc" id="L45">		String dir = req.getDir().toString();</span>
+<span class="fc" id="L46">		double time = req.getTime();</span>
+		
+<span class="fc bfc" id="L48" title="All 2 branches covered.">		if (type.equals(&quot;FR&quot;)) {</span>
+<span class="fc" id="L49">			System.out.printf(&quot;[%s, %d, %s, %.0f] / (%d, %s, %.1f)\n&quot;, type, target, dir, time, this.curFloor, this.direction, this.elevTime);</span>
+<span class="fc" id="L50">		}</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">		else if (type.equals(&quot;ER&quot;)) {</span>
+<span class="fc" id="L52">			System.out.printf(&quot;[%s, %d, %.0f] / (%d, %s, %.1f)\n&quot;, type, target, time, this.curFloor, this.direction, this.elevTime);</span>
+		}
+<span class="fc" id="L54">	}</span>
+
+	@Override
+	public boolean moveUp() {
+		/**
+		 * @REQUIRES: floor, time;
+		 * @MODIFIES: this;
+		 * @EFFECTS: (\result == true) ==&gt; (\this.curFloor == \old.curFloor+1) &amp;&amp; (\this.elevTime == \old.elevTime + \this.moveTime);
+		 */
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		if (getCurFloor() == 10) {</span>
+<span class="fc" id="L64">			return false;</span>
+		}
+<span class="fc" id="L66">		this.curFloor += 1;</span>
+<span class="fc" id="L67">		addElevTime(this.moveTime);</span>
+<span class="fc" id="L68">		return true;</span>
+	}
+
+	@Override
+	public boolean moveDown() {
+		/**
+		 * @REQUIRES: floor, time;
+		 * @MODIFIES: this;
+		 * @EFFECTS: (\result == true) ==&gt; (\this.curFloor == \old.curFloor-1) &amp;&amp; (\this.elevTime == \old.elevTime + \this.moveTime);
+		 */
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		if (getCurFloor() == 1) {</span>
+<span class="fc" id="L79">			return false;</span>
+		}
+<span class="fc" id="L81">		this.curFloor -= 1;</span>
+<span class="fc" id="L82">		addElevTime(this.moveTime);</span>
+<span class="fc" id="L83">		return true;</span>
+	}
+
+	@Override
+	public boolean doorMove() {
+		/**
+		 * @REQUIRES: None;
+		 * @MODIFIES: this;
+		 * @EFFECTS: (\result == true) ==&gt; (\this.direction == &quot;STILL&quot;) &amp;&amp; (\this.elevTime == \old.elevTime + \this.doorTime);
+		 */
+<span class="fc" id="L93">		this.direction = &quot;STILL&quot;;</span>
+<span class="fc" id="L94">		addElevTime(this.doorTime);</span>
+<span class="fc" id="L95">		return true;</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Elevator-ALS (Aug 5, 2018 12:51:45 PM)</div></body></html>

@@ -1,0 +1,23 @@
+package elevator;
+
+public class Scheduler {
+	
+	private Elevator elevator = new Elevator();
+	private Queue queue = new Queue();
+	
+	public boolean addReq(Request req) {
+		return queue.addQueue(req);
+	}
+	
+	public void runElevator() {
+		Request curReq = queue.getQueue(0);
+		if(curReq.getTime() != 0) {
+			System.out.println("Starting time should be 0!");
+		}
+		while (queue.getQueueSize() > 0) {
+			System.out.println("I'm here");
+			queue.removeQueue(0);
+		}
+	}
+
+}

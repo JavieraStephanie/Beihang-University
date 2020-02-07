@@ -1,0 +1,142 @@
+package elevator;
+
+import java.util.Scanner;
+
+public class Request {
+	
+	private int req_floor;
+	private double req_time;
+	private Direction direction;
+	
+	public Request(int floor, Direction dir, double time) {
+		this.req_floor = floor;
+		this.direction = dir;
+		this.req_time = time;
+	}
+	
+	public Request(String req) {
+		String temp[] = req.split(",");
+		
+		if (temp[0].equals("FR")) {
+			this.req_floor = Integer.parseInt(temp[1]);
+			
+			if(temp[2].equals("UP"))
+				this.direction = Direction.UP;
+			else if (temp[2].equals("DOWN"))
+				this.direction = Direction.DOWN;
+			
+			this.req_time = Long.parseLong(temp[3]);
+		}
+		else if (temp[0].equals("ER")) {
+			this.req_floor = Integer.parseInt(temp[1]);
+			
+			this.direction = Direction.NONE;
+			
+			this.req_time = Long.parseLong(temp[3]);
+		}
+	}
+	
+	public int getFloor() {
+		return this.req_floor;
+	}
+	
+	public double getTime() {
+		return this.req_time;
+	}
+	
+	public Direction getDir() {
+		return this.direction;
+	}
+	
+	public static void main(String[] args) throws Exception {
+		String input;
+		Queue queue = new Queue();
+		Scheduler sched = new Scheduler();
+		Scanner scanner = new Scanner(System.in);
+		
+		while(scanner.hasNextLine()) {
+			//Scan the input strings
+			input = scanner.nextLine();
+
+			//If the input string equals to "RUN" means that the input event is done
+			if(input.equals("RUN")) {
+				break;
+			}
+			
+			//INPUT VALIDATION
+			//Replace all occurrences of " " and "\t" to nothing
+			input = input.replace(" ", "").replace("\t", "");
+			char []val = input.toCharArray();
+			int content = 0; //to check which content is being validated
+			String req = ""; //string to parse
+			for(int i = 0; i<val.length; i++) {
+				if(val[i] == '(' && content == 0) {
+					content++;
+					req += val[i];
+					continue;
+				}
+				else if((val[i] == 'F' || val[i] == 'E') && val[i+1] == 'R' && val[i+2] == ',' && content == 1) {
+					content++;
+					req += val[i];
+					req += val[i+1];
+					req += val[i+2];
+					i+=2;
+					continue;
+				}
+				else if(val[i] >= '0' && val[i] <= '9' && content == 2) {
+					content++;
+					req += val[i];
+					req += val[i+1];
+					if(val[i+2] == ',') {
+						req += val[i+2];
+						i+=2;
+					}
+					else 
+						i++;
+					continue;
+				}
+				else if((val[i] == 'U' && val[i+1] == 'P' && val[i+2] == ',') && content == 3) {
+					content++;
+					req += "UP,";
+					i+=2;
+					continue;
+				}
+				else if ((val[i] == 'D' && val[i+1] == 'O' && val[i+2] == 'W' && val[i+3] == 'N') && content == 3) {
+					content++;
+					req += "DOWN,";
+					i+=4;
+					continue;
+				}
+				else if (val[i] >= '0' && val[i] <= '9' && content == 3) {
+					content++;
+					req += "NONE,";
+					while(val[i]!=')' && i<val.length) {
+						req += val[i];
+						i++;
+					}
+					req += ')';
+				}
+				else if (val[i] >= '0' && val[i] <= '9' && content == 4) {
+					while(val[i]!=')' && i<val.length) {
+						req += val[i];
+						i++;
+					}
+					req += ')';
+				}
+				else
+					throw new Exception ("Invalid format!");
+			}
+			
+			req = req.replace("(", "").replace(")", "");
+			
+			queue.addQueue(new Request(req));
+		}
+		
+		sched.runElevator();
+		
+		System.out.println("INPUT DONE");
+		
+		scanner.close();
+	}
+
+}

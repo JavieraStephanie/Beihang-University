@@ -1,0 +1,65 @@
+DESIGN:
+
+CLASSES:
+
+* Main
+* Input Handler (Input validation using regex)
+* Request:
+	- Floor Request
+	- Elevator Request
+* Floor -> Queue of 10 floors each has:
+	- Up Button
+	- Down Button
+	- Know which floor it is
+* Elevator -> Queue of 3 elevators each:
+	- Has floor buttons
+	- Current floor display
+	- Can move up
+	- Can move down
+	- Records current time
+* Scheduler (Basically the GodManager)
+
+
+HOW THINGS WORKS:
+* Main will initialize things (create floors and elevators) -> invoke the InputHandler
+* If the user inputs an FR request (floor request), the button on that very floor will be turned on
+	- That button will then send an FR request to the Scheduler
+* If the user inputs an ER request (elevator request), the button in the requested elevator will be turned on
+	- That button will create an ER request to the requested Elevator
+* Start the whole system
+* The starting status of all elevators is IDLE, therefore random elevator will take the first request, setting the status to RUNNING
+* If there are running elevator(s) and there's a new request
+	- first check if any of those elevator(s) could take the request as a pickup
+	- If none could, then the IDLE one will take
+	- If there's no IDLE elevator, then the request will have to wait until there's an elevator that could pickup or IDLE
+	- If many could pickup, choose the one with less point
+* Move the elevator to the requested floor, keep checking if there's a pickup request in it's own queue
+* Each elevator has its own queue to prevent the queue being processed by other elevators
+ 
+INPUT EXAMPLES:
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(FR, 4, UP, 2)
+(ER, 5, 2)
+(ER, 3, 3)
+RUN
+
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(ER, 4, 2)
+(FR, 4, DOWN, 2)
+(FR, 4, UP, 3)
+RUN
+
+(FR, 1, UP, 0)
+(ER, 4, 1)
+(FR, 4, UP, 1)
+RUN
+
+(FR, 3, UP, 0)
+(FR, 3, UP, 0)
+RUN
+
+(FR, 1, UP, 0)
+(ER, #1, 1, 0)
+(FR, 9, DOWN, 1); (ER, #2, 5, 2)

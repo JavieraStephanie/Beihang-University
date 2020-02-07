@@ -1,0 +1,101 @@
+package taxi;
+
+import java.awt.Point;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class InputHandler implements Runnable{
+	private Thread inputThread;
+	private Dispatcher disp;
+	private String input;
+	private Scanner scanner = new Scanner(System.in);
+	//private String regex = "[CR,\\(\\d,\\d\\),\\(\\d,\\d\\)]";
+	private String regex = "\\[CR,\\(\\d,\\d\\),\\(\\d";
+	private Pattern p;
+	private String temp[];
+	
+	public InputHandler(Dispatcher disp) {
+		this.disp = disp;
+	}
+	
+	public void input() throws Exception {
+		
+		while(scanner.hasNextLine()) {
+			this.input = scanner.nextLine();
+
+			if(this.input.equals("END")) {
+				break;
+			}
+			
+			this.start();
+		}
+		
+		scanner.close();
+	}
+	
+	public void validateInput(double time) {		
+		try {
+			p = Pattern.compile(regex);
+			
+			Matcher m = p.matcher(input);
+			
+			System.out.println(input);
+			System.out.println(p);
+			if(m.matches() == false)
+				throw new Exception ("Invalid Format!");
+			
+			input = input.replace("(", "").replace(")", "");
+			
+			parseInput(time);
+		}
+		catch (Exception except) {
+			System.out.print(except.getMessage());
+		}
+	}
+	
+	public void parseInput(double time) throws Exception {
+		temp = input.split(",");
+		int src_i;
+		int src_j;
+		int dst_i;
+		int dst_j;
+		double req_time;
+		
+		try {
+			src_i = Integer.parseInt(temp[1]);
+			src_j = Integer.parseInt(temp[2]);
+			dst_i = Integer.parseInt(temp[3]);
+			dst_j = Integer.parseInt(temp[4]);
+				
+			req_time = time * 0.001;
+			
+			if (disp.addReq(new Request(new Point(src_i, src_j), new Point(dst_i, dst_j), req_time)) == false)
+				throw new Exception ("Cannot add query!");
+		}
+		catch (Exception except) {
+			System.out.print(except.getMessage());
+		}
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		double time = System.currentTimeMillis();
+		
+		try {
+			input = input.replace(" ", "").replace("\t", "");
+			
+			validateInput(time);
+			disp.start();
+		}
+		catch (Exception except) {
+			System.out.print(except.getMessage());
+		}
+	}
+	
+	public void start() {
+		inputThread = new Thread (this);
+		inputThread.start();
+	}
+}

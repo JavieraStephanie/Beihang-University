@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\Tasks\Beihang University\HW\OOP\Elevator-ALS"/>
+		<item value="D:\Tasks\Beihang University\HW\OOP\Polynomial"/>
+		<item value="D:\Tasks\Beihang University\HW\OOP\ZuoYe2"/>
+		<item value="D:\Tasks\Beihang University\HW\OOP\Elevator-Base"/>
+		<item value="D:\Tasks\Beihang University\HW\OOP\ZuoYe1"/>
+		<item value="D:\HW\OOP\TokenMachine\TokenMachine"/>
+		<item value="D:\HW\OOP\TokenMachine"/>
+		<item value="D:\HW\OOP\ShiYan4\Bank2"/>
+		<item value="D:\HW\OOP\FileModification"/>
+		<item value="D:\HW\OOP\ZuoYe6\FileModification"/>
+		<item value="D:\HW\OOP\ZuoYe6"/>
+		<item value="D:\HW\OOP\ZuoYe7\Taxi"/>
+		<item value="D:\HW\OOP\ZuoYe7\MyTaxi"/>
+		<item value="D:\HW\OOP\ZuoYe7\mytaxi-example"/>
+		<item value="D:\HW\OOP\MyTaxi"/>
+	</list>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>

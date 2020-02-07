@@ -1,0 +1,31 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Template.aux
+The style file: splncs03.bst
+Database file #1: reference.bib
+A bad cross reference---entry "DBLP:conf/vr/Rosenberg93a"
+refers to entry "DBLP:conf/vr/1993", which doesn't exist
+A bad cross reference---entry "DBLP:conf/ismar/ZhouDB08"
+refers to entry "DBLP:conf/ismar/2008", which doesn't exist
+A bad cross reference---entry "DBLP:conf/epia/CostaNNMLA07"
+refers to entry "DBLP:conf/epia/2007w", which doesn't exist
+A bad cross reference---entry "DBLP:conf/dimea/WetzelLWJ08"
+refers to entry "DBLP:conf/dimea/2008", which doesn't exist
+A bad cross reference---entry "DBLP:conf/vr/LedermannS05"
+refers to entry "DBLP:conf/vr/2005", which doesn't exist
+A bad cross reference---entry "DBLP:conf/cw/EggesPM06"
+refers to entry "DBLP:conf/cw/2006", which doesn't exist
+A bad cross reference---entry "DBLP:conf/cscw/PejsaKBOW16"
+refers to entry "DBLP:conf/cscw/2016", which doesn't exist
+A bad cross reference---entry "DBLP:conf/egve/PeternierVT06"
+refers to entry "DBLP:conf/egve/2006", which doesn't exist
+A bad cross reference---entry "DBLP:conf/ACMace/KnoerleinSH07"
+refers to entry "DBLP:conf/ACMace/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/vr/1993"
+Warning--I didn't find a database entry for "DBLP:conf/egve/2006"
+Warning--I didn't find a database entry for "DBLP:conf/ismar/2008"
+Warning--I didn't find a database entry for "DBLP:conf/vr/2005"
+Warning--I didn't find a database entry for "DBLP:conf/cw/2006"
+Warning--I didn't find a database entry for "DBLP:conf/dimea/2008"
+Warning--I didn't find a database entry for "DBLP:conf/ACMace/2007"
+Warning--I didn't find a database entry for "DBLP:conf/cscw/2016"
+Warning--I didn't find a database entry for "DBLP:conf/epia/2007w"
+(There were 9 error messages)

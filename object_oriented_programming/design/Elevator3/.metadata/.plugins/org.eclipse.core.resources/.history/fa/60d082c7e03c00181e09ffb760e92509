@@ -1,0 +1,23 @@
+package elevator3;
+
+import java.util.Scanner;
+
+public class InputHandler {
+	private String regex;
+	
+	public Boolean validate (String valid) {
+		return null;
+		
+	}
+	
+	public Boolean parse (String sentence) {
+		return null;
+		
+	}
+	
+	public Integer scan (Scanner scann) {
+		return null;
+		
+	}
+
+}

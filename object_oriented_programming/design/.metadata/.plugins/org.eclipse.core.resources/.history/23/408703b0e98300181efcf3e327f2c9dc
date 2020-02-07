@@ -1,0 +1,24 @@
+package elevator;
+
+import java.util.Scanner;
+
+public class Request {
+	
+	public static void main(String[] args) {
+		String input;
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		while(scanner.hasNextLine()) {
+			input = scanner.nextLine();
+			input.replace(" ", "");
+			input.replace("\t", "");
+			if(input.equals("RUN")) {
+				break;
+			}
+		}
+		
+		scanner.close();
+	}
+
+}

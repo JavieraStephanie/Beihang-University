@@ -1,0 +1,6 @@
+package elevator3;
+
+public class InputHandler {
+	private String regex;
+
+}

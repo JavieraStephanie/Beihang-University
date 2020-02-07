@@ -1,0 +1,91 @@
+package taxi;
+
+import java.awt.Point;
+import java.util.ArrayList;
+
+import elevatormulti.Elevator;
+
+public class Taxi implements Runnable {
+	private int taxinum;
+	private int review;
+	private Point curPos;
+	private Point tarPos;
+	private Status taxiStat;
+	private Thread taxiThread = null;
+	
+	private Taxi (int taxinum) {
+		this.taxinum = taxinum;
+	}
+	
+	public int getTaxiNum() {
+		return this.taxinum;
+	}
+	
+	public int getReview() {
+		return this.review;
+	}
+	
+	public Point getCurPos() {
+		return this.curPos;
+	}
+	
+	public Point getTarPos() {
+		return this.tarPos;
+	}
+	
+	public Status getTaxiStat() {
+		return this.taxiStat;
+	}
+	
+	public void setCurPos(Point curPos) {
+		this.curPos = curPos;
+	}
+	
+	public void setTarPos(Point tarPos) {
+		this.tarPos = tarPos;
+	}
+	
+	public void setTaxiStat(Status taxiStat) {
+		this.taxiStat = taxiStat;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		this.taxiStat = Status.SERVING;
+		
+		this.taxiStat = Status.WAITING;
+		
+		try {
+			Thread.sleep(20000);
+			this.taxiStat = Status.STOP;
+			Thread.sleep(1000);
+			this.taxiStat = Status.WAITING;
+		} catch (Exception except) {
+			System.out.print(except.getMessage());
+		}
+		
+		taxiThread = null;
+		return;
+	}
+	
+	public void start() {
+		if (taxiThread == null) {
+			taxiThread = new Thread (this);
+			taxiThread.start();
+		}
+	}
+}
+
+class Taxis {
+	private ArrayList<Taxi> taxis = new ArrayList<Taxi>();
+	
+	public boolean addElevator (int elevnum) {
+		elevators.add(new Elevator(elevnum));
+		return true;
+	}
+	
+	public Elevator getElevator (int i) {
+		return elevators.get(i);
+	}
+}

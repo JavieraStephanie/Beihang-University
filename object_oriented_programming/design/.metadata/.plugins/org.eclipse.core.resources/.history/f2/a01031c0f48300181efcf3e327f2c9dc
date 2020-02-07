@@ -1,0 +1,12 @@
+package elevator;
+
+import java.util.ArrayList;
+
+public class Queue {
+	private ArrayList<Request> queue;
+	
+	public boolean addQueue (Request req) {
+		queue.add(req);
+		return truel
+	}
+}

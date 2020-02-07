@@ -1,0 +1,216 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{abowd1999towards}
+Abowd, G.D., Dey, A.K., Brown, P.J., Davies, N., Smith, M., Steggles, P.:
+  Towards a better understanding of context and context-awareness. In:
+  International symposium on handheld and ubiquitous computing. pp. 304--307.
+  Springer (1999)
+
+\bibitem{azuma2001recent}
+Azuma, R., Baillot, Y., Behringer, R., Feiner, S., Julier, S., MacIntyre, B.:
+  Recent advances in augmented reality. IEEE computer graphics and applications
+   21(6),  34--47 (2001)
+
+\bibitem{buchmann2004fingartips}
+Buchmann, V., Violich, S., Billinghurst, M., Cockburn, A.: Fingartips: gesture
+  based direct manipulation in augmented reality. In: Proceedings of the 2nd
+  international conference on Computer graphics and interactive techniques in
+  Australasia and South East Asia. pp. 212--221. ACM (2004)
+
+\bibitem{cohen2009interactivity}
+Cohen, R.: Interactivity with a mixed reality (Jul~21 2009), uS Patent
+  7,564,469
+
+\bibitem{DBLP:journals/tvcg/ComportMPC06}
+Comport, A.I., Marchand, {\'{E}}., Pressigout, M., Chaumette, F.: Real-time
+  markerless tracking for augmented reality: The virtual visual servoing
+  framework. {IEEE} Trans. Vis. Comput. Graph.  12(4),  615--628 (2006),
+  \url{https://doi.org/10.1109/TVCG.2006.78}
+
+\bibitem{DBLP:journals/tvcg/CoscoGBMO13}
+Cosco, F.I., Garre, C., Bruno, F., Muzzupappa, M., Otaduy, M.A.: Visuo-haptic
+  mixed reality with unobstructed tool-hand integration. {IEEE} Trans. Vis.
+  Comput. Graph.  19(1),  159--172 (2013),
+  \url{https://doi.org/10.1109/TVCG.2012.107}
+
+\bibitem{DBLP:conf/epia/CostaNNMLA07}
+Costa, R., Neves, J., Novais, P., Machado, J., Lima, L., Alberto, C.:
+  Intelligent mixed reality for the creation of ambient assisted living. In:
+  Progress in Artificial Intelligence, 13th Portuguese Conference on Aritficial
+  Intelligence, {EPIA} 2007, Workshops: GAIW, AIASTS, ALEA, AMITA, BAOSW, BI,
+  CMBSB, IROBOT, MASTA, STCS, and TEMA, Guimar{\~{a}}es, Portugal, December
+  3-7, 2007, Proceedings. pp. 323--331 (2007),
+  \url{https://doi.org/10.1007/978-3-540-77002-2\_27}
+
+\bibitem{costanza2009mixed}
+Costanza, E., Kunz, A., Fjeld, M.: Mixed reality: A survey. In: Human machine
+  interaction, pp. 47--68. Springer (2009)
+
+\bibitem{derakhshani2012introducing}
+Derakhshani, D.: Introducing Autodesk Maya 2013. John Wiley \& Sons (2012)
+
+\bibitem{derakhshani2012autodesk}
+Derakhshani, D., Derakhshani, R.L.: Autodesk 3ds Max 2013 essentials. John
+  Wiley \& Sons (2012)
+
+\bibitem{DBLP:conf/cw/EggesPM06}
+Egges, A., Papagiannakis, G., Magnenat{-}Thalmann, N.: An interactive mixed
+  reality framework for virtual humans. In: 5th International Conference on
+  Cyberworlds {(CW} 2006), 28-29 November 2006, Lausanne, Switzerland. pp.
+  165--172 (2006), \url{https://doi.org/10.1109/CW.2006.15}
+
+\bibitem{feiner1993knowledge}
+Feiner, S., Macintyre, B., Seligmann, D.: Knowledge-based augmented reality.
+  Communications of the ACM  36(7),  53--62 (1993)
+
+\bibitem{firestein2001olfactory}
+Firestein, S.: How the olfactory system makes sense of scents. Nature
+  413(6852),  211 (2001)
+
+\bibitem{hess2007essential}
+Hess, R.: The essential Blender: guide to 3D creation with the open source
+  suite Blender. No Starch Press (2007)
+
+\bibitem{hoellwarth2015head}
+Hoellwarth, Q.C.: Head-mounted display apparatus for retaining a portable
+  electronic device with display (Feb~17 2015), uS Patent 8,957,835
+
+\bibitem{hoffman2014feasibility}
+Hoffman, H.G., Meyer~III, W.J., Ramirez, M., Roberts, L., Seibel, E.J., Atzori,
+  B., Sharar, S.R., Patterson, D.R.: Feasibility of articulated arm mounted
+  oculus rift virtual reality goggles for adjunctive pain control during
+  occupational therapy in pediatric burn patients. Cyberpsychology, Behavior,
+  and Social Networking  17(6),  397--401 (2014)
+
+\bibitem{hughes2005mixed}
+Hughes, C.E., Stapleton, C.B., Hughes, D.E., Smith, E.M.: Mixed reality in
+  education, entertainment, and training. IEEE computer graphics and
+  applications  25(6),  24--30 (2005)
+
+\bibitem{ichikawa1995majic}
+Ichikawa, Y., Okada, K.i., Jeong, G., Tanaka, S., Matsushita, Y.: Majic
+  videoconferencing system: experiments, evaluation and improvement. In:
+  Proceedings of the Fourth European Conference on Computer-Supported
+  Cooperative Work ECSCW’95. pp. 279--292. Springer (1995)
+
+\bibitem{kim2014using}
+Kim, S.L., Suk, H.J., Kang, J.H., Jung, J.M., Laine, T.H., Westlin, J.: Using
+  unity 3d to facilitate mobile augmented reality game development. In: 2014
+  IEEE World Forum on Internet of Things (WF-IoT). pp. 21--26. IEEE (2014)
+
+\bibitem{kirkley2005creating}
+Kirkley, S.E., Kirkley, J.R.: Creating next generation blended learning
+  environments using mixed reality, video games and simulations. TechTrends
+  49(3),  42--53 (2005)
+
+\bibitem{DBLP:conf/ACMace/KnoerleinSH07}
+Knoerlein, B., Sz{\'{e}}kely, G., Harders, M.: Visuo-haptic collaborative
+  augmented reality ping-pong. In: Proceedings of the International Conference
+  on Advances in Computer Entertainment Technology, {ACE} 2007, Salzburg,
+  Austria, June 13-15, 2007. pp. 91--94 (2007),
+  \url{https://doi.org/10.1145/1255047.1255065}
+
+\bibitem{kress2019mixed}
+Kress, B.C., Wall, R.A.: Mixed reality display device (Apr~16 2019), uS Patent
+  App. 10/261,320
+
+\bibitem{DBLP:conf/vr/LedermannS05}
+Ledermann, F., Schmalstieg, D.: {APRIL} {A} high-level framework for creating
+  augmented reality presentations. In: {IEEE} Virtual Reality Conference 2005,
+  {VR} 2005, Bonn, Germany, March 12-16, 2005. pp. 187--194 (2005),
+  \url{https://doi.org/10.1109/VR.2005.8}
+
+\bibitem{lewis2013gaze}
+Lewis, J.R., Wei, Y., Crocco, R.L., Vaught, B.I., Kipman, A.A.A., Perez, K.S.:
+  Gaze detection in a see-through, near-eye, mixed reality display (Jul~16
+  2013), uS Patent 8,487,838
+
+\bibitem{liu2012sentiment}
+Liu, B.: Sentiment analysis and opinion mining. Synthesis lectures on human
+  language technologies  5(1),  1--167 (2012)
+
+\bibitem{mann2018all}
+Mann, S., Furness, T., Yuan, Y., Iorio, J., Wang, Z.: All reality: Virtual,
+  augmented, mixed (x), mediated (x, y), and multimediated reality. arXiv
+  preprint arXiv:1804.08386  (2018)
+
+\bibitem{milgram1994taxonomy}
+Milgram, P., Kishino, F.: A taxonomy of mixed reality visual displays. IEICE
+  TRANSACTIONS on Information and Systems  77(12),  1321--1329 (1994)
+
+\bibitem{DBLP:journals/computer/MineBGRY12}
+Mine, M.R., van Baar, J., Grundh{\"{o}}fer, A., Rose, D., Yang, B.:
+  Projection-based augmented reality in disney theme parks. {IEEE} Computer
+  45(7),  32--40 (2012), \url{https://doi.org/10.1109/MC.2012.154}
+
+\bibitem{oka2002real}
+Oka, K., Sato, Y., Koike, H.: Real-time fingertip tracking and gesture
+  recognition. IEEE Computer graphics and Applications  22(6),  64--71 (2002)
+
+\bibitem{olshannikova2015visualizing}
+Olshannikova, E., Ometov, A., Koucheryavy, Y., Olsson, T.: Visualizing big data
+  with augmented and virtual reality: challenges and research agenda. Journal
+  of Big Data  2(1), ~22 (2015)
+
+\bibitem{DBLP:journals/vc/OttTV07}
+Ott, R., Thalmann, D., Vexo, F.: Haptic feedback in mixed-reality environment.
+  The Visual Computer  23(9-11),  843--849 (2007),
+  \url{https://doi.org/10.1007/s00371-007-0159-y}
+
+\bibitem{papageorgiou1998general}
+Papageorgiou, C.P., Oren, M., Poggio, T.: A general framework for object
+  detection. In: Sixth International Conference on Computer Vision (IEEE Cat.
+  No. 98CH36271). pp. 555--562. IEEE (1998)
+
+\bibitem{DBLP:conf/cscw/PejsaKBOW16}
+Pejsa, T., Kantor, J., Benko, H., Ofek, E., Wilson, A.D.: Room2room: Enabling
+  life-size telepresence in a projected augmented reality environment. In:
+  Proceedings of the 19th {ACM} Conference on Computer-Supported Cooperative
+  Work {\&} Social Computing, {CSCW} 2016, San Francisco, CA, USA, February 27
+  - March 2, 2016. pp. 1714--1723 (2016),
+  \url{https://doi.org/10.1145/2818048.2819965}
+
+\bibitem{DBLP:conf/egve/PeternierVT06}
+Peternier, A., Vexo, F., Thalmann, D.: Wearable mixed reality system in less
+  than 1 pound. In: Proceedings of the 12th Eurographics Symposium on Virtual
+  Environments, {EGVE} 2006, Lisbon, Portugal, 2006. pp. 35--44 (2006),
+  \url{https://doi.org/10.2312/EGVE/EGVE06/035-044}
+
+\bibitem{DBLP:conf/vr/Rosenberg93a}
+Rosenberg, L.B.: Virtual fixtures: Perceptual tools for telerobotic
+  manipulation. In: {IEEE} Virtual Reality Annual International Symposium,
+  {VRAIS} '93, Seattle, Washington, USA, September 18-22, 1993, Proceedings.
+  pp. 76--82 (1993), \url{https://doi.org/10.1109/VRAIS.1993.380795}
+
+\bibitem{storring2004computer}
+St{\"o}rring, M., Moeslund, T.B., Liu, Y., Granum, E.: Computer vision-based
+  gesture recognition for an augmented reality interface. In: 4th IASTED
+  international conference on visualization, imaging, and image processing. pp.
+  766--771 (2004)
+
+\bibitem{thomas2012survey}
+Thomas, B.H.: A survey of visual, mixed, and augmented reality gaming.
+  Computers in Entertainment (CIE)  10(1), ~3 (2012)
+
+\bibitem{wang2010new}
+Wang, S., Mao, Z., Zeng, C., Gong, H., Li, S., Chen, B.: A new method of
+  virtual reality based on unity3d. In: 2010 18th international conference on
+  Geoinformatics. pp. 1--5. IEEE (2010)
+
+\bibitem{DBLP:conf/dimea/WetzelLWJ08}
+Wetzel, R., Lindt, I., Waern, A., Johnson, S.: The magic lens box: simplifying
+  the development of mixed reality games. In: Proceedings of the Third
+  International Conference on Digital Interactive Media in Entertainment and
+  Arts, {DIMEA} 2008, 10-12 September 2008, Athens, Greece. pp. 479--486
+  (2008), \url{https://doi.org/10.1145/1413634.1413719}
+
+\bibitem{DBLP:conf/ismar/ZhouDB08}
+Zhou, F., Duh, H.B., Billinghurst, M.: Trends in augmented reality tracking,
+  interaction and display: {A} review of ten years of {ISMAR}. In: 7th {IEEE}
+  and {ACM} International Symposium on Mixed and Augmented Reality, {ISMAR}
+  2008, Cambridge, UK, 15-18th September 2008. pp. 193--202 (2008),
+  \url{https://doi.org/10.1109/ISMAR.2008.4637362}
+
+\end{thebibliography}

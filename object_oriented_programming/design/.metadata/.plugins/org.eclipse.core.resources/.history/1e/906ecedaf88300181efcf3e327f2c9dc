@@ -1,0 +1,8 @@
+package elevator;
+
+public interface ElevatorInterface {
+	boolean moveUP();
+	boolean moveDOWN();
+	boolean doorMOVE();
+	double moveTime = 0.5, doorTime = 1.0;
+}

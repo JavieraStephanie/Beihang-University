@@ -1,0 +1,15 @@
+package taxi;
+
+import java.awt.Point;
+
+public class Taxi {
+	private int taxinum;
+	private int review;
+	private Point curPos;
+	private Point tarPos;
+	private Status taxiStat;
+	
+	private Taxi (int taxinum) {
+		this.taxinum = taxinum;
+	}
+}

@@ -1,0 +1,77 @@
+FLOOR:
+- Up Button
+- Down Button
+
+ELEVATOR
+- Current floor
+- Target floor buttons
+- Time
+- Direction
+- Can move:
+	set cur floor
+	set direction
+	set cur time
+	if cur floor == target floor, cur time adds the cur time with the request time
+	print string
+	
+
+REQUEST
+- Input
+- Input validation
+- Consists of target floor, direction, time
+
+QUEUE
+- Array of requests
+- Time of request handled
+- Add queue
+- Remove queue
+
+DISPATCHER
+- First request or not (just for the error handling if the time isn't 0)
+- If request is FR, then set the up/down button of that floor
+- If request is repeated before elevator come, invalid request
+- Move elevator to that requested floor
+- If the elevator going up to certain floor and then suddenly a new request to a floor below that one is made, then pickup
+- Same applies to going down
+
+EXCEPTIONS
+- If the request floor < 1 or > 10, will throw INVALID exception and the request will be ignored
+- If the request direction is down but cur floor is 1 or direction is up but cur floor is 10, throw INVALID exception and request ignored
+- If queue is empty cannot remove
+- Format error will result in exception thrown - Invalid Format
+- Repeated request will be ignored & throw SAME exception
+
+INPUT FORMAT:
+- (FR, %d, UP/DOWN, %d), Targetfloor, direction, time
+- (ER, %d, %d), Targetfloor, time
+
+OUTPUT FORMAT:
+FR Request:
+[FR, %d, UP/DOWN, %.0f], TargetFloor, direction, time / (%d, UP/DOWN/STILL, %.1f), currentFloor, direction, time
+
+ER Request:
+[ER, %d, %.0f], TargetFloor, time / (%d, UP/DOWN/STILL, %.1f), currentFloor, direction, time
+
+EXAMPLE INPUTS:
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(FR, 4, UP, 2)
+(ER, 5, 2)
+(ER, 3, 3)
+RUN
+
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(ER, 4, 2)
+(FR, 4, DOWN, 2)
+(FR, 4, UP, 3)
+RUN
+
+(FR, 1, UP, 0)
+(ER, 4, 1)
+(FR, 4, UP, 1)
+RUN
+
+(FR, 3, UP, 0)
+(FR, 3, UP, 0)
+RUN

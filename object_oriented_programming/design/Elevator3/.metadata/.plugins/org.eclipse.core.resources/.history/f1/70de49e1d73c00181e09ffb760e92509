@@ -1,0 +1,10 @@
+package elevator3;
+
+import java.sql.Time;
+
+public class Elevator {
+	private ElevatorStatus status;
+	private Integer currentfloor;
+	private Direction dir;
+
+}

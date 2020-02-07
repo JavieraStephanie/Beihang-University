@@ -1,0 +1,8 @@
+package elevator;
+
+import java.util.ArrayList;
+
+public class Elevator {
+	private int curFloor;
+	private ArrayList<Request> queue;
+}

@@ -1,0 +1,9 @@
+package elevator3;
+
+public class Elevator {
+	private ElevatorStatus status;
+	private Integer currentfloor;
+	private Time sys_time;
+	private Direction dir;
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Request.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Elevator-ALS (Aug 5, 2018 12:51:45 PM)</a> &gt; <a href="../../index.html" class="el_group">Elevator-ALS</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">elevatorals</a> &gt; <span class="el_source">Request.java</span></div><h1>Request.java</h1><pre class="source lang-java linenums">package elevatorals;
+
+public class Request {
+	
+<span class="fc" id="L5">	private String type = &quot;FR&quot;;</span>
+	private int req_floor;
+	private double req_time;
+	private Direction direction;
+	
+<span class="fc" id="L10">	public Request(int floor, Direction dir, double time) {</span>
+<span class="fc" id="L11">		this.req_floor = floor;</span>
+<span class="fc" id="L12">		this.direction = dir;</span>
+<span class="fc" id="L13">		this.req_time = time;</span>
+		
+<span class="fc bfc" id="L15" title="All 4 branches covered.">		if (dir == Direction.UP || dir == Direction.DOWN) {</span>
+<span class="fc" id="L16">			this.type = &quot;FR&quot;;</span>
+<span class="fc" id="L17">		}</span>
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">		else if (dir == Direction.STILL) {</span>
+<span class="fc" id="L19">			this.type = &quot;ER&quot;;</span>
+		}
+<span class="fc" id="L21">	}</span>
+	
+	public String getType() {
+<span class="fc" id="L24">		return this.type;</span>
+	}
+	
+	public int getFloor() {
+<span class="fc" id="L28">		return this.req_floor;</span>
+	}
+	
+	public double getTime() {
+<span class="fc" id="L32">		return this.req_time;</span>
+	}
+	
+	public Direction getDir() {
+<span class="fc" id="L36">		return this.direction;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Elevator-ALS (Aug 5, 2018 12:51:45 PM)</div></body></html>

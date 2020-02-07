@@ -1,0 +1,4 @@
+﻿1、可以参考https://blog.csdn.net/lirunling/article/details/79035089
+2、获取激活码
+http://www.tenable.com/products/nessus/nessus-plugins/obtain-an-activation-code
+填写注册信息提交，登录邮箱即可获得激活码。

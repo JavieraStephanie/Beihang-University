@@ -1,0 +1,80 @@
+package taxi;
+
+import java.awt.Point;
+
+import elevatormulti.Status;
+
+public class Taxi implements Runnable {
+	private int taxinum;
+	private int review;
+	private Point curPos;
+	private Point tarPos;
+	private Status taxiStat;
+	private Thread taxiThread = null;
+	
+	private Taxi (int taxinum) {
+		this.taxinum = taxinum;
+	}
+	
+	public int getTaxiNum() {
+		return this.taxinum;
+	}
+	
+	public int getReview() {
+		return this.review;
+	}
+	
+	public Point getCurPos() {
+		return this.curPos;
+	}
+	
+	public Point getTarPos() {
+		return this.tarPos;
+	}
+	
+	public Status getTaxiStat() {
+		return this.taxiStat;
+	}
+	
+	public void setCurPos(Point curPos) {
+		this.curPos = curPos;
+	}
+	
+	public void setTarPos(Point tarPos) {
+		this.tarPos = tarPos;
+	}
+	
+	public void setTaxiStat(Status taxiStat) {
+		this.taxiStat = taxiStat;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		this.taxiStat = Status.SERVING;
+		if (floorqueue.getQueueSize() > 0)
+			this.tarFloor = this.floorqueue.getQueue(0).getFloor();
+		else if (elevqueue.getQueueSize() > 0)
+			this.tarFloor = this.elevqueue.getQueue(0).getFloor();
+		
+		if (this.tarFloor > this.curFloor) {
+			moveUp();
+		}
+		else if (this.tarFloor < this.curFloor) {
+			moveDown();
+		}
+		else if (this.tarFloor == this.curFloor) {
+			doorMove();
+		}
+		this.status = Status.IDLE;
+		elevThread = null;
+		return;
+	}
+	
+	public void start() {
+		if (taxiThread == null) {
+			taxiThread = new Thread (this);
+			taxiThread.start();
+		}
+	}
+}

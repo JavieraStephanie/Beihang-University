@@ -1,0 +1,27 @@
+package elevator;
+
+import java.util.ArrayList;
+
+public class Elevator implements ElevatorInterface{
+	private int curFloor;
+	private ArrayList<Request> queue;
+	private Request req;
+	
+	@Override
+	public boolean moveUP() {
+		curStatus = new Query(getCurFloor() + 1, getCurTime() + moveTime, Request.Direction.UP);
+		return true;
+	}
+	@Override
+	public boolean moveDOWN() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean doorMOVE() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+}

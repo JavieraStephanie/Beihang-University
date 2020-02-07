@@ -1,0 +1,27 @@
+package taxi;
+
+public class Dispatcher implements Runnable {
+	private Taxis taxis = new Taxis();
+	private Queue queue = new Queue();
+	
+	public void initThings() throws InvalidRequestException, SameRequestException {
+		for (int i = 1; i <= 100; i++) {
+			taxis.addFloor(i);
+		}
+	}
+	
+	public boolean addReq(Request req) throws InvalidRequestException, SameRequestException {
+		return queue.addQueue(req);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+}

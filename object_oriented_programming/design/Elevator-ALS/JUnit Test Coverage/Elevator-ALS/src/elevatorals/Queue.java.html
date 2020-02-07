@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Queue.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Elevator-ALS (Aug 5, 2018 12:51:45 PM)</a> &gt; <a href="../../index.html" class="el_group">Elevator-ALS</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">elevatorals</a> &gt; <span class="el_source">Queue.java</span></div><h1>Queue.java</h1><pre class="source lang-java linenums">package elevatorals;
+
+import java.util.ArrayList;
+
+<span class="fc" id="L5">public class Queue {	</span>
+<span class="fc" id="L6">	private ArrayList&lt;Request&gt; queue = new ArrayList&lt;Request&gt;();</span>
+	private Request last;
+	
+	public boolean addQueue (Request req) throws InvalidRequestException, SameRequestException {
+		/**
+		 * Description: Adds new req to queue;
+		 * @REQUIRES: this.queue != NULL;
+		 * @MODIFIES: this.queue;
+		 * @EFFECTS: 
+		 * (\result==false)==&gt;(\old(\this).contains(req)==true)
+		 * (\this.size == \old(\this).size+1) &amp;&amp; (\this.contains(req)==true)&amp;&amp;(\result==true);
+		 */
+		try {
+<span class="pc bpc" id="L19" title="2 of 12 branches missed.">			if ((req.getDir() == Direction.DOWN &amp;&amp; req.getFloor() == 1) || (req.getDir() == Direction.UP &amp;&amp; req.getFloor() == 10) || req.getFloor() &lt; 1 || req.getFloor() &gt; 10) {</span>
+<span class="fc" id="L20">				throw new InvalidRequestException (&quot;INVALID &quot;);</span>
+			}
+<span class="fc bfc" id="L22" title="All 2 branches covered.">			if (queue.size() &gt;= 1) {</span>
+<span class="fc" id="L23">				last = queue.get(queue.size()-1);</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">				if (req.getFloor() == last.getFloor() &amp;&amp; req.getDir() == last.getDir()) {</span>
+<span class="fc" id="L25">					throw new SameRequestException (&quot;SAME &quot;);</span>
+				}
+			}
+<span class="fc" id="L28">			queue.add(req);</span>
+<span class="fc" id="L29">			return true;</span>
+		}
+<span class="fc" id="L31">		catch (Exception except) {</span>
+<span class="fc" id="L32">			System.out.println(except.getMessage() + &quot;[FR&quot; + &quot;, &quot; + req.getFloor() + &quot;, &quot; + req.getDir().toString() + &quot;, &quot; + req.getTime() + &quot;]&quot;);</span>
+<span class="fc" id="L33">			return false;</span>
+		}
+	}
+	
+	public boolean removeQueue (int i) throws CannotRemoveException {
+		/**
+		 * Description: Removes i(th) element from queue;
+		 * @REQUIRES: this.queue != {};
+		 * @MODIFIES: this.queue;
+		 * @EFFECTS: 
+		 * (this.queue.size == \old(\this.queue).size-1);
+		 * (\forall int e; e != i; this.queue.contains(e) == \old(this.queue).contains(e));
+		 * exceptional_behaviour(CannotRemoveException(&quot;Remove index is out of array bounds!&quot;));
+		 */
+		
+		try {
+<span class="pc bpc" id="L49" title="1 of 6 branches missed.">			if ((i &lt; 0)	|| i&gt;=queue.size()|| queue.size() == 0){</span>
+<span class="fc" id="L50">	            throw new CannotRemoveException (&quot;Remove index is out of array bounds!&quot;);</span>
+			}
+<span class="fc" id="L52">			queue.remove(i);</span>
+<span class="fc" id="L53">			return true;</span>
+		}
+<span class="fc" id="L55">		catch (Exception except) {</span>
+<span class="fc" id="L56">			System.out.print(except.getMessage());</span>
+<span class="fc" id="L57">			return false;</span>
+		}
+	}
+	
+	public Request getQueue (int i) {
+<span class="fc" id="L62">		return queue.get(i);</span>
+	}
+	
+	public int getQueueSize () {
+<span class="fc" id="L66">		return queue.size();</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Elevator-ALS (Aug 5, 2018 12:51:45 PM)</div></body></html>

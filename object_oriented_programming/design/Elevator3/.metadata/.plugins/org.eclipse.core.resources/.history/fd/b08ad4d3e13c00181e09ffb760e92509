@@ -1,0 +1,9 @@
+package elevator3;
+
+public interface SchedulableCarrier {
+	
+	public static void moveup (Integer dst) {
+		
+	}
+
+}

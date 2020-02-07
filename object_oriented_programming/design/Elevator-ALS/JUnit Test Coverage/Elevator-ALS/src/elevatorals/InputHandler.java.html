@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>InputHandler.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Elevator-ALS (Aug 5, 2018 12:51:45 PM)</a> &gt; <a href="../../index.html" class="el_group">Elevator-ALS</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">elevatorals</a> &gt; <span class="el_source">InputHandler.java</span></div><h1>InputHandler.java</h1><pre class="source lang-java linenums">package elevatorals;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class InputHandler {
+	private Scheduler sched;
+<span class="fc" id="L9">	private Scanner scanner = new Scanner(System.in);</span>
+<span class="fc" id="L10">	private String regex1 = &quot;\\(FR,\\S+,(UP|DOWN),\\S+\\)&quot;;</span>
+<span class="fc" id="L11">	private String regex2 = &quot;\\(ER,\\S+,\\S+\\)&quot;;</span>
+<span class="fc" id="L12">	private Pattern p = Pattern.compile(regex1);</span>
+	private String temp[];
+	
+<span class="fc" id="L15">	public InputHandler(Scheduler sched) {</span>
+<span class="fc" id="L16">		this.sched = sched;</span>
+<span class="fc" id="L17">	}</span>
+	
+	public void input() throws Exception {
+		String input;
+		
+<span class="nc bnc" id="L22" title="All 2 branches missed.">		while(scanner.hasNextLine()) {</span>
+<span class="nc" id="L23">			input = scanner.nextLine();</span>
+
+<span class="nc bnc" id="L25" title="All 2 branches missed.">			if(input.equals(&quot;RUN&quot;)) {</span>
+<span class="nc" id="L26">				break;</span>
+			}
+			
+			try {
+<span class="nc" id="L30">				input = input.replace(&quot; &quot;, &quot;&quot;).replace(&quot;\t&quot;, &quot;&quot;);</span>
+				
+<span class="nc" id="L32">				validateInput(input);</span>
+<span class="nc" id="L33">			}</span>
+<span class="nc" id="L34">			catch (Exception except) {</span>
+<span class="nc" id="L35">				System.out.print(except.getMessage());</span>
+			}
+		}
+		
+<span class="nc" id="L39">		scanner.close();</span>
+<span class="nc" id="L40">	}</span>
+	
+	public void validateInput(String input) {		
+		try {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">			if (input.indexOf(&quot;FR&quot;) != -1) {</span>
+<span class="fc" id="L45">				p = Pattern.compile(regex1);</span>
+				
+<span class="fc" id="L47">			}</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">			else if (input.indexOf(&quot;ER&quot;) != -1) {</span>
+<span class="fc" id="L49">				p = Pattern.compile(regex2);</span>
+			}
+			
+<span class="fc" id="L52">			Matcher m = p.matcher(input);</span>
+			
+<span class="fc bfc" id="L54" title="All 2 branches covered.">			if(m.matches() == false)</span>
+<span class="fc" id="L55">				throw new Exception (&quot;Invalid Format!&quot;);</span>
+			
+<span class="fc" id="L57">			input = input.replace(&quot;(&quot;, &quot;&quot;).replace(&quot;)&quot;, &quot;&quot;);</span>
+			
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">			if (input.indexOf(&quot;FR&quot;) != -1) {</span>
+<span class="nc" id="L60">				parseFloor(input);</span>
+<span class="nc" id="L61">			}</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">			else if (input.indexOf(&quot;ER&quot;) != -1) {</span>
+<span class="fc" id="L63">				parseElevator(input);</span>
+			}
+<span class="fc" id="L65">		}</span>
+<span class="fc" id="L66">		catch (Exception except) {</span>
+<span class="fc" id="L67">			System.out.print(except.getMessage());</span>
+		}
+<span class="fc" id="L69">	}</span>
+	
+	public void parseFloor(String input) throws Exception {
+<span class="fc" id="L72">		temp = input.split(&quot;,&quot;);</span>
+		int req_floor;
+<span class="fc" id="L74">		Direction direction = Direction.UP;</span>
+		double req_time;
+		
+		try {
+<span class="fc" id="L78">			req_floor = Integer.parseInt(temp[1]);</span>
+<span class="fc" id="L79">			req_time = Integer.parseInt(temp[3]);</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">			if(temp[2].equals(&quot;UP&quot;))</span>
+<span class="nc" id="L81">				direction = Direction.UP;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">			else if (temp[2].equals(&quot;DOWN&quot;))</span>
+<span class="nc" id="L83">				direction = Direction.DOWN;</span>
+			
+<span class="fc bfc" id="L85" title="All 2 branches covered.">			if (sched.addReq(new Request(req_floor, direction, req_time)) == false)</span>
+<span class="fc" id="L86">				throw new Exception (&quot;Cannot add query!&quot;);</span>
+		}
+<span class="fc" id="L88">		catch (Exception except) {</span>
+<span class="fc" id="L89">			System.out.print(except.getMessage());</span>
+		}
+<span class="fc" id="L91">	}</span>
+	
+	public void parseElevator(String input) throws Exception {
+		int req_floor;
+		double req_time;
+		
+<span class="fc" id="L97">		input = input.replace(&quot;#&quot;, &quot;&quot;);</span>
+<span class="fc" id="L98">		temp = input.split(&quot;,&quot;);</span>
+		
+		try {
+<span class="fc" id="L101">			req_floor = Integer.parseInt(temp[1]);</span>
+<span class="fc" id="L102">			req_time = Integer.parseInt(temp[2]);</span>
+			
+<span class="fc bfc" id="L104" title="All 2 branches covered.">			if (sched.addReq(new Request(req_floor, Direction.STILL, req_time)) == false)</span>
+<span class="fc" id="L105">				throw new Exception (&quot;Cannot add query!&quot;);</span>
+		}
+<span class="fc" id="L107">		catch (Exception except) {</span>
+<span class="fc" id="L108">			System.out.print(except.getMessage());</span>
+		}
+<span class="fc" id="L110">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Elevator-ALS (Aug 5, 2018 12:51:45 PM)</div></body></html>

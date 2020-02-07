@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.jprofiler.integrations.eclipse; singleton:=tr
+ ue
+Require-Bundle: org.eclipse.core.resources,org.eclipse.ui,org.eclipse.
+ core.runtime,org.eclipse.debug.core,org.eclipse.jdt.launching,org.ecl
+ ipse.jdt.debug.ui,org.eclipse.jdt.core,org.eclipse.jdt.ui,org.eclipse
+ .jdt.junit,org.eclipse.debug.ui,org.eclipse.ui.editors,org.eclipse.ui
+ .ide
+Bundle-ManifestVersion: 2
+Bundle-Vendor: ej-technologies GmbH
+Import-Package: org.eclipse.jst.server.core;resolution:=optional,org.e
+ clipse.jst.server.generic.core.internal;resolution:=optional,org.ecli
+ pse.pde.internal.launching.launcher;resolution:=optional,org.eclipse.
+ pde.internal.ui.launcher;resolution:=optional,org.eclipse.pde.launchi
+ ng;resolution:=optional,org.eclipse.pde.ui.launcher;resolution:=optio
+ nal
+Eclipse-LazyStart: true
+Export-Package: com.jprofiler.integrations.eclipse, com.jprofiler.inte
+ grations.eclipse.a, com.jprofiler.integrations.eclipse.delegates, com
+ .jprofiler.integrations.a, com.jprofiler.integrations.protocol
+Bundle-Version: 9.2.1
+Bundle-Name: JProfiler eclipse integration
+Bundle-ClassPath: eclipse4-jprofiler.jar
+Bundle-Localization: plugin
+Bundle-Activator: com.jprofiler.integrations.eclipse.EclipsePlugin
+

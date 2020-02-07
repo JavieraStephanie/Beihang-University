@@ -1,0 +1,47 @@
+DESIGN:
+
+Classes:
+
+* Main (done)
+* Input Handler (Input validation using regex) (done)
+* Request:
+	- Floor Request
+	- Elevator Request
+* Floor -> Queue of 10 floors each has:
+	- Up Button
+	- Down Button
+	- Know which floor it is
+* Elevator -> Queue of 3 elevators each:
+	- Has floor buttons
+	- Current floor display
+	- Can move up
+	- Can move down
+	- Records current time
+* Scheduler (Basically the GodManager)
+
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(FR, 4, UP, 2)
+(ER, 5, 2)
+(ER, 3, 3)
+(FR, 2, 5)
+
+(FR, 1, UP, 0)
+(ER, 10, 0)
+(ER, 4, 2)
+(FR, 4, DOWN, 2)
+(FR, 4, UP, 3)
+RUN
+
+(FR, 1, UP, 0)
+(ER, 4, 1)
+(FR, 4, UP, 1)
+RUN
+
+(FR, 3, UP, 0)
+(FR, 3, UP, 0)
+RUN
+
+(FR, 1, UP, 0)
+(ER, #1, 1, 0)
+(FR, 9, DOWN, 1); (ER, #2, 5, 2)

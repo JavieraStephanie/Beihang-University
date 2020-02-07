@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ALS.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">Elevator-ALS (Aug 5, 2018 12:51:45 PM)</a> &gt; <a href="../../index.html" class="el_group">Elevator-ALS</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">elevatorals</a> &gt; <span class="el_source">ALS.java</span></div><h1>ALS.java</h1><pre class="source lang-java linenums">package elevatorals;
+
+public class ALS extends Scheduler {
+Scheduler sched;
+	
+<span class="fc" id="L6">	public ALS(Scheduler sched) {</span>
+<span class="fc" id="L7">		this.sched = sched;</span>
+<span class="fc" id="L8">	}</span>
+	
+	public void pickUp(Queue queue, Elevator elevator) throws CannotRemoveException {
+		Request next;
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">		if (queue.getQueueSize() &gt; 1) {</span>
+<span class="fc" id="L13">			next = queue.getQueue(1);</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">			if (next.getType().equals(&quot;FR&quot;)) {</span>
+<span class="pc bpc" id="L15" title="1 of 6 branches missed.">				if (elevator.getCurFloor() == next.getFloor() &amp;&amp; elevator.getDir().equals(next.getDir().toString()) &amp;&amp; next.getTime() &lt;= elevator.getElevTime() + 1.0) {</span>
+<span class="fc" id="L16">					elevator.print(next);</span>
+<span class="fc" id="L17">					queue.removeQueue(1);</span>
+<span class="fc" id="L18">					setPickUp(true);</span>
+				};
+<span class="fc" id="L20">			}</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			else if (next.getType().equals(&quot;ER&quot;)) {</span>
+<span class="pc bpc" id="L22" title="1 of 4 branches missed.">				if (elevator.getCurFloor() == next.getFloor() &amp;&amp; next.getTime() &lt;= elevator.getElevTime()) {</span>
+<span class="fc" id="L23">					elevator.print(next);</span>
+<span class="fc" id="L24">					queue.removeQueue(1);</span>
+<span class="fc" id="L25">					setPickUp(true);</span>
+				};
+			}
+		}
+<span class="fc" id="L29">	}</span>
+	
+	public void runElevator() throws Exception {
+<span class="fc" id="L32">		Queue queue = sched.getQueue();</span>
+<span class="fc" id="L33">		Elevator elevator = getElevator();</span>
+<span class="fc" id="L34">		Request curReq = queue.getQueue(0);</span>
+		
+<span class="fc bfc" id="L36" title="All 2 branches covered.">		if(curReq.getTime() != 0) {</span>
+<span class="fc" id="L37">			System.out.println(&quot;Starting time should be 0!&quot;);</span>
+<span class="fc" id="L38">			return;</span>
+		}
+		
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		while (queue.getQueueSize() &gt; 0) {</span>
+<span class="fc" id="L42">			curReq = queue.getQueue(0);</span>
+<span class="fc" id="L43">			int targetFloor = curReq.getFloor();</span>
+			
+<span class="fc bfc" id="L45" title="All 2 branches covered.">			if(elevator.getCurFloor() &lt; targetFloor) {</span>
+<span class="fc" id="L46">				elevator.setDirection(&quot;UP&quot;);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">				while (elevator.getCurFloor() &lt; targetFloor) {</span>
+<span class="fc" id="L48">					elevator.moveUp();</span>
+<span class="fc" id="L49">					pickUp(queue, elevator);</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">					if (getPickUp()) {</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">						if (elevator.getCurFloor() == targetFloor) {</span>
+<span class="fc" id="L52">							setPickUp(false);</span>
+<span class="fc" id="L53">							continue;</span>
+						}
+<span class="fc" id="L55">						elevator.addElevTime(elevator.getDoorTime());</span>
+<span class="fc" id="L56">						setPickUp(false);</span>
+					}
+				}
+<span class="fc" id="L59">				elevator.print(curReq);</span>
+<span class="fc" id="L60">				elevator.addElevTime(elevator.getDoorTime());</span>
+<span class="fc" id="L61">			}</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">			else if(elevator.getCurFloor() &gt; targetFloor) {</span>
+<span class="fc" id="L63">				elevator.setDirection(&quot;DOWN&quot;);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">				while (elevator.getCurFloor() &gt; targetFloor) {</span>
+<span class="fc" id="L65">					elevator.moveDown();</span>
+<span class="fc" id="L66">					pickUp(queue, elevator);</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">					if (getPickUp()) {</span>
+<span class="nc" id="L68">						elevator.addElevTime(elevator.getDoorTime());</span>
+					}
+<span class="fc" id="L70">					setPickUp(false);</span>
+				}
+<span class="fc" id="L72">				elevator.print(curReq);</span>
+<span class="fc" id="L73">				elevator.addElevTime(elevator.getDoorTime());</span>
+<span class="fc" id="L74">			}</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">			else if (elevator.getCurFloor() == targetFloor){</span>
+<span class="fc" id="L76">				elevator.setDirection(&quot;STILL&quot;);</span>
+<span class="fc" id="L77">				elevator.doorMove();</span>
+<span class="fc" id="L78">				elevator.print(curReq);</span>
+			}
+<span class="fc" id="L80">			queue.removeQueue(0);</span>
+		}
+<span class="fc" id="L82">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>Elevator-ALS (Aug 5, 2018 12:51:45 PM)</div></body></html>

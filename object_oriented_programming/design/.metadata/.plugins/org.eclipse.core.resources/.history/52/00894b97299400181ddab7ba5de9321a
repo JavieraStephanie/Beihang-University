@@ -1,0 +1,10 @@
+package taxi;
+
+import java.awt.Point;
+
+public class Taxi {
+	private int taxinum;
+	private int review;
+	private Point curPos;
+	private Status taxiStat;
+}

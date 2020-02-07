@@ -1,0 +1,39 @@
+package elevator;
+
+import java.util.Scanner;
+
+public class Request {
+	
+	private int req_floor;
+	private double req_time;
+	private Direction direction;
+	
+	public Request(int floor, Direction dir, int time) {
+		
+	}
+	
+	public static void main(String[] args) {
+		String input;
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		while(scanner.hasNextLine()) {
+			//Scan the input strings
+			input = scanner.nextLine();
+			
+			//Replace all occurrences of " " and "\t" to nothing
+			input.replace(" ", "");
+			input.replace("\t", "");
+			
+			//If the input string equals to "RUN" means that the input event is done
+			if(input.equals("RUN")) {
+				break;
+			}
+			
+			
+		}
+		
+		scanner.close();
+	}
+
+}

@@ -1,0 +1,20 @@
+{(10, 1),(2,2)} + {(2, 3)}
+{(10, 1), (2, 1)} - {(1, 1), (3, 1)} + {(2, 2)}
+{((10, 1), (2, 1)} - {(1, 1), (3, 1)} + {(2, 2)}
+
+Poly:
+All coef without any '-' sign is a positive value and will be added
+Can just get rid of the '{}' sign: if the '+' is found before the '{}', then just leave it be
+				   if the '-' is found, then turn all polys next to it to negative value
+Sort
+Count
+Print
+Done!
+
+
+
+COMPLETE DESIGN:
+- 3D ARRAY
+THE EXPRESSION ARRAY: CONSISTS SEVERAL POLY AND OPERATORS
+THE POLY ARRAY: CONSISTS OF SEVERAL POLY ITEMS
+THE ITEM ARRAY: CONSISTS OF COEFFICIENT AND INDEX

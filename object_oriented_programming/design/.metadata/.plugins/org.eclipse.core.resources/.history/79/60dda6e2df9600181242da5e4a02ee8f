@@ -1,0 +1,355 @@
+package elevatormulti;
+
+import java.util.ArrayList;
+
+public class Elevator implements Movement, Runnable{	
+	/*overview: Elevator is a moving machine that is used to process passenger request in elevator system.
+	 * There will be two types of request that will be processed by an elevator, the floor request, that is a 
+	 * request made on certain floor, and elevator request, the request made in the elevator itself.
+	 * Therefore, each elevator will have its own queues to record the requests that it needs to process,
+	 * preventing to process other elevator's request or have its request processed by other elevator.
+	 * When a request is done being processed, that request will be removed from the queue, meaning that
+	 * it's done being processed and the system will call the OutputHandler to print out the record.
+	 * The elevator will know which request should be processed first, considering there exist pickup
+	 * requests that could be made after a main request is made and processed.
+	*/
+	OutputHandler output = new OutputHandler();
+	Scheduler sched;
+	Floors floors;
+	
+	private FloorQueue floorqueue = new FloorQueue();
+	private ElevatorQueue elevqueue = new ElevatorQueue();
+	
+	private long moveTime = 3000;
+	private long doorTime = 6000;
+	
+	private int tarFloor;
+	private int elevnum;
+	private int point = 0;
+	private int curFloor = 1;
+	private double elevTime = System.currentTimeMillis() * 0.001;
+	private String direction = "STILL";
+	private Status status = Status.IDLE;
+	private ElevButtons elevbuttons = new ElevButtons();
+	private Thread elevThread = null;
+	private boolean isPickUp = false;
+	
+	public Elevator(int elevnum) {
+		this.elevnum = elevnum;
+	}
+	
+	public synchronized boolean addFloorReq(FloorRequest req) throws InvalidRequestException, SameRequestException {
+		return floorqueue.addQueue(req);
+	}
+	
+	public synchronized boolean addElevReq(ElevatorRequest req) throws InvalidRequestException, SameRequestException {
+		return elevqueue.addQueue(req);
+	}
+	
+	public int getTargetFloor() {
+		return this.tarFloor;
+	}
+	
+	public int getElevNum() {
+		return this.elevnum;
+	}
+	
+	public int getCurFloor() {
+		return this.curFloor;
+	}
+	
+	public double getElevTime() {
+		return this.elevTime;
+	}
+	
+	public String getDir() {
+		return this.direction;
+	}
+	
+	public Status getElevStatus() {
+		return this.status;
+	}
+	
+	public ElevButtons getElevButtons() {
+		return this.elevbuttons;
+	}
+	
+	public void setCurFloor(int floor) {
+		this.curFloor = floor;
+	}
+	
+	public void setDirection(String dir) {
+		this.direction = dir;
+	}
+	
+	public boolean getPickUp() {
+		return this.isPickUp;
+	}
+	
+	public void setElevStatus(Status status) {
+		this.status = status;
+	}
+	
+	public void printFloor(FloorRequest req) {
+		int target = req.getFloor();
+		double time = req.getTime();
+		String dir = req.getDir().toString();
+		
+		System.out.printf("[FR, %d, %s, %.0f] / (%d, %s, %.1f)\n", target, dir, time, this.curFloor, this.direction, this.elevTime);
+		output.writeFloor(target, dir, time, this.elevnum, this.curFloor, this.direction, this.point);
+	}
+	
+	public void printElevator(ElevatorRequest req) {
+		int target = req.getFloor();
+		double time = req.getTime();
+		System.out.printf("[ER, %d, %.0f] / (%d, %s, %.1f)\n", target, time, this.curFloor, this.direction, this.elevTime);
+		output.writeElev(target, time, this.elevnum, this.curFloor, this.direction, this.point);
+	}
+	
+	public void printFloor(int target, double time, String dir) {
+		System.out.printf("[FR, %d, %s, %.0f] / (%d, %s, %.1f)\n", target, dir, time, this.curFloor, this.direction, this.elevTime);
+		output.writeFloor(target, dir, time, this.elevnum, this.curFloor, this.direction, this.point);
+	}
+	
+	public void printElevator(int target, double time) {
+		System.out.printf("[ER, %d, %.0f] / (%d, %s, %.1f)\n", target, time, this.curFloor, this.direction, this.elevTime);
+		output.writeElev(target, time, this.elevnum, this.curFloor, this.direction, this.point);
+	}
+	
+	public void setData(Scheduler sched) {
+		this.sched = sched;
+		this.floors = this.sched.getFloors();
+	}
+	
+	@Override
+	public boolean moveUp() {
+		while(this.curFloor < this.tarFloor) {
+			this.direction = "UP";
+			try {
+				Thread.sleep(this.moveTime);
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			this.curFloor += 1;
+			this.point += 1;
+			try {
+				pickUp();
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			if (isPickUp) {
+				if (this.curFloor == this.tarFloor) {
+					isPickUp = false;
+					continue;
+				}
+				doorMove();
+				isPickUp = false;
+			}
+		}
+		if (this.floors.getFloor(this.curFloor-1).getUpStatus()) {
+			printFloor(this.floorqueue.getQueue(0));
+			try {
+				this.floorqueue.removeQueue(0);
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			this.floors.getFloor(this.curFloor-1).setUpStatus(false, sched);
+		}
+		if (this.elevbuttons.getElevButton(this.curFloor-1).getButtonStat()) {
+			printElevator(this.elevqueue.getQueue(0));
+			this.elevbuttons.getElevButton(this.curFloor-1).setButtonStat(false);
+		}
+		doorMove();
+		return true;
+	}
+
+	@Override
+	public boolean moveDown() {
+		while(this.curFloor > this.tarFloor) {
+			this.direction = "DOWN";
+			try {
+				Thread.sleep(this.moveTime);
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			this.curFloor -= 1;
+			this.point += 1;
+			try {
+				pickUp();
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			if (isPickUp) {
+				if (this.curFloor == this.tarFloor) {
+					isPickUp = false;
+					continue;
+				}
+				doorMove();
+				isPickUp = false;
+			}
+		}
+		if (this.floors.getFloor(this.curFloor-1).getDownStatus()) {
+			printFloor(this.floorqueue.getQueue(0));
+			try {
+				this.floorqueue.removeQueue(0);
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			this.floors.getFloor(this.curFloor-1).setDownStatus(false, sched);
+		}
+		if (this.elevbuttons.getElevButton(this.curFloor-1).getButtonStat()) {
+			printElevator(this.elevqueue.getQueue(0));
+			this.elevbuttons.getElevButton(this.curFloor-1).setButtonStat(false);
+		}
+		doorMove();
+		return true;
+	}
+
+	@Override
+	public boolean doorMove() {
+		this.direction = "STILL";
+		try {
+			Thread.sleep(this.doorTime);
+		} catch (Exception except) {
+			System.out.print(except.getMessage());
+		}
+		this.floors.getFloor(this.curFloor-1).setUpStatus(false, sched);
+		return true;
+	}
+	
+	public void pickUp() throws CannotRemoveException {
+		Floor floor = floors.getFloor(this.curFloor-1);
+		ElevButton button = this.elevbuttons.getElevButton(this.curFloor-1);
+		
+		if (this.direction.equals("UP") && floor.getUpStatus() == true && floor.getFloorNum()<this.tarFloor) {
+			if (this.floorqueue.contains(this.curFloor, this.direction)) {
+				floor.setUpStatus(false, sched);
+				System.out.println("THIS ONE");
+				printFloor(this.curFloor, floor.getUpTime(), "UP");
+				isPickUp = true;
+			}
+		}
+		
+		else if (this.direction.equals("DOWN") && floor.getDownStatus() == true && floor.getFloorNum()<this.tarFloor) {
+			if (this.floorqueue.contains(this.curFloor, this.direction)) {
+				floor.setDownStatus(false, sched);
+				printFloor(this.curFloor, floor.getDownTime(), "DOWN");
+				isPickUp = true;
+			}
+		}
+		
+		if (button.getButtonStat() == true && floor.getFloorNum()<this.tarFloor) {
+			if (this.elevqueue.contains(this.curFloor)) {
+				button.setButtonStat(false);
+				System.out.println(this.direction);
+				printElevator(this.curFloor, button.getButtonTime());
+				isPickUp = true;
+			}
+		}
+	}
+	
+
+	@Override
+	public void run() {
+		this.status = Status.RUNNING;
+		if (floorqueue.getQueueSize() > 0)
+			this.tarFloor = this.floorqueue.getQueue(0).getFloor();
+		else if (elevqueue.getQueueSize() > 0)
+			this.tarFloor = this.elevqueue.getQueue(0).getFloor();
+		
+		if (this.tarFloor > this.curFloor) {
+			moveUp();
+		}
+		else if (this.tarFloor < this.curFloor) {
+			moveDown();
+		}
+		else if (this.tarFloor == this.curFloor) {
+			doorMove();
+		}
+		this.status = Status.IDLE;
+		elevThread = null;
+		return;
+	}
+	
+	public void start() {
+		if (elevThread == null) {
+			elevThread = new Thread (this);
+			elevThread.start();
+		}
+	}
+	
+	public boolean repOK(){
+		
+		return true;
+	}
+}
+
+class Elevators {
+	private ArrayList<Elevator> elevators = new ArrayList<Elevator>();
+	
+	public boolean addElevator (int elevnum) {
+		elevators.add(new Elevator(elevnum));
+		return true;
+	}
+	
+	public Elevator getElevator (int i) {
+		return elevators.get(i);
+	}
+}
+
+class ElevButton {
+	int buttonnum;
+	boolean on = false;
+	double buttontime;
+	
+	public ElevButton(int buttonnum) {
+		this.buttonnum = buttonnum;
+	}
+	
+	public int getButtonNum() {
+		return this.buttonnum;
+	}
+	
+	public boolean getButtonStat() {
+		return this.on;
+	}
+	
+	public double getButtonTime() {
+		return this.buttontime;
+	}
+	
+	public void setButtonStat(boolean on) {
+		this.on = on;
+	}
+	
+	public synchronized void setButtonStat(boolean on, Elevator elev) {
+		this.on = on;
+		if (this.on == true) {
+			try {
+				if (elev.addElevReq(new ElevatorRequest(this.buttonnum, this.buttontime, elev.getElevNum())) == false)
+					throw new Exception ("Cannot add query!");
+			} catch (Exception except) {
+				System.out.print(except.getMessage());
+			}
+			if (elev.getElevStatus() == Status.IDLE)
+				elev.start();
+		}
+	}
+	
+	public void setButtonTime(double time) {
+		this.buttontime = time;
+	}
+}
+
+class ElevButtons {
+	private ArrayList<ElevButton> elevbuttons = new ArrayList<ElevButton>();
+	
+	public boolean addButton (int buttonnum) throws InvalidRequestException, SameRequestException {
+		elevbuttons.add(new ElevButton(buttonnum));
+		return true;
+	}
+	
+	public ElevButton getElevButton (int i) {
+		return elevbuttons.get(i);
+	}
+}

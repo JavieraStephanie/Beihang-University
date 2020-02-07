@@ -1,0 +1,9 @@
+package taxi;
+
+public class Dispatcher {
+	private Queue queue = new Queue();
+	
+	public boolean addReq(Request req) throws InvalidRequestException, SameRequestException {
+		return queue.addQueue(req);
+	}
+}

@@ -1,0 +1,15 @@
+package taxi;
+
+public class Dispatcher implements Runnable {
+	private Queue queue = new Queue();
+	
+	public boolean addReq(Request req) throws InvalidRequestException, SameRequestException {
+		return queue.addQueue(req);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,10 @@
+package elevator;
+
+public class Scheduler {
+	
+	private Elevator elevator;
+	private Queue queue;
+	
+	while (queue.getQueueSize() > 0)
+
+}

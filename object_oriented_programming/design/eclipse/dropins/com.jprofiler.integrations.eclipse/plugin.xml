@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+    <extension
+    point="org.eclipse.ui.preferencePages">
+    <page
+      name="JProfiler"
+      class="com.jprofiler.integrations.eclipse.PreferencePage"
+      id="com.jprofiler.integrations.eclipse.preferences">
+    </page>
+  </extension>
+  
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Attach JProfiler to local JVM"
+            visible="true"
+            id="com.jprofiler.integrations.eclipse.attach">
+         <menu
+               label="%RunMenu.label"
+               path="additions"
+               id="org.eclipse.ui.run">
+            <separator
+                  name="jprofilerGroup">
+            </separator>
+         </menu>
+         <action
+               label="Attach JProfiler to a Running JVM"
+               icon="icons/jprofiler.png"
+               class="com.jprofiler.integrations.eclipse.AttachAction"
+               tooltip="Attach JProfiler to a running JVM"
+               menubarPath="org.eclipse.ui.run/jprofilerGroup"
+               toolbarPath="jprofilerGroup"
+               id="com.jprofiler.integrations.eclipse.attach">
+         </action>
+      </actionSet>
+   </extension>
+  
+
+  <extension point="org.eclipse.debug.core.launchDelegates">
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.LocalJavaDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.LocalJavaDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.jdt.launching.localJavaApplication">
+    </launchDelegate>
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.AppletJavaDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.AppletJavaDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.jdt.launching.javaApplet">
+    </launchDelegate>
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.JUnitJavaDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.JUnitJavaDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.jdt.junit.launchconfig">
+    </launchDelegate>
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.WorkbenchDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.WorkbenchDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.pde.ui.RuntimeWorkbench">
+    </launchDelegate>
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.EquinoxDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.EquinoxDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.pde.ui.EquinoxLauncher">
+    </launchDelegate>
+    <launchDelegate
+          delegate="com.jprofiler.integrations.eclipse.delegates.JUnitWorkbenchDelegate"
+          id="com.jprofiler.integrations.eclipse.delegates.JUnitWorkbenchDelegate"
+          modes="profile"
+          name="JProfiler"
+          type="org.eclipse.pde.ui.JunitLaunchConfig">
+    </launchDelegate>
+  </extension>
+
+  <extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+    <launchConfigurationTabGroup
+      type="org.eclipse.jdt.launching.localJavaApplication"
+      helpContextId="org.eclipse.jdt.debug.ui.launchConfigHelpContext.local_java_application"
+      class="org.eclipse.jdt.internal.debug.ui.launcher.LocalJavaApplicationTabGroup"
+      id="org.eclipse.jdt.debug.ui.launchConfigurationTabGroup.localJavaApplication">
+      <launchMode
+        mode="profile"
+        description="Create a configuration that will launch a Java application with JProfiler.">
+      </launchMode>
+    </launchConfigurationTabGroup>
+    <launchConfigurationTabGroup
+      type="org.eclipse.jdt.launching.javaApplet"
+      helpContextId="org.eclipse.jdt.debug.ui.launchConfigHelpContext.java_applet"
+      class="org.eclipse.jdt.internal.debug.ui.launcher.JavaAppletTabGroup"
+      id="org.eclipse.jdt.debug.ui.launchConfigurationTabGroup.javaApplet">
+      <launchMode
+        mode="profile"
+        description="Create a configuration that will launch a Java applet with JProfiler.">
+      </launchMode>
+    </launchConfigurationTabGroup>
+    <launchConfigurationTabGroup
+      type="org.eclipse.jdt.junit.launchconfig"
+      helpContextId="org.eclipse.jdt.junit.junit_tab_group"
+      class="org.eclipse.jdt.internal.junit.launcher.JUnitTabGroup"
+      id="org.eclipse.jdt.junit.launchConfigurationTabGroup.junit">
+      <launchMode
+        description="Create a configuration that will launch a JUnit test with JProfiler."
+        mode="profile">
+      </launchMode>
+    </launchConfigurationTabGroup>
+    <launchConfigurationTabGroup
+      type="org.eclipse.pde.ui.RuntimeWorkbench"
+      class="org.eclipse.pde.ui.launcher.EclipseLauncherTabGroup"
+      id="org.eclipse.pde.ui.launcher.WorkbenchLauncherTabGroup">
+      <launchMode
+        description="Create a configuration to launch an Eclipse application with JProfiler."
+        mode="profile">
+      </launchMode>
+    </launchConfigurationTabGroup>
+      <launchConfigurationTabGroup
+            type="org.eclipse.pde.ui.EquinoxLauncher"
+            class="org.eclipse.pde.ui.launcher.OSGiLauncherTabGroup"
+            id="org.eclipse.pde.ui.launcher.EquinoxLauncherTabGroup">
+         <launchMode
+               description="Create a configuration to launch an OSGi framework with JProfiler."
+               mode="profile">
+      </launchMode>
+    </launchConfigurationTabGroup>
+    
+    <launchConfigurationTabGroup
+      type="org.eclipse.pde.ui.JunitLaunchConfig"
+      class="org.eclipse.pde.ui.launcher.JUnitTabGroup"
+      id="org.eclipse.pde.ui.launcher.JUnitTabGroup">
+      <launchMode
+        description="Create a configuration that will launch a JUnit plug-in test with JProfiler."
+        mode="profile">
+      </launchMode>
+    </launchConfigurationTabGroup>
+  </extension>
+
+  <extension
+    point="org.eclipse.debug.ui.launchShortcuts">
+
+
+    <shortcut
+      label="Java Application"
+      icon="icons/java_app.gif"
+      helpContextId="org.eclipse.jdt.debug.ui.shortcut_local_java_application"
+      modes="profile"
+      class="org.eclipse.jdt.debug.ui.launchConfigurations.JavaApplicationLaunchShortcut"
+      id="org.eclipse.jdt.debug.ui.localJavaShortcut">
+      <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate>
+                <or>
+               	  <test property="org.eclipse.jdt.launching.hasMain"/>
+               	  <and>
+               	     <test property="org.eclipse.jdt.launching.isContainer"/>
+               	     <test property="org.eclipse.jdt.launching.hasProjectNature" args="org.eclipse.jdt.core.javanature"/>
+               	  </and>
+               	</or>
+               </iterate>
+               </with>
+           </enablement>
+      </contextualLaunch>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.debug.ui.DebugPerspective">
+      </perspective>
+    </shortcut>
+    <shortcut
+      label="Java Applet"
+      icon="icons/java_applet.gif"
+      helpContextId="org.eclipse.jdt.debug.ui.shortcut_java_applet"
+      modes="profile"
+      class="org.eclipse.jdt.debug.ui.launchConfigurations.JavaAppletLaunchShortcut"
+      id="org.eclipse.jdt.debug.ui.javaAppletShortcut">
+      <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+             <count value="1"/>
+               <iterate>
+               	<or>
+               	  <test property="org.eclipse.jdt.launching.extendsClass" args="java.applet.Applet"/>
+               	  <and>
+               	     <test property="org.eclipse.jdt.launching.isContainer"/>
+               	     <test property="org.eclipse.jdt.launching.hasProjectNature" args="org.eclipse.jdt.core.javanature"/>
+               	  </and>
+               	 </or>
+               </iterate>
+           	</with>
+           </enablement>
+      </contextualLaunch>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.debug.ui.DebugPerspective">
+      </perspective>
+    </shortcut>
+    <shortcut
+      label="JUnit Test"
+      icon="icons/julaunch.gif"
+      helpContextId="org.eclipse.jdt.junit.launch_shortcut"
+      class="org.eclipse.jdt.junit.launcher.JUnitLaunchShortcut"
+      modes="profile"
+      id="org.eclipse.jdt.junit.junitShortcut">
+      <contextualLaunch>
+            <enablement>
+               <with variable="selection">
+                  <count value="1"/>
+               	  <iterate>
+                     <adapt type="org.eclipse.jdt.core.IJavaElement">
+		                <test property="org.eclipse.jdt.core.isInJavaProject"/>
+		                <test property="org.eclipse.jdt.core.hasTypeOnClasspath" value="junit.framework.Test"/>
+		                <test property="org.eclipse.jdt.junit.canLaunchAsJUnit" forcePluginActivation="true"/>
+		             </adapt>
+		          </iterate>
+               </with>
+            </enablement>
+      </contextualLaunch>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.debug.ui.DebugPerspective">
+      </perspective>
+    </shortcut>
+    <shortcut
+      label="JUnit Plug-in Test"
+      icon="icons/julaunchpgn.gif"
+      modes="profile"
+      class="org.eclipse.pde.ui.launcher.JUnitWorkbenchLaunchShortcut"
+      id="org.eclipse.pde.ui.junitWorkbenchShortcut">
+    <contextualLaunch>
+            <enablement>
+               <with variable="selection">
+                  <count value="1"/>
+               	  <iterate>
+                     <adapt type="org.eclipse.jdt.core.IJavaElement">
+		                <test property="org.eclipse.jdt.core.isInJavaProject"/>
+		                <test property="org.eclipse.jdt.core.hasTypeOnClasspath" value="junit.framework.Test"/>
+		                <test property="org.eclipse.jdt.junit.canLaunchAsJUnit" forcePluginActivation="true"/>
+		             </adapt>
+		          </iterate>
+               </with>
+            </enablement>
+      </contextualLaunch>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.debug.ui.DebugPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.pde.PDEPerspective">
+      </perspective>
+    </shortcut>
+    <shortcut
+      label="Eclipse Application"
+      icon="icons/eclipse_launcher.gif"
+      modes="profile"
+      class="org.eclipse.pde.ui.launcher.EclipseLaunchShortcut"
+      id="org.eclipse.pde.ui.runtimeWorkbenchShortcut">
+      <enablement>
+        <with variable="selection">
+          <count value="*"/>
+        </with>
+      </enablement>
+      <contextualLaunch>
+        <enablement>
+           <with variable="selection">
+              <or>
+                <and>
+                  <count value="1"/>
+                  <iterate>
+                      <test property="org.eclipse.debug.ui.projectNature" value="org.eclipse.pde.PluginNature"/>
+                      <adapt type="org.eclipse.core.resources.IProject"/>
+                  </iterate>
+                </and>
+                <count value="0"/>
+              </or>
+           </with>
+        </enablement>
+      </contextualLaunch>         
+      <perspective
+        id="org.eclipse.jdt.ui.JavaPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.debug.ui.DebugPerspective">
+      </perspective>
+      <perspective
+        id="org.eclipse.pde.PDEPerspective">
+      </perspective>
+    </shortcut>
+      <shortcut
+            label="OSGi Framework"
+            icon="icons/bundle_obj.gif"
+            modes="profile"
+            class="org.eclipse.pde.ui.launcher.OSGiLaunchShortcut"
+            id="org.eclipse.pde.ui.EquinoxLaunchShortcut">
+         <enablement>
+           <with variable="selection">
+             <count value="*"/>
+           </with>
+         </enablement>
+         <contextualLaunch>
+            <enablement>
+               <with variable="selection">
+                  <or>
+                  	<and>
+	                  <count value="1"/>
+	                  <iterate>
+		                  <test property="org.eclipse.debug.ui.projectNature" value="org.eclipse.pde.PluginNature"/>
+                   		  <adapt type="org.eclipse.core.resources.IProject"/>
+		              </iterate>
+		            </and>
+		            <count value="0"/>
+		          </or>
+               </with>
+           </enablement>
+         </contextualLaunch>         
+         <perspective
+               id="org.eclipse.jdt.ui.JavaPerspective">
+         </perspective>
+         <perspective
+               id="org.eclipse.jdt.ui.JavaHierarchyPerspective">
+         </perspective>
+         <perspective
+               id="org.eclipse.jdt.ui.JavaBrowsingPerspective">
+         </perspective>
+         <perspective
+               id="org.eclipse.debug.ui.DebugPerspective">
+         </perspective>
+         <perspective
+               id="org.eclipse.pde.PDEPerspective">
+         </perspective>
+         <configurationType
+               id="org.eclipse.pde.ui.EquinoxLauncher">
+         </configurationType>
+      </shortcut>
+    
+  </extension>
+  <extension
+        point="org.eclipse.ui.editors">
+     <editor
+           default="true"
+           extensions="jps,hprof,hpz"
+           icon="icons/jprofiler.png"
+           id="com.jprofiler.integrations.eclipse.snapshotEditor"
+           launcher="com.jprofiler.integrations.eclipse.JpsEditorLauncher"
+           name="JProfiler ">
+     </editor>
+  </extension>
+  <extension
+        point="org.eclipse.jst.server.core.serverProfilers">
+     <serverProfiler
+           class="com.jprofiler.integrations.eclipse.delegates.ServerJProfilerDelegate"
+           name="JProfiler" id="JProfiler">
+     </serverProfiler>
+  </extension>
+
+</plugin>

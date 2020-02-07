@@ -1,0 +1,8 @@
+package elevator;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Queue {
+	private Queue<Request> queue = new LinkedList<>();
+}

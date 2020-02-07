@@ -1,0 +1,45 @@
+﻿Request:
+- T: Long
+- hasCar(): boolean
+- getT(): Long
+
+Map:
+- dig: int[][]
+- getDig(): int[][]
+
+RequestQueue:
+- hasRequest(req: Request): boolean
+- remove(now: Request): void
+- isEmpty(): boolean
+- peek(): Request
+- poll(): Request
+- offer(req： Request): void
+
+Dispatcher:
+- addNearby(now_time: Long, now_req: Request）： void
+- decide(now_time: Long, now_req: Request): void
+- getCarAtStatus(status: Car.CarStatus): ArrayList<Integer>
+
+Car:
+- dx: int[]
+- dy: int[]
+- ind: int
+- status: CarStatus
+- wait_time: double
+- credit: int
+- dis: int[][]
+- used: int[][]
+- carry_req: Request
+- Car(ind_in: int)
+- getInd(): int
+- addCredit(x: int): void
+- getCredit(): int
+- spfa(src: Position, dst: Position): void
+- canMoveOneStep(dir: int, ori_pos: Position, now_pos: Position): boolean
+- checkNeedRest(): void
+- getStatus(): CarStatus
+- setStatus(status_in: CarStatus): void
+- getCarDistance(now_car: Car): int
+- moveOneStepRandom(): void
+- getStrStatus(): String
+- getInfo(): String

@@ -1,0 +1,6 @@
+﻿nubby tweed = 苏格兰布的转角长沙发/粗花尼外罩
+slacks = 长裤/穿得很随便
+FBI = 美国工业联邦政府/美国联邦调查局
+Pall Mall cigarettes = 黑猫牌香烟/佩尔魔牌香烟 should be长红
+See's Nuts & Chews = 各种干果和口香糖/西伊果仁口香糖
+M & M's = 糖果/摩摩糖蜜钱

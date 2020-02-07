@@ -1,0 +1,11 @@
+package elevator3;
+
+public class InputHandler {
+	private String regex;
+	
+	public Boolean validate (String valid) {
+		return null;
+		
+	}
+
+}

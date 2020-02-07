@@ -1,0 +1,85 @@
+ sysname R2                                                                     
+#                                                                               
+#                                                                               
+interface Serial4/0                                                             
+ ppp pap local-user RTB password cipher $c$3$MCa0Qct3AULJLpBospy4RrfYfO1Ggg==   
+ ip address 129.0.0.2 255.255.255.0                                             
+#                                                                               
+ sysname R1                                                                     
+#                                                                               
+interface Serial4/0                                                             
+ ppp authentication-mode pap domain system                                      
+ ip address 219.224.160.20 255.255.255.0                                        
+#                                                                               
+#                                                                               
+local-user RTB class network                                                    
+ password cipher $c$3$qXLi9HAfURydNIL1qRlVR8mv1ix/7Q==                          
+ service-type ppp                                                               
+#                                                                               
+return                                                                          
+                                                                                
+<R1>debugging ppp pap all                                                       
+<R1>terminal debugging                                                          
+The current terminal is enabled to display debugging logs.                      
+<R1>sy                                                                          
+System View: return to User View with Ctrl+Z.                                   
+[R1]int se 4/0                                                                  
+[R1-Serial4/0]sh                                                                
+[R1-Serial4/0]*Jan  1 00:14:41:628 2011 R1 PPP/7/PAP_EVENT_0:                   
+  PPP Event:                                                                    
+      Serial4/0 PAP Lower Down Event                                            
+      State ServerSuccess                                                       
+*Jan  1 00:14:41:628 2011 R1 PPP/7/PAP_STATE_0:                                 
+  PPP State Change:                                                             
+      Serial4/0 PAP: ServerSuccess --> Initial                                  
+%Jan  1 00:14:41:633 2011 R1 IFNET/5/LINK_UPDOWN: Line protocol state on the int
+erface Serial4/0 changed to down.                                               
+%Jan  1 00:14:41:635 2011 R1 IFNET/3/PHY_UPDOWN: Physical state on the interface
+ Serial4/0 changed to down.                                                     
+                                                                                
+[R1-Serial4/0]                                                                  
+[R1-Serial4/0]un sh                                                             
+[R1-Serial4/0]%Jan  1 00:14:52:407 2011 R1 IFNET/3/PHY_UPDOWN: Physical state on
+ the interface Serial4/0 changed to up.                                         
+*Jan  1 00:14:54:970 2011 R1 PPP/7/PAP_EVENT_0:                                 
+  PPP Event:                                                                    
+      Serial4/0 PAP Initial Event                                               
+      State Initial                                                             
+*Jan  1 00:14:54:970 2011 R1 PPP/7/PAP_EVENT_0:                                 
+  PPP Event:                                                                    
+      Serial4/0 PAP Server Lower Up Event                                       
+      State Initial                                                             
+*Jan  1 00:14:54:970 2011 R1 PPP/7/PAP_STATE_0:                                 
+  PPP State Change:                                                             
+      Serial4/0 PAP: Initial --> ServerListen                                   
+%Jan  1 00:14:54:971 2011 R1 IFNET/5/LINK_UPDOWN: Line protocol state on the int
+erface Serial4/0 changed to up.                                                 
+*Jan  1 00:14:54:977 2011 R1 PPP/7/PAP_PACKET_0:                                
+  PPP Packet:                                                                   
+      Serial4/0 Input PAP(c023) Packet, PktLen 16                               
+      State ServerListen, code Request(01), id 1, Len 12                        
+      Host Len:  3  Name:RTB                                                    
+      Pwd  Len:  *  Pwd :******                                                 
+*Jan  1 00:14:54:977 2011 R1 PPP/7/PAP_EVENT_0:                                 
+  PPP Event:                                                                    
+      Serial4/0 PAP Receive Request Event                                       
+      State ServerListen                                                        
+*Jan  1 00:14:54:978 2011 R1 PPP/7/PAP_STATE_0:                                 
+  PPP State Change:                                                             
+      Serial4/0 PAP: ServerListen --> WaitAAA                                   
+*Jan  1 00:14:54:985 2011 R1 PPP/7/PAP_EVENT_0:                                 
+  PPP Event:                                                                    
+      Serial4/0 PAP Receive AAA Result Event                                    
+      State WaitAAA                                                             
+*Jan  1 00:14:54:985 2011 R1 PPP/7/PAP_PACKET_0:                                
+  PPP Packet:                                                                   
+      Serial4/0 Output PAP(c023) Packet, PktLen 36                              
+      State WaitAAA, code Ack(02), id 1, Len 32                                 
+      Msg  Len: 27  Msg :Welcome to use this device.                            
+*Jan  1 00:14:54:985 2011 R1 PPP/7/PAP_STATE_0:                                 
+  PPP State Change:                                                             
+      Serial4/0 PAP: WaitAAA --> ServerSuccess                                  
+                                                                                
+[R1-Serial4/0]                                                                  
+[R1-Serial4/0]                                                                  
+[R1-Serial4/0]
