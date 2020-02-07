@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/string2/string2.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/string2/string2.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 string2.ngc string2.ngd  
-map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o string2_map.ncd string2.ngd string2.pcf 
-par -w -intstyle ise -ol high -t 1 string2_map.ncd string2.ncd string2.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml string2.twx string2.ncd -o string2.twr string2.pcf 
-bitgen -intstyle ise -f string2.ut string2.ncd 

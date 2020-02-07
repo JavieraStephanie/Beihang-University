@@ -1,4 +1,0 @@
-xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splitter1.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splitter1.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-4 splitter1.ngc splitter1.ngd  
-xst -intstyle ise -ifn "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splitter1.xst" -ofn "D:/HW/JiSuanJiZuCheng/Verilog/splitter/splitter1.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-4 splitter1.ngc splitter1.ngd  

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=D:\HW\JiSuanJiZuCheng\Verilog\adder\adder.ncd
-OUTFILE=D:\HW\JiSuanJiZuCheng\Verilog\adder\adder.bit
-FAMILY=Automotive Spartan3
-PART=xa3s50-4vqg100
-WORKINGDIR=D:\HW\JiSuanJiZuCheng\Verilog\adder
-LICENSE=WebPack
-USER_INFO=211427565_0_0_978
