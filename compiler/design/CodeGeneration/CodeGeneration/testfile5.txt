@@ -1,0 +1,20 @@
+int find_factorial(int n)
+{
+   if(n==0)
+      return(1);
+ 
+   return(n*find_factorial(n-1));
+}
+
+void main()
+{
+   int num, fact;
+
+   printf("\nEnter any integer number:");
+   scanf(num);
+ 
+   fact =find_factorial(num);
+ 
+   printf("\nfactorial of %d is: %d",num);
+   printf(fact);
+}

@@ -1,0 +1,10 @@
+int yyyyy, lep[8];
+char hiii;
+
+void main()
+{
+	printf("Nothin here just testing");
+	lep[0] = -1;
+	lep[1] = -2 + 3 / 2 * 6;
+	printf(lep[1]);
+}

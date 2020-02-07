@@ -1,0 +1,95 @@
+﻿CHECKLIST:
+- regnum after expression check shouldn't be set to 0, instead set it to the
+last reg num
+
+- (DONE) consider params in getReg, not only const and var
+
+- (DONE) check the intExp thingy
+- (DONE) calculation of arr Op funcCall
+- (DONE) recursive function
+- (DONE) check If condition
+- (DONE) check for loop
+- (DONE) check while loop
+- (DONE) check do while loop
+- (DONE) check expression calling function sw and lw
+- (DONE) in the .data section sort the data by type (don't mix them)
+- (DONE) If the return value is found not at the end of function
+- (DONE) non-val function may have but doesn't have to have return;
+- (HALFDONE) local variable shouldn't be saved to a normal var array, because if there's
+  a recursion, the value will be replaced when it shouldn't
+  ****** STILL NEED TO DO THE SAME FOR ARRAY ******
+- (DONE) consider a situation if the scanf is for param/localid
+- (DONE) '\' should be printed as is, so for example "\t" should be printed as is,
+  instead of a tab space
+- nested if statement without braces may cause errors
+CodeGen1
+代码生成作业一中的测试程序只包括:
+- 整型常量
+- 变量声明语句
+- main函数
+- scanf
+- printf
+- 赋值语句（其中赋值符号右侧的表达式中只有整型常量变量之间的加减乘除运算）
+
+CodeGen2
+testcase1：不同循环语句、多层条件语句嵌套的测试
+testcase2：函数递归调用、嵌套调用的测试
+testcase3：函数递归调用、嵌套调用、特殊符号输出的测试
+testcase4：同名不同作用域变量常量、数组元素嵌套引用与赋值的测试
+
+DATAS:
+- Const
+- Array init
+- String
+- Int var (1 int needs 4 space)
+- Char var
+
+
+CODES
+- (DONE) PRINT:
+E.x. li $v0, 11 (11 means print char, 1 int, 4 string)
+     li $a0, '\n' (store the data in $a0)
+     syscall
+- (DONE) SCAN
+E.x. li $v0, 5 (5 means read int, 8 string, 12 char)
+     syscall
+- (DONE) ADD/SUB/MUL/DIV
+* (DONE) there shouldn't be any operation between two immediates, all should be
+moved to a register
+- (DONE) COMPARISON
+- (DONE) IF/ELSE/LOOP
+- (DONE) FUNCTION CALL
+- (DONE) RETURN
+* return value
+* (DONE) return address
+- (DONE) ARRAY
+* (DONE) array index needs to be shifted using sll
+- (DONE) ASSIGN
+
+
+
+Features:
+* Comparison * BEQ *BNE * SLT * BGEZ * BGTZ * BLEZ * BLTZ
+* If else
+* Loop
+* Return
+- return value can be saved in $v0 and/or $v1
+- save the return address by
+  sub $sp, $sp, 12 OR addi $sp, $sp, -12
+  sw $ra, 0($sp)
+
+  //jal label
+
+  and then to return
+  lw $s1, 4($sp) #load index
+  lw $s2, 8($sp) #load i
+  lw $ra, 0($sp) #load address
+  add $sp, $sp, 12
+
+  jr $ra
+
+MIPS:
+* J
+* JR
+* JALR
+* NOP

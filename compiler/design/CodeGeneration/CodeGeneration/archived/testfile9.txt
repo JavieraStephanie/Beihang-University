@@ -1,0 +1,20 @@
+const int A1 = 0, a = 6, a2 = +7, a3 = -7;
+const char c = 'c', d = '7';
+
+char ch;
+int i, num;
+
+void main()
+{
+	int b;
+
+	while (i<10) q= i+1;
+
+	while (a>10){
+		i = i+2;
+		a = a - 1;
+	}
+
+	while (a) 
+		while (b) b = b - 1;
+}

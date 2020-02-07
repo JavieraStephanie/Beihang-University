@@ -1,0 +1,63 @@
+const int c0 = 9, _t = 0, yii = -1, yee = +2, yuu = 7;
+const char wut = '+', bleh = '-';
+int i, r, arr[10];
+char c, t;
+
+int testFunc(int n)
+{
+	if (n > 1) n = n-1;
+	else n = 1;
+
+	if (n == 1)
+	{
+		printf("Done testFunc!");
+	}
+	
+	return (n + 1/2 * 3);
+}
+
+void testFunc2()
+{
+	if (1<0) printf("False");
+	else printf("True");
+}
+
+void testLoop(int x)
+{
+	while(x>=0) x = x-1;
+	printf(x);
+	while(x<=10)
+	{
+		x = x+1;
+		printf("x Incremented!");
+	}
+	if (x!=0) printf("X isn't 0");
+}
+
+void testRead()
+{
+	scanf(i);
+	printf(i);
+}
+
+void main()
+{
+	int yii;
+
+	printf("!#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^`abcdefghijklmnopqrstuvwxyz{|}~");
+	printf(bleh);
+
+	yii = -(-2);
+	i = -(-yii);
+	printf("i: ", i);
+	i = -yii;
+	printf("i: ", -(-i));
+	printf(testFunc(3));
+	testFunc2();
+	testLoop(10);
+	for(r = 0; r<10; r = r+1)
+	{
+		printf("r Incremented!");
+	}
+	printf("Testing this out", testFunc(9) + 3/2);
+}

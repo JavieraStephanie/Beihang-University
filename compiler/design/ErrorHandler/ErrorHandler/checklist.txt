@@ -1,0 +1,49 @@
+﻿CHECKLIST FOR ERROR HANDLER:
+
+- (DONE) There's no more delayed outputs
+- (DONE) There are errors in the prog, means any condition could happen
+  it won't always work as it should be, so make sure everything is parsed
+- (DONE) The parseWord() could end up going to the new line before printing out
+  the error of the previous line if the next line is an empty line
+- (DONE) The assign statement semicolon error doesn't work if there's an iden
+  next
+- (OPT) If the error is consecutive, e.g. ']' and ';' from var dec are missing,
+  the error line of ';' will be wrong
+- Consider condition of missing and unexpected symbols
+- (DONE) 错误类型k：对于缺分号的情况，在下一个单词出现的时候才会发现缺分号，下一个单词有可能是同一行，也可能不是同一行，报错报在通常意义上的行末应该出现分号的那行。
+- 错误类型n：如果do后面是复合语句，有大括号的话，报在右大括号}后面出现的第一个单词所在的行；如果do后面只是一条语句，到下一条语句出现的第一个单词，如果不是期望的while，就在那一行报错。 
+- (DONE) 对于有返回值的函数，函数里至少要有一条return（***）的语句；对于没有返回值的函数，要么没有返回语句，要么只有return；这样的返回语句，而不能有return（***）的返回语句。 
+- (DONE) 如果一个有返回值函数没有返回语句,报错应该在函数结束}那一行
+- (DONE) 如果一个返回值int的函数返回了char,报错应该在return 语句行
+- (DONE) 条件中，只对整型数据进行比较，如果不是整型就认为是不合法的类型
+- (DONE) 不需要检查每个分支是否有返回语句，一个有返回值的函数，只要有一条返回了值的返回语句就算对。 测试程序不会出现某分支没有返回值的情况。
+- (DONE) 不符合词法的情况包括：
+* 出现词法规则里不允许出现的符号
+* (DONE) 在定义字符的时候，同一行中没有找到配对的右单引号
+* (DONE) 在定义字符串的时候，同一行中没有找到配对的右双引号
+- (DONE) 表达式类型为char型有以下三种情况：
+(DONE) （１）表达式由<标识符>或＜标识符＞'['＜表达式＞']构成，且<标识符>的类型为char，即char类型的常量和变量、char类型的数组元素。
+(DONE) （２）表达式仅由一个<字符>构成，即字符字面量。
+(DONE) （３）表达式仅由一个有返回值的函数调用构成，且该被调用的函数返回值为char型
+即，<表达式> ::*= <标识符>|＜标识符＞'['＜表达式＞'] | <有返回值函数调用语句> | <字符>，该标识符在作用域内为char类型，有返回值调用语句返回char型，:*=表示经过多步推导
+除此之外的所有情况，<表达式>的类型都是int
+- (DONE) Consider overly recursive conditions for function call and array in:
+* (DONE) Amount of parameters: e.g. testFunc(testFunc2(1, 2));
+* (DONE) Expression type
+* (DONE) Search name
+
+- (NO EFFECTS) 1非法符号或不符合词法
+- (DONE) 2名字重定义
+- (NO EFFECTS?) 3未定义的名字
+- (DONE) 4函数参数个数不匹配
+- (DONE) 5函数参数类型不匹配
+- (DONE) 6条件判断中出现不合法的类型
+- (DONE) 7无返回值的函数存在不匹配的return语句
+- (DONE) 8有返回值的函数缺少return语句或存在不匹配的return语句
+- (DONE) 9数组元素的下标只能是整型表达式
+- (DONE) 10不能改变常量的值
+- (DONE) 11应为分号
+- (DONE) 12应为右小括号’)’
+- (NO EFFECTS?) 13应为右中括号’]’
+- (DONE) 14do-while语句中缺少while
+- (DONE) 15常量定义中=后面只能是整型或字符型常量

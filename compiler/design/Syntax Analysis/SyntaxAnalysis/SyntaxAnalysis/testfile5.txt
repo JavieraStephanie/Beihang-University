@@ -1,0 +1,8 @@
+const int yep = 9;
+const char ha = 'c', cut = '*', silence = '/';
+
+void main()
+{
+	if (1) printf("Nothin here just testing");
+	if (+2) printf("Printed?");
+}

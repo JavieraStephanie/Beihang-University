@@ -1,0 +1,32 @@
+int Var;
+int count;
+int Prcntge;
+
+int RecursvFcnTogetPrcntge()
+{
+
+    if(count==101)
+    {
+        return (1);
+    }
+
+    Prcntge=Var*count;
+    printf("\n%3d Percent = %.02f");
+    printf(count);
+    printf(Prcntge);
+
+    count = count + 1;
+    RecursvFcnTogetPrcntge();
+    return (0);
+}
+
+void main()
+{
+    count = 1;
+    printf("\nEnter a value to split in percentage: ");
+    scanf(Var);
+
+    Var=Var/100;
+    RecursvFcnTogetPrcntge();
+    printf("\n");
+}

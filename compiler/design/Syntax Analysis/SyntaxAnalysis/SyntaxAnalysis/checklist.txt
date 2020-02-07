@@ -1,0 +1,58 @@
+Checklist:
+- (DONE) Non-Direct Use of CheckSym
+- Get everything a corresponding table:
+    * Variable
+    * Constant
+    * (DONE) Function to differ value and non-value functions
+
+- (DONE) <String> right after "
+- (DONE) <Program> right after main function
+
+- (DONE) <Const Declaration> must before ;
+- (DONE) <Const Statement> must only happen once and if there is a const dec
+
+- (DONE) <Var Declaration> must be before ;
+- <Var Statement> must only happen once if there is a var dec
+
+- (DONE) <Unsigned Integer>
+- (DONE) <Integer>
+
+- (DONE) <Statement Header> must be before (
+
+- (DONE) <Value Function Declaration> right after }
+- (DONE) <Non-value Function Declaration> right after }
+
+- (DONE) <Compound Statement> after <Statement List>
+
+- (DONE) <Parameters Table> always exist even tho it's empty, before )
+
+- (DONE) <Main Function> right after }, got no parameters
+
+- (DONE) <Expression> before ), ;, ,, inside array, inside ()
+- Numbers in <Expression> can be followed with + or -
+- There could be a - at the start of <Expression>
+- (DONE) <Term> factor */ factor
+- (DONE) <Factor> integer/identifier/array/char/function/expression
+
+- (DONE) <Statement> after any statement's ;
+
+- (DONE) <Assign Statement> before ;
+
+- (DONE) <Condition Statement>
+- (DONE) <Condition> before ) and/or ;
+
+- (DONE) <Loop Statement>
+- (DONE) <In/decrement> unsigned integer ONLY
+
+- (DONE) <Value Function Call> before ;
+- (DONE) <Non=value Function Call> before ;
+
+- (DONE) <Value Parameters Table> Empty is also counted, before )
+
+- (DONE) <Statement List> before }
+
+- (DONE) <Read Statement> after )
+
+- (DONE) <Write Statement> after )
+
+- (DONE) <Return Statement> either after Return or )

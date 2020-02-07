@@ -1,0 +1,119 @@
+.data
+	vars: .space 0
+.align 2
+.align 1
+	str0: .asciiz "%d "
+	str1: .asciiz "Enter total number of terms: "
+	str2: .asciiz "Fibonacii series is : "
+	str3: .asciiz "%d\\t%d\\t"
+	str4: .asciiz "\\n"
+.text
+	main :
+	addi $sp, $sp, -8
+	addi $sp, $sp, -20
+	addi $t3, $0, 0
+	move $s0, $t3
+	sw $s0, 8($sp)
+	addi $t0, $0, 1
+	move $s1, $t0
+	sw $s1, 12($sp)
+	la $a0, str1
+	li $v0, 4
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	li $v0, 5
+	syscall
+	sw $v0, 20($sp)
+	la $a0, str2
+	li $v0, 4
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	la $a0, str3
+	li $v0, 4
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	lw $a0, 8($sp)
+	li $v0, 1
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	lw $a0, 12($sp)
+	li $v0, 1
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	lw $t0, 8($sp)
+	move $s0, $t0
+	lw $t1, 12($sp)
+	move $s1, $t1
+	lw $t3, 20($sp)
+	addi $t4, $0, 2
+	sub $t2, $t3, $t4
+	move $s2, $t2
+	jal LABEL1
+	la $a0, str4
+	li $v0, 4
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	addi $sp, $sp, 8
+	j exit
+	LABEL1:
+	addi $sp, $sp, -8
+	addi $sp, $sp, -4
+	addi $sp, $sp, -12
+	sw $s2, 16($sp)
+	sw $s1, 12($sp)
+	sw $s0, 8($sp)
+	sw $ra, 4($sp)
+	lw $t0, 16($sp)
+	addi $t1, $0, 0
+	ble $t0, $t1, LABEL3
+	lw $t3, 8($sp)
+	lw $t4, 12($sp)
+	add $t2, $t3, $t4
+	move $s0, $t2
+	sw $s0, 20($sp)
+	la $a0, str0
+	li $v0, 4
+	syscall
+	lw $a0, 20($sp)
+	li $v0, 1
+	syscall
+	li $a0, '\n'
+	li $v0, 11
+	syscall
+	lw $t0, 12($sp)
+	move $s0, $t0
+	sw $s0, 8($sp)
+	lw $t0, 20($sp)
+	move $s1, $t0
+	sw $s1, 12($sp)
+	lw $t0, 8($sp)
+	move $s0, $t0
+	lw $t1, 12($sp)
+	move $s1, $t1
+	lw $t3, 16($sp)
+	addi $t4, $0, 1
+	sub $t2, $t3, $t4
+	move $s2, $t2
+	jal LABEL1
+	b LABEL3
+	LABEL3:
+	lw $s2, 16($sp)
+	lw $s1, 12($sp)
+	lw $s0, 8($sp)
+	lw $ra, 4($sp)
+	addi $sp, $sp, 4
+	addi $sp, $sp, 20
+	jr $ra
+	exit:

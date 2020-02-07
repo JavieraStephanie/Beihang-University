@@ -1,0 +1,307 @@
+﻿//If-else
+	if (!strcmp(line, "IFTK")) {
+		printOutput(dcode, dcontent);
+		line = parseWord();
+		/*if (!strcmp(line, "LPARENT")) {
+			printOutput(dcode, dcontent);
+			assign = true;
+			line = checkCondition(parseWord());
+			assign = false;
+
+			if (!strcmp(line, "\0")) {
+				line = parseWord();
+				if (!strcmp(line, "LBRACE")) {
+					printOutput(dcode, dcontent);
+					line = checkStatement(parseWord());
+					while (strcmp(line, "RBRACE")) {
+						line = checkStatement(line);
+						printOutput(dcode, dcontent);
+					}
+					if (!strcmp(line, "RBRACE")) {
+						//printSyntax("<语句列>");
+						printOutput(dcode, dcontent);
+						delay = true;
+						line = parseWord();
+						delay = false;
+					}
+				}
+				else {
+					delay = true;
+					layer += 1;
+					line = checkStatement(line);
+					layer -= 1;
+					delay = false;
+				}
+
+				if (!strcmp(line, "ELSETK")) {
+					line = checkElse(line);
+				}
+
+				//printSyntax("<条件语句>");
+				//printSyntax("<语句>");
+				if (layer == 0 && strcmp(dcode, "SEMICN")) printOutput(dcode, dcontent);
+			}
+		}*/
+	}
+	//While
+	else if (!strcmp(line, "WHILETK")) {
+		printOutput(dcode, dcontent);
+		line = parseWord();
+		/*if (!strcmp(line, "LPARENT")) {
+			printOutput(dcode, dcontent);
+			assign = true;
+			line = checkCondition(parseWord());
+			assign = false;
+
+			if (!strcmp(line, "\0")) {
+				line = parseWord();
+				if (!strcmp(line, "LBRACE")) {
+					printOutput(dcode, dcontent);
+					line = checkStatement(parseWord());
+					while (strcmp(line, "RBRACE")) {
+						line = checkStatement(line);
+						printOutput(dcode, dcontent);
+					}
+					if (!strcmp(line, "RBRACE")) {
+						//printSyntax("<语句列>");
+						printOutput(dcode, dcontent);
+						//printSyntax("<循环语句>");
+						//printSyntax("<语句>");
+						line = parseWord();
+					}
+				}
+				else {
+					if (!delay) {
+						delay = true;
+						line = checkStatement(line);
+						delay = false;
+						//printSyntax("<循环语句>");
+						//printSyntax("<语句>");
+						printOutput(dcode, dcontent);
+					}
+					else {
+						line = checkStatement(line);
+						//printSyntax("<循环语句>");
+						//printSyntax("<语句>");
+					}
+				}
+			}
+		}*/
+	}
+	//Do-While
+	else if (!strcmp(line, "DOTK")) {
+		printOutput(dcode, dcontent);
+		/*line = parseWord();
+		if (!strcmp(line, "LBRACE")) {
+			printOutput(dcode, dcontent);
+			line = checkStatement(parseWord());
+			while (strcmp(line, "RBRACE")) {
+				printOutput(dcode, dcontent);
+				line = checkStatement(line);
+			}
+			if (!strcmp(line, "RBRACE")) {
+				//printSyntax("<语句列>");
+				printOutput(dcode, dcontent);
+				line = parseWord();
+			}
+		}
+		else {
+			printOutput(dcode, dcontent);
+			line = checkStatement(line);
+		}
+
+		if (!strcmp(line, "WHILETK")) {
+			printOutput(dcode, dcontent);
+			if (!strcmp(parseWord(), "LPARENT")) {
+				printOutput(dcode, dcontent);
+				assign = true;
+				line = checkCondition(parseWord());
+				assign = false;
+				if (!strcmp(line, "\0")) {
+					//printSyntax("<循环语句>");
+					//printSyntax("<语句>");
+				}
+			}
+		}*/
+		line = parseWord();
+	}
+	//For
+	else if (!strcmp(line, "FORTK")) {
+		printOutput(dcode, dcontent);
+		line = parseWord();
+		/*if (!strcmp(line, "LPARENT")) {
+			printOutput(dcode, dcontent);
+			line = parseWord();
+			if (!strcmp(line, "IDENFR")) {
+				printOutput(dcode, dcontent);
+				line = checkAssign(parseWord());
+				if (!strcmp(line, "\0")) {
+					assign = true;
+					line = checkCondition(parseWord());
+					assign = false;
+					if (!strcmp(line, "SEMICN")) {
+						printOutput(dcode, dcontent);
+						line = checkIncrement(parseWord());
+						if (!strcmp(line, "RPARENT")) {
+							line = parseWord();
+							if (!strcmp(line, "LBRACE")) {
+								printOutput(dcode, dcontent);
+								line = checkStatement(parseWord());
+								while (strcmp(line, "RBRACE")) {
+									line = checkStatement(line);
+									printOutput(dcode, dcontent);
+								}
+								if (!strcmp(line, "RBRACE")) {
+									//printSyntax("<语句列>");
+									printOutput(dcode, dcontent);
+									//printSyntax("<循环语句>");
+									//printSyntax("<语句>");
+									line = parseWord();
+								}
+							}
+							else {
+								if (!delay) {
+									delay = true;
+									line = checkStatement(line);
+									delay = false;
+									//printSyntax("<循环语句>");
+									//printSyntax("<语句>");
+									printOutput(dcode, dcontent);
+								}
+								else {
+									line = checkStatement(line);
+									//printSyntax("<循环语句>");
+									//printSyntax("<语句>");
+								}
+							}
+						}
+					}
+				}
+			}
+		}*/
+	}
+	//Recursive sub-statement
+	else if (!strcmp(line, "LBRACE")) {
+		printOutput(dcode, dcontent);
+		line = checkStatement(parseWord());
+		printOutput(dcode, dcontent);
+		/*while (strcmp(line, "RBRACE")) {
+			printOutput(dcode, dcontent);
+			line = checkStatement(line);
+		}*/
+		if (!strcmp(line, "RBRACE")) {
+			//printSyntax("<语句列>");
+			printOutput(dcode, dcontent);
+		}
+		line = parseWord();
+	}
+	//Function call
+	//Assignment statement
+	else if (!strcmp(line, "IDENFR")) {
+		printOutput(dcode, dcontent);
+		line = parseWord();
+		if (!strcmp(line, "LPARENT")) {
+			strcpy(funcname, subStr);
+			printOutput(dcode, dcontent);
+			assign = true;
+			line = checkFuncCall(parseWord());
+			if (!strcmp(line, "RPARENT")) {
+				printOutput(dcode, dcontent);
+				//if (valtab[findId()].valfunc) printSyntax("<有返回值函数调用语句>");
+				//else printSyntax("<无返回值函数调用语句>");
+				line = parseWord();
+				if (!strcmp(line, "SEMICN")) {
+					printOutput(dcode, dcontent);
+					//printSyntax("<语句>");
+				}
+			}
+			
+			assign = false;
+			line = parseWord();
+		}
+		else if (!strcmp(line, "ASSIGN")) {
+			printOutput(dcode, dcontent);
+			line = checkAssign(line);
+			if (!strcmp(line, "\0")) line = parseWord();
+		}
+		else if (!strcmp(line, "LBRACK")) {
+			printOutput(dcode, dcontent);
+			assign = true;
+			line = checkExpression(parseWord());
+			assign = false;
+			if (!strcmp(line, "RBRACK"))
+			{
+				//printSyntax("<表达式>");
+				printOutput(dcode, dcontent);
+				line = parseWord();
+				if (!strcmp(line, "ASSIGN")) {
+					printOutput(dcode, dcontent);
+					line = checkAssign(line);
+					if (!strcmp(line, "\0")) line = parseWord();
+				}
+			}
+		}
+	}
+	//Read Statement
+	else if (!strcmp(line, "SCANFTK")) {
+		printOutput(dcode, dcontent);
+		checkRead(parseWord());
+		line = parseWord();
+	}
+	//Write Statement
+	else if (!strcmp(line, "PRINTFTK")) {
+		printOutput(dcode, dcontent);
+		assign = true;
+		checkWrite(parseWord());
+		assign = false;
+		line = parseWord();
+	}
+	//Return Statement
+	else if (!strcmp(line, "RETURNTK")) {
+		printOutput(dcode, dcontent);
+		line = parseWord();
+		if (!strcmp(line, "LPARENT")) {
+			printOutput(dcode, dcontent);
+			assign = true;
+			line = parseWord();
+			num = intcon;
+			line = checkExpression(line);
+			//printSyntax("<表达式>");
+			num = num2 = intcon;
+			assign = false;
+			if (!strcmp(line, "RPARENT")) {
+				printOutput(dcode, dcontent);
+				line = parseWord();
+			}
+		}
+
+		if (!strcmp(line, "SEMICN")) {
+			//printSyntax("<返回语句>");
+			printOutput(dcode, dcontent);
+			//printSyntax("<语句>");
+		}
+		
+		line = parseWord();
+	}
+	//Empty Statement
+	else if (!strcmp(line, "SEMICN")) {
+		////printSyntax("<Empty statement>");
+		printOutput(dcode, dcontent);
+		//printSyntax("<语句>");
+		line = parseWord();
+	}
+
+	else {
+		if (strcmp(line, "RBRACE")) printOutput(dcode, dcontent);
+		line = parseWord();
+	}
+
+	if (!strcmp(line, "EOF")) {
+		printf("The program is incomplete!\n");
+		exit(1);
+	}
+	else if (!strcmp(line, "VOIDTK") || isType(line)) {
+		printf("'}' Expected!\n");
+		return(line);
+	}
+	else return (line);

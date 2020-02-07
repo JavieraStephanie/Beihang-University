@@ -1,0 +1,69 @@
+CONSTTK const
+INTTK int
+IDENFR const1
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR const2
+ASSIGN =
+MINU -
+INTCON 100
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR const3
+ASSIGN =
+CHARCON _
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR change1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR change3
+<Variable Declaration>
+SEMICN ;
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+IDENFR change1
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+MULT *
+INTCON 8
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+DIV /
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Main Function>
+<Program>

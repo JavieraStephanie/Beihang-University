@@ -1,0 +1,12 @@
+int plus(int a,int b)
+{
+    return (a+b);
+}
+int immain()
+{
+    int a,b;
+    scanf(a);
+    scanf(b);
+    printf("a+b=",plus(a,b));
+    printf("no main");
+}

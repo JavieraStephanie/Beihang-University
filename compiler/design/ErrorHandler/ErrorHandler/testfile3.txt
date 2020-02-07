@@ -1,0 +1,35 @@
+void testEmpty()
+{
+}
+
+void testEmpty2()
+{
+	const char ca = 'i';
+	int h;
+}
+
+void testEmpty3()
+{
+	return;
+}
+
+void testPrint()
+{
+	const int c = 19;
+
+	printf("Test Print Starting!");
+	printf(c);
+	
+	do printf(c+2); while(c<21);
+}
+
+void main()
+{
+	int temp;
+
+	temp = 10;
+	testEmpty();
+	testEmpty2();
+	testEmpty3();
+	testPrint();
+}

@@ -1,0 +1,103 @@
+const const_int_postive = 1, const_int_zero = +0, const_int_negtive = -1;
+
+int int_global_var;
+
+void testIf()
+{
+    const test_if_1 = 1, test_if_2 = 2;
+    if(test_if_1 < test_if_2)
+        printf("1 < 2");
+    if(test_if_1 <= test_if_2)
+        printf("1 <= 2");
+    if(test_if_1 == test_if_2)
+        printf("1 == 2");
+    if(test_if_1 != test_if_2)
+        printf("1 != 2");
+    if(test_if_1 - test_if_2)
+        printf("1 - 2 = true (not zero)");
+    int_global_var = -1;
+}
+
+void testWhile(int loop_length)
+{
+    int test_while_loop,mul;
+    test_while_loop = 0;
+    mul = 1;
+    while(test_while_loop < loop_length)
+    {
+        mul = mul * 2;
+        test_while_loop = test_while_loop + 1;
+    }
+    printf("product value : 2^5 = ", mul);
+    int_global_var = -2;
+}
+
+
+int returnInt()
+{
+    return (10);
+}
+
+
+int returnIntParameter(int int_parameter)
+{
+    int _tmp;
+    _tmp = int_parameter;
+    return (_tmp);
+}
+
+
+void testAssign()
+{
+    const test_assign_10 = +10;
+    int int_test_assign;
+    int_test_assign = ++10 + returnIntParameter(-+2);
+    printf("int_test_assign : 8 = ", int_test_assign);
+    int_global_var = -3;
+}
+
+void testInputOutput()
+{
+    int int_test_input;
+    scanf(int_test_input);
+    printf("your input is : ",int_test_input);
+    int_global_var = -4;
+}
+
+int testRecursion(int n)
+{
+    if(n == 1)
+        return (n);
+    return (n * testRecursion(n - 1));
+}
+
+void testCallFunction()
+{
+    int test_recursion_result;
+    printf("---------------test if---------------");
+    testIf();
+    printf("int_global_var : -1 = ", int_global_var);
+    printf("---------------test while---------------");
+    testWhile(5);
+    printf("int_global_var : -2 = ", int_global_var);
+    printf("---------------test assign---------------");
+    testAssign();
+    printf("int_global_var : -3 = ", int_global_var);
+    printf("---------------test in out---------------");
+    testInputOutput();
+    printf("int_global_var : -4 = ", int_global_var);
+    printf("---------------test recursion---------------");
+    test_recursion_result = testRecursion(5);
+    printf("Factorial result is : 5!=", test_recursion_result);
+    test_recursion_result = testRecursion(8);
+    printf("Factorial result is : 8!=", test_recursion_result);
+    int_global_var = -6;
+}
+
+void main()
+{
+    int int_global_var;
+    testCallFunction();
+    int_global_var = 0;
+    printf("int_global_var : 0 = ", int_global_var);
+}

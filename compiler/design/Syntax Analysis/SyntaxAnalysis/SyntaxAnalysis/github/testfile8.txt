@@ -1,0 +1,76 @@
+﻿const int a = +10;
+const char b = 'a';
+
+int c, d[10];
+char e, f[20];
+
+int foo1(int x)
+{
+	const int a = +10;
+	const char b = 'a';
+	int c, d[10];
+	int i;
+	char e, f[10];
+	if (x > 0)
+	{
+		i = 0;
+		while (i < 10)
+		{
+			d[i] = i;
+			printf(d[i]);
+			i = i + 1;
+		}
+	}
+	else
+	{
+		i = 'z';
+		while (i > 'z' - 10)
+		{
+			f['z' - i] = i;
+			printf(f['z' - i]);
+			i = i - 1;
+		}
+	}
+	printf(" ");
+	return (a);
+}
+int foo2
+{
+	printf("hello", foo1(2));
+	return (0);
+}
+void bar2
+{
+	int x, y;
+	scanf(x, y);
+	foo1(x);
+	foo1(y);
+}
+int foobar(int x)
+{
+	if (x > 0)
+		return (x * foobar(x - 1));
+	else
+		return (1);
+}
+void main()
+{
+	int i;
+	c = a;
+	c = (c * (a + 'a') / (-15) - b) * 'b';
+	i = c + (c * (a + 'a') / (-15) - b) * 'b';
+	i = i - (c * (a + 'a') / (-15) - b) * 'b';
+	printf(i);
+	printf(" ");
+	foo1(a);
+	foo1(-a);
+	foo2;
+	i = -3;
+	while (i <= 3)
+	{
+		bar1(i, i);
+		i = i + 1;
+	}
+	bar2;
+	printf(foobar(5));
+}

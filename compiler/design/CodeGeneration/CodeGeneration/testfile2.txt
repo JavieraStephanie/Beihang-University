@@ -1,0 +1,29 @@
+int sum, rem;
+
+int mod(int x, int y){
+   x=x-x/y*y;
+
+   return (x) ;
+}
+
+int reverse_function(int num){
+   if(num){
+      rem=mod(num, 10);
+      sum=sum*10+rem;
+      reverse_function(num/10);
+   }
+   else
+      return (sum);
+   return (sum);
+}
+
+void main(){
+   int num,reverse_number;
+
+   printf("\nEnter any number:");
+   scanf(num);
+
+   sum = 0;
+   reverse_number=reverse_function(num);
+   printf("\nAfter reverse the no is :",reverse_number);
+}

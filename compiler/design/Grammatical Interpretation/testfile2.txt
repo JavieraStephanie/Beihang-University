@@ -1,0 +1,75 @@
+const int A1 = 0, a = 6, a2 = +7,a3 = -7;
+const char c = 'c', d = '7';
+
+char ch;
+int i, num;
+int arr[20];
+char charr[5];
+
+void swap(int x, int y)
+{
+	int temp;
+	temp = x;
+	x = y;
+	y = temp;
+	
+	return;
+}
+
+void testExp()
+{
+	int r, sum;
+	sum = 0;
+	for (r = 10; r > 1; r = r - 1)
+		sum = sum + r;
+	sum = (A1+2)*a3/7;
+	arr[1] = r;
+	arr[2] = arr[1]+2;
+	charr[0] = 'c';
+	charr[1] = 't';
+
+	printf("done Exp!");
+}
+
+int retInt(int n)
+{
+	int x, y;
+	x = 1;
+	y = 2;
+	x = x + y + n;
+	
+	return (x);
+}
+
+char retChar(char p)
+{
+	printf(p);
+	p = 'u';
+	printf("What is p?", p);
+
+	return (p);
+}
+
+void main()
+{
+	const int emm = 3;
+	const char ugh = 'y';
+
+	int u, l[9];
+	int bla[12];
+	char zzz, wake[0], hmm[3];
+
+	printf("Test char limits");
+	printf("!#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^`abcdefghijklmnopqrstuvwxyz{|}~");
+	scanf(i, num);
+	;
+	;
+	swap(i, num);
+	testExp();
+	bla[0] = retInt(emm);
+	u = bla[0] + bla[1] + 1;
+	zzz = retChar(ugh);
+	charr[3] = zzz;
+	printf(charr[3]);
+}
+

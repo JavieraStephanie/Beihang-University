@@ -1,0 +1,22 @@
+int ctime;
+int fib(int i)
+{
+    ctime = ctime + 1;
+    if (i==1)
+        return (1);
+    if (i==2)
+        return (1);
+    return (fib(i-1)+fib(i-2));
+}
+int main()
+{
+    int n;
+    ctime = 0;
+    printf("please input a number n");
+    scanf(n);
+	printf(n);
+    printf("The nth Fibonacci number is ",fib(n));
+    printf("There are ", ctime);
+    printf("nodes in the Fibonacci tree");
+    return (0);
+}

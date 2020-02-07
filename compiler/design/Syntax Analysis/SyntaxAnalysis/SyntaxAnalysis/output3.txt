@@ -1,0 +1,110 @@
+VOIDTK void
+IDENFR testEmpty
+LPARENT (
+<???>
+RPARENT )
+LBRACE {
+<Compound>
+RBRACE }
+<????????>
+VOIDTK void
+IDENFR testEmpty2
+LPARENT (
+<???>
+RPARENT )
+LBRACE {
+CONSTTK const
+CHARTK char
+IDENFR ca
+ASSIGN =
+CHARCON i
+SEMICN ;
+INTTK int
+IDENFR h
+SEMICN ;
+<Compound>
+RBRACE }
+<????????>
+VOIDTK void
+IDENFR testEmpty3
+LPARENT (
+<???>
+RPARENT )
+LBRACE {
+RETURNTK return
+SEMICN ;
+<Compound>
+RBRACE }
+<????????>
+VOIDTK void
+IDENFR testPrint
+LPARENT (
+<???>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR c
+ASSIGN =
+INTCON 19
+SEMICN ;
+PRINTFTK printf
+LPARENT (
+STRCON Test Print Starting!
+RPARENT )
+SEMICN ;
+PRINTFTK printf
+LPARENT (
+IDENFR c
+RPARENT )
+SEMICN ;
+DOTK do
+PRINTFTK printf
+LPARENT (
+IDENFR c
+PLUS +
+INTCON 2
+RPARENT )
+SEMICN ;
+WHILETK while
+LPARENT (
+IDENFR c
+LSS <
+INTCON 21
+RPARENT )
+SEMICN ;
+<Compound>
+RBRACE }
+<????????>
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+INTTK int
+IDENFR temp
+SEMICN ;
+IDENFR temp
+ASSIGN =
+INTCON 10
+SEMICN ;
+IDENFR testEmpty
+LPARENT (
+RPARENT )
+SEMICN ;
+IDENFR testEmpty2
+LPARENT (
+RPARENT )
+SEMICN ;
+IDENFR testEmpty3
+LPARENT (
+RPARENT )
+SEMICN ;
+IDENFR testPrint
+LPARENT (
+RPARENT )
+SEMICN ;
+<Compound>
+RBRACE }
+<???>
+<??>

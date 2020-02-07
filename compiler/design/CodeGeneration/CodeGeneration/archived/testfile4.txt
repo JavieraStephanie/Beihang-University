@@ -1,0 +1,46 @@
+const int const1=1, const2=+7, const3=-6;
+const char const4='a', const5='9';
+
+int int1, int2, int3[5];
+int abcdefgh, IJKLMNOP;
+char charr[11], tchar; 
+
+void func1()
+{
+	int x, y, i;
+
+	printf("Input two integers:");
+	scanf(x, y);
+	
+	for (i=0; i<5; i = i+1);
+	
+	printf("Ohman", x);
+	printf(y);
+	printf(i);
+
+	return;
+}
+
+void call()
+{
+	func1();
+	return;
+}
+
+void main()
+{
+	int sum;
+	
+	call();
+	int3[0] = 0;
+	int3[1] = 1;
+	int3[2] = 9;
+	charr[5] = 'a';
+	printf("Input some char here:");
+	scanf(tchar);
+	
+	sum = (int3[0] + int3[1]) * 3/int3[2] * 6 - charr[5] + 90;
+
+	printf(sum);
+	printf("Done!");
+}

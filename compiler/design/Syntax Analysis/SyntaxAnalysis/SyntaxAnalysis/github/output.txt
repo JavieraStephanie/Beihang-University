@@ -1,0 +1,5200 @@
+CONSTTK const
+INTTK int
+IDENFR global_single_int
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+INTTK int
+IDENFR global_int_1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR global_int_2
+ASSIGN =
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR global_single_char
+ASSIGN =
+CHARCON _
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR global_char_1
+ASSIGN =
+CHARCON +
+COMMA ,
+IDENFR global_char_2
+ASSIGN =
+CHARCON 9
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR b
+COMMA ,
+IDENFR c
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR d
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e
+LBRACK [
+INTCON 20
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR f
+COMMA ,
+IDENFR g
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch2
+COMMA ,
+IDENFR ch3
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch4
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch5
+COMMA ,
+IDENFR ch6
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR n
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR arr
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR flag
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+INTTK int
+IDENFR func1
+<Function Header>
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+RETURNTK return
+LPARENT (
+IDENFR global_int_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+VOIDTK void
+IDENFR test1
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR local_single_int
+ASSIGN =
+INTCON 100
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+INTTK int
+IDENFR local_int_1
+ASSIGN =
+INTCON 101
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR local_int_2
+ASSIGN =
+INTCON 102
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_single_char
+ASSIGN =
+CHARCON -
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_char_1
+ASSIGN =
+CHARCON *
+COMMA ,
+IDENFR local_char_2
+ASSIGN =
+CHARCON /
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR b1
+COMMA ,
+IDENFR c1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR d1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 20
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR f1
+COMMA ,
+IDENFR g1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch7
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch8
+COMMA ,
+IDENFR ch9
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch10
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch11
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a
+ASSIGN =
+INTCON 10
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b
+ASSIGN =
+MINU -
+INTCON 11
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR c
+ASSIGN =
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR d
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+PLUS +
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MULT *
+LPARENT (
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+PLUS +
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MINU -
+LPARENT (
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+PLUS +
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+LPARENT (
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MULT *
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+INTCON 11
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR a1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b1
+ASSIGN =
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR c1
+ASSIGN =
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f1
+ASSIGN =
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+IDENFR b1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+IDENFR c1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+MULT *
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR g1
+ASSIGN =
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+IDENFR c1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+MULT *
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR g
+ASSIGN =
+IDENFR d
+LBRACK [
+IDENFR b1
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+IDENFR c1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+MULT *
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f
+ASSIGN =
+IDENFR d
+LBRACK [
+IDENFR d
+LBRACK [
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+IDENFR c1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+MULT *
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR func1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR func1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+PLUS +
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR func1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+MULT *
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR d
+LBRACK [
+IDENFR d
+LBRACK [
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+LPARENT (
+IDENFR func1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+PLUS +
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+DIV /
+LPARENT (
+IDENFR c1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+IDENFR func1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+MULT *
+IDENFR b1
+<Factor>
+<Term>
+MINU -
+LPARENT (
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e1
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON a
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch12
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON A
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e1
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR ch12
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MULT *
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   a = 
+<String>
+COMMA ,
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   b = 
+<String>
+COMMA ,
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   c = 
+<String>
+COMMA ,
+IDENFR c
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[0] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[1] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[2] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[3] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   f1 = 
+<String>
+COMMA ,
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   g1 = 
+<String>
+COMMA ,
+IDENFR g1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   f = 
+<String>
+COMMA ,
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   g = 
+<String>
+COMMA ,
+IDENFR g
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[0] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[1] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[2] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[3] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e1[0] = 
+<String>
+COMMA ,
+IDENFR e1
+LBRACK [
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e1[1] = 
+<String>
+COMMA ,
+IDENFR e1
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+IDENFR test2
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR local_single_int
+ASSIGN =
+INTCON 100
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+INTTK int
+IDENFR local_int_1
+ASSIGN =
+INTCON 101
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR local_int_2
+ASSIGN =
+INTCON 102
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_single_char
+ASSIGN =
+CHARCON -
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_char_1
+ASSIGN =
+CHARCON *
+COMMA ,
+IDENFR local_char_2
+ASSIGN =
+CHARCON /
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR b1
+COMMA ,
+IDENFR c1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR d1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 20
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR f1
+COMMA ,
+IDENFR g1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch7
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch8
+COMMA ,
+IDENFR ch9
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch10
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch11
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR c
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f
+ASSIGN =
+INTCON 7
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR g
+ASSIGN =
+INTCON 8
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch1
+ASSIGN =
+CHARCON a
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch2
+ASSIGN =
+CHARCON b
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch3
+ASSIGN =
+CHARCON c
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch4
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON A
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch4
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON B
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch5
+ASSIGN =
+CHARCON d
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch6
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON C
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch6
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON D
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR a1
+ASSIGN =
+INTCON 11
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b1
+ASSIGN =
+INTCON 12
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR c1
+ASSIGN =
+INTCON 13
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d1
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 14
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d1
+LBRACK [
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 15
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e1
+LBRACK [
+INTCON 16
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 16
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f1
+ASSIGN =
+INTCON 17
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR g1
+ASSIGN =
+INTCON 18
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e1
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 19
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch7
+ASSIGN =
+CHARCON e
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch8
+ASSIGN =
+CHARCON f
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch9
+ASSIGN =
+CHARCON g
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch10
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON E
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch10
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON F
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch11
+ASSIGN =
+CHARCON h
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch12
+LBRACK [
+INTCON 13
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON G
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR ch12
+LBRACK [
+INTCON 14
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+CHARCON H
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_single_int =
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR global_single_int
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_int_1 = 
+<String>
+COMMA ,
+IDENFR global_int_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_int_2 = 
+<String>
+COMMA ,
+IDENFR global_int_2
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_single_char =
+<String>
+COMMA ,
+IDENFR global_single_char
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_char_1 = 
+<String>
+COMMA ,
+IDENFR global_char_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   global_char_2 = 
+<String>
+COMMA ,
+IDENFR global_char_2
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_single_int =
+<String>
+COMMA ,
+IDENFR local_single_int
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_int_1 = 
+<String>
+COMMA ,
+IDENFR local_int_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_int_2 = 
+<String>
+COMMA ,
+IDENFR local_int_2
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_single_char =
+<String>
+COMMA ,
+IDENFR local_single_char
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_char_1 = 
+<String>
+COMMA ,
+IDENFR local_char_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   local_char_2 = 
+<String>
+COMMA ,
+IDENFR local_char_2
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   a = 
+<String>
+COMMA ,
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   b = 
+<String>
+COMMA ,
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   c = 
+<String>
+COMMA ,
+IDENFR c
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[4] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d[5] = 
+<String>
+COMMA ,
+IDENFR d
+LBRACK [
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[6] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   f = 
+<String>
+COMMA ,
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   g = 
+<String>
+COMMA ,
+IDENFR g
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e[9] = 
+<String>
+COMMA ,
+IDENFR e
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch1 = 
+<String>
+COMMA ,
+IDENFR ch1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch2 = 
+<String>
+COMMA ,
+IDENFR ch2
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch3 = 
+<String>
+COMMA ,
+IDENFR ch3
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch4[1] = 
+<String>
+COMMA ,
+IDENFR ch4
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch4[2] = 
+<String>
+COMMA ,
+IDENFR ch4
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch5 = 
+<String>
+COMMA ,
+IDENFR ch5
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch6[3] = 
+<String>
+COMMA ,
+IDENFR ch6
+LBRACK [
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch6[4] = 
+<String>
+COMMA ,
+IDENFR ch6
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   a1 = 
+<String>
+COMMA ,
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   b1 = 
+<String>
+COMMA ,
+IDENFR b1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   c1 = 
+<String>
+COMMA ,
+IDENFR c1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d1[4] = 
+<String>
+COMMA ,
+IDENFR d1
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   d1[5] = 
+<String>
+COMMA ,
+IDENFR d1
+LBRACK [
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e1[16] = 
+<String>
+COMMA ,
+IDENFR e1
+LBRACK [
+INTCON 16
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   f1 = 
+<String>
+COMMA ,
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   g1 = 
+<String>
+COMMA ,
+IDENFR g1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   e1[19] = 
+<String>
+COMMA ,
+IDENFR e1
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch7 = 
+<String>
+COMMA ,
+IDENFR ch7
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch8 = 
+<String>
+COMMA ,
+IDENFR ch8
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch9 = 
+<String>
+COMMA ,
+IDENFR ch9
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch10[1] = 
+<String>
+COMMA ,
+IDENFR ch10
+LBRACK [
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch10[2] = 
+<String>
+COMMA ,
+IDENFR ch10
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch11 = 
+<String>
+COMMA ,
+IDENFR ch11
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch12[13] = 
+<String>
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 13
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON   ch12[14] = 
+<String>
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 14
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+IDENFR test3
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR local_single_int
+ASSIGN =
+INTCON 100
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+INTTK int
+IDENFR local_int_1
+ASSIGN =
+INTCON 101
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR local_int_2
+ASSIGN =
+INTCON 102
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_single_char
+ASSIGN =
+CHARCON -
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_char_1
+ASSIGN =
+CHARCON *
+COMMA ,
+IDENFR local_char_2
+ASSIGN =
+CHARCON /
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR b1
+COMMA ,
+IDENFR c1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR d1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 20
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR f1
+COMMA ,
+IDENFR g1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch7
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch8
+COMMA ,
+IDENFR ch9
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch10
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch11
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR c
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e
+LBRACK [
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f1
+ASSIGN =
+INTCON 7
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR g1
+ASSIGN =
+INTCON 8
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR e1
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IFTK if
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+EQL ==
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 1 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+EQL ==
+IDENFR c
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 2 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR c
+<Factor>
+<Term>
+<Expression>
+NEQ !=
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 3 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+NEQ !=
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 4 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+GRE >
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 5 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+GRE >
+IDENFR f1
+<Factor>
+<Term>
+DIV /
+INTCON 7
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 6 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+GEQ >=
+IDENFR d
+LBRACK [
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MINU -
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 7 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+GEQ >=
+MINU -
+INTCON 7
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 8 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+PLUS +
+IDENFR e1
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+MINU -
+IDENFR g1
+<Factor>
+<Term>
+<Expression>
+LSS <
+IDENFR e1
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+PLUS +
+IDENFR g1
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 9 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR g1
+<Factor>
+<Term>
+MULT *
+IDENFR e1
+LBRACK [
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+LSS <
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 10 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+LEQ <=
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 11 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+LEQ <=
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 12 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+LEQ <=
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 13 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+MINU -
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 14 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IFTK if
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON  # 15 
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IDENFR a
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+WHILETK while
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+LSS <
+INTCON 10
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+IDENFR a
+ASSIGN =
+IDENFR a
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Loop Statement>
+<Statement>
+WHILETK while
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+IDENFR a
+ASSIGN =
+IDENFR a
+<Factor>
+<Term>
+MINU -
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Loop Statement>
+<Statement>
+IDENFR a1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+INTTK int
+IDENFR fac
+<Function Header>
+LPARENT (
+INTTK int
+IDENFR n
+<Parameters>
+RPARENT )
+LBRACE {
+IFTK if
+LPARENT (
+IDENFR n
+<Factor>
+<Term>
+<Expression>
+EQL ==
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+RETURNTK return
+LPARENT (
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Condition Statement>
+<Statement>
+RETURNTK return
+LPARENT (
+IDENFR n
+<Factor>
+<Term>
+MULT *
+IDENFR fac
+LPARENT (
+IDENFR n
+<Factor>
+<Term>
+MINU -
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+CHARTK char
+IDENFR getch3
+<Function Header>
+LPARENT (
+CHARTK char
+IDENFR ch
+COMMA ,
+CHARTK char
+IDENFR ch1
+COMMA ,
+CHARTK char
+IDENFR ch2
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func7_const1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func7_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR func7_const3
+ASSIGN =
+CHARCON 3
+COMMA ,
+IDENFR func7_const4
+ASSIGN =
+CHARCON o
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR c
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR c
+ASSIGN =
+IDENFR ch2
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+LPARENT (
+IDENFR c
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+CHARTK char
+IDENFR getch2
+<Function Header>
+LPARENT (
+CHARTK char
+IDENFR ch
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func6_const1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func6_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR func6_const3
+ASSIGN =
+CHARCON 3
+COMMA ,
+IDENFR func6_const4
+ASSIGN =
+CHARCON o
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR c
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+RETURNTK return
+LPARENT (
+IDENFR ch
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+CHARTK char
+IDENFR getch1
+<Function Header>
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func5_const1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func5_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR func5_const3
+ASSIGN =
+CHARCON t
+COMMA ,
+IDENFR func5_const4
+ASSIGN =
+CHARCON _
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR c
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+RETURNTK return
+LPARENT (
+IDENFR global_char_1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+INTTK int
+IDENFR add_mult3
+<Function Header>
+LPARENT (
+INTTK int
+IDENFR x
+COMMA ,
+INTTK int
+IDENFR y
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func3_const1
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func3_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR e1
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+LPARENT (
+IDENFR x
+<Factor>
+<Term>
+PLUS +
+IDENFR y
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+IDENFR func3_const1
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+LPARENT (
+IDENFR e1
+LBRACK [
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+INTTK int
+IDENFR add_mult2
+<Function Header>
+LPARENT (
+INTTK int
+IDENFR x
+COMMA ,
+INTTK int
+IDENFR y
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func2_const1
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func2_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a1
+ASSIGN =
+LPARENT (
+IDENFR x
+<Factor>
+<Term>
+PLUS +
+IDENFR y
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+IDENFR func2_const2
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+INTTK int
+IDENFR add_mult1
+<Function Header>
+LPARENT (
+INTTK int
+IDENFR x
+COMMA ,
+INTTK int
+IDENFR y
+COMMA ,
+INTTK int
+IDENFR z
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func4_const1
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func4_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a1
+ASSIGN =
+IDENFR add_mult2
+LPARENT (
+IDENFR x
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+IDENFR y
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+PLUS +
+IDENFR z
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Value Function Declaration>
+VOIDTK void
+IDENFR print_num
+LPARENT (
+INTTK int
+IDENFR x
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR func1_const1
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR func1_const2
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a
+ASSIGN =
+IDENFR a
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON  | print_num called: 
+<String>
+COMMA ,
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON  x = 
+<String>
+COMMA ,
+IDENFR x
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+IDENFR test4
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR local_single_int
+ASSIGN =
+INTCON 100
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+INTTK int
+IDENFR local_int_1
+ASSIGN =
+INTCON 101
+<Unsigned Integer>
+<Integer>
+COMMA ,
+IDENFR local_int_2
+ASSIGN =
+INTCON 102
+<Unsigned Integer>
+<Integer>
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_single_char
+ASSIGN =
+CHARCON -
+<Constant Declaration>
+SEMICN ;
+CONSTTK const
+CHARTK char
+IDENFR local_char_1
+ASSIGN =
+CHARCON *
+COMMA ,
+IDENFR local_char_2
+ASSIGN =
+CHARCON /
+<Constant Declaration>
+SEMICN ;
+<Constant Statement>
+INTTK int
+IDENFR a1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR b1
+COMMA ,
+IDENFR c1
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR d1
+LBRACK [
+INTCON 12
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+INTTK int
+IDENFR e1
+LBRACK [
+INTCON 20
+<Unsigned Integer>
+RBRACK ]
+COMMA ,
+IDENFR f1
+COMMA ,
+IDENFR g1
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch7
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch8
+COMMA ,
+IDENFR ch9
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch10
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+CHARTK char
+IDENFR ch11
+COMMA ,
+IDENFR ch12
+LBRACK [
+INTCON 19
+<Unsigned Integer>
+RBRACK ]
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IDENFR a
+ASSIGN =
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b
+ASSIGN =
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f1
+ASSIGN =
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR f
+ASSIGN =
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 6
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR b1
+ASSIGN =
+INTCON 7
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d1
+LBRACK [
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 8
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d1
+LBRACK [
+INTCON 10
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 9
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR d
+LBRACK [
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+MINU -
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 10
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+INTCON 4
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR d
+LBRACK [
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR b1
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR d1
+LBRACK [
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR d1
+LBRACK [
+IDENFR b1
+<Factor>
+<Term>
+PLUS +
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR d
+LBRACK [
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+MINU -
+IDENFR f
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Factor>
+<Term>
+MULT *
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR a1
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+WHILETK while
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+LSS <
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+IDENFR print_num
+LPARENT (
+IDENFR a1
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR a1
+ASSIGN =
+IDENFR a1
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Loop Statement>
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR add_mult2
+LPARENT (
+IDENFR a
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR g1
+ASSIGN =
+IDENFR add_mult2
+LPARENT (
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR g1
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR add_mult3
+LPARENT (
+IDENFR b
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+IDENFR f1
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR print_num
+LPARENT (
+IDENFR add_mult1
+LPARENT (
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+INTCON 2
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+INTCON 3
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR getch1
+LPARENT (
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR getch2
+LPARENT (
+CHARCON q
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR getch3
+LPARENT (
+CHARCON s
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+CHARCON z
+<Factor>
+<Term>
+<Expression>
+COMMA ,
+CHARCON y
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR fac
+LPARENT (
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+PRINTFTK printf
+LPARENT (
+IDENFR fac
+LPARENT (
+INTCON 5
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Value Function Call>
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+IDENFR perm
+LPARENT (
+INTTK int
+IDENFR k
+<Parameters>
+RPARENT )
+LBRACE {
+INTTK int
+IDENFR i
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+IFTK if
+LPARENT (
+IDENFR k
+<Factor>
+<Term>
+<Expression>
+EQL ==
+IDENFR n
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+IDENFR i
+ASSIGN =
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+WHILETK while
+LPARENT (
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+LSS <
+IDENFR n
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+IDENFR arr
+LBRACK [
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+IDENFR i
+ASSIGN =
+IDENFR i
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Loop Statement>
+<Statement>
+PRINTFTK printf
+LPARENT (
+STRCON ========
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+RETURNTK return
+<Return Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IDENFR i
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+WHILETK while
+LPARENT (
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+LEQ <=
+IDENFR n
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+IFTK if
+LPARENT (
+IDENFR flag
+LBRACK [
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+<Factor>
+<Term>
+<Expression>
+EQL ==
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Condition>
+RPARENT )
+LBRACE {
+IDENFR flag
+LBRACK [
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR arr
+LBRACK [
+IDENFR k
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+IDENFR perm
+LPARENT (
+IDENFR k
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+IDENFR flag
+LBRACK [
+IDENFR i
+<Factor>
+<Term>
+<Expression>
+RBRACK ]
+ASSIGN =
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Condition Statement>
+<Statement>
+IDENFR i
+ASSIGN =
+IDENFR i
+<Factor>
+<Term>
+PLUS +
+INTCON 1
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Assign Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+RBRACE }
+<Loop Statement>
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+IDENFR test5
+LPARENT (
+<Parameters>
+RPARENT )
+LBRACE {
+PRINTFTK printf
+LPARENT (
+STRCON permutation test , please input total number:
+<String>
+RPARENT )
+<Write Statement>
+SEMICN ;
+<Statement>
+SCANFTK scanf
+LPARENT (
+IDENFR n
+RPARENT )
+<Read Statement>
+SEMICN ;
+<Statement>
+IDENFR perm
+LPARENT (
+INTCON 0
+<Unsigned Integer>
+<Integer>
+<Factor>
+<Term>
+<Expression>
+<Value Parameters>
+RPARENT )
+<Non-Value Function Call>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Non-Value Function Declaration>
+VOIDTK void
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+INTTK int
+IDENFR a
+<Variable Declaration>
+SEMICN ;
+<Variable Statement>
+SCANFTK scanf
+LPARENT (
+IDENFR a
+RPARENT )
+<Read Statement>
+SEMICN ;
+<Statement>
+<Statement List>
+<Compound Statement>
+RBRACE }
+<Main Function>
+<Program>

@@ -1,0 +1,87 @@
+const char cha='a',chb='b',chc='c',chd='d';
+const char chA='A',chB='B',chC='C',chD='D';
+
+int c,d;
+int abc[3],i;
+
+int fun1(int a,int b){    
+    c=0;
+    c=(a+b)*b+a*b;    
+    printf(" c=(a+b)*b+a*b ");
+    printf(" c=",c);
+    printf(" ");
+    return(c);
+}
+
+char fun2(int a,int b){
+    c=0;
+    d=0;
+    printf("input c and d:");
+     scanf(c,d);
+    if(c>d)
+        printf(a);
+    if(c<d)
+        printf(b);
+    if(c==d);
+    return('F');
+}
+
+void fun3(int a,int b){
+    const int num0=0,num1=1,num2=2,num3=3,num4=4;
+    const char ch_plus='+',ch_minus='-',ch_star='*',ch_div='/';
+    if(a>=b){
+        printf(" cha-chad ");
+        printf(cha);
+        printf(chb);
+        printf(chc);
+        printf(chd);
+    }
+    if(a<b){
+        printf(" chA-chD ");
+        printf(chA);
+        printf(chB);
+        printf(chC);
+        printf(chD);
+    }
+    printf(ch_plus);
+    printf(ch_minus);
+    printf(ch_star);
+    printf(ch_div);
+}
+
+void fun4(){
+    i=0;
+    abc[0]=0;
+    abc[1]=0;
+    abc[2]=0;
+    while(i<=2){
+        abc[i]=i+i*i;
+        i=i+1;
+        printf(abc[i]);
+    }            
+    while(i>2);        
+}
+
+int fun5(int a,int b){
+    return(fun1(a,b));
+}
+
+char fun6(int a,int b){
+    return (fun2(a,b));
+}
+
+int fun7(){
+    abc[0]=11;
+    return(abc[0]);
+}
+
+void main(){        
+    int flag;
+    int num;
+    char ch;
+    num=0;
+    ch='a';    
+    scanf(flag);
+    printf(num);
+    printf(ch);
+}

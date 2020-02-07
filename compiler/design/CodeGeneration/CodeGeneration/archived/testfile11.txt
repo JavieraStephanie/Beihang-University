@@ -1,0 +1,27 @@
+const int A1 = 0, a = 6, a2 = +7, a3 = -7;
+const char c = 'c', d = '7';
+
+char ch;
+int i, num;
+
+void main()
+{
+	int r, sum;
+
+	sum = 0;
+	i = 0;
+
+	for (r = 10; r > 1; r = r - 1) 
+		sum = sum + r;
+
+	printf(sum);
+
+	while (i<10) 
+		do {
+			for (r = 10; r > 1; r = r - 1) 
+				sum = sum + r;
+			i = i + 1;
+		} while (1>2)
+
+	printf(sum);
+}
