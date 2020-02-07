@@ -12,5 +12,4 @@ This repository includes everything that I made/learn while in Beihang Universit
 7. Object Oriented Programming
 8. Operating System
 9. Frontier Lecture
-10. X86 Assembly
-11. Research Methodology
+10. Research Methodology
