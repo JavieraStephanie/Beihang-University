@@ -1,0 +1,478 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" into library work
+Parsing module <hazard>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\storeOpt.v" into library work
+Parsing module <storeOpt>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\reg_w.v" into library work
+Parsing module <reg_w>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\reg_m.v" into library work
+Parsing module <reg_m>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\reg_e.v" into library work
+Parsing module <reg_e>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\reg_d.v" into library work
+Parsing module <reg_d>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mux.v" into library work
+Parsing module <mux3_5>.
+Parsing module <mux3_32>.
+Parsing module <mux4_32>.
+Parsing module <mux5_32>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ifu.v" into library work
+Parsing module <pc>.
+Parsing module <im>.
+Parsing module <npc>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" into library work
+Parsing module <hazard_sig>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\grf.v" into library work
+Parsing module <grf>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ext.v" into library work
+Parsing module <ext>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\dm.v" into library work
+Parsing module <dm>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" into library work
+Parsing module <ctrl>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\comp.v" into library work
+Parsing module <comp>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\bw_ext.v" into library work
+Parsing module <bw_ext>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\alu.v" into library work
+Parsing module <alu>.
+Analyzing Verilog file "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" into library work
+Parsing module <mips>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mips>.
+
+Elaborating module <pc>.
+
+Elaborating module <im>.
+Reading initialization file \"code.txt\".
+WARNING:HDLCompiler:1670 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ifu.v" Line 52: Signal <mem> in initial block is partially initialized.
+
+Elaborating module <reg_d>.
+
+Elaborating module <ctrl>.
+WARNING:HDLCompiler:91 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 266: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 272: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 286: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 292: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 78: Assignment to ALUSrc_D ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 79: Assignment to MemtoReg_D ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 80: Assignment to ALUctr_D ignored, since the identifier is never used
+
+Elaborating module <mux3_32>.
+
+Elaborating module <comp>.
+
+Elaborating module <npc>.
+
+Elaborating module <grf>.
+"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\grf.v" Line 51. $display  32'b................................ 5'b..... 32'b................................
+
+Elaborating module <ext>.
+
+Elaborating module <mux3_5>.
+
+Elaborating module <reg_e>.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 100: Assignment to RS_E ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 108: Assignment to RegDst_E ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 109: Assignment to MemtoReg_E ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 110: Assignment to ExtOp_E ignored, since the identifier is never used
+
+Elaborating module <alu>.
+
+Elaborating module <reg_m>.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 127: Assignment to RegDst_M ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 128: Assignment to MemtoReg_M ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 129: Assignment to ExtOp_M ignored, since the identifier is never used
+
+Elaborating module <storeOpt>.
+
+Elaborating module <dm>.
+"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\dm.v" Line 71. $display  32'b................................ 32'b................................ 32'b................................
+
+Elaborating module <reg_w>.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 143: Assignment to RegDst_W ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 144: Assignment to MemWrite_W ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 145: Assignment to ExtOp_W ignored, since the identifier is never used
+
+Elaborating module <bw_ext>.
+WARNING:HDLCompiler:1016 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 99: Port TnewSrc is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 100: Port Tuse_rs is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 101: Port Tuse_rs is not connected to this instance
+WARNING:HDLCompiler:1016 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 102: Port Tuse_rs is not connected to this instance
+
+Elaborating module <hazard_sig>.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 49: Assignment to rd_d ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 51: Assignment to rs_m ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 52: Assignment to rs_w ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 75: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 80: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 85: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 90: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 95: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <hazard>.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 98: Assignment to j ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 101: Assignment to jal ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 111: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 112: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 115: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 118: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 125: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 100: Assignment to Tnew_ie ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 102: Assignment to Tnew_W ignored, since the identifier is never used
+WARNING:HDLCompiler:552 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 99: Input port TnewSrc[1] is not connected on this instance
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 68. All outputs of instance <pc_f> of block <pc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 70. All outputs of instance <im_f> of block <im> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 72. All outputs of instance <reg_d> of block <reg_d> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78. All outputs of instance <ctrl_d> of block <ctrl> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 82. All outputs of instance <alua_d> of block <mux3_32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 84. All outputs of instance <alub_d> of block <mux3_32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 86. All outputs of instance <comp_d> of block <comp> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 88. All outputs of instance <npc_d> of block <npc> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 91. All outputs of instance <grf_d> of block <grf> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 94. All outputs of instance <ext_d> of block <ext> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 96. All outputs of instance <regdst_mux> of block <mux3_5> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 98. All outputs of instance <reg_e> of block <reg_e> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108. All outputs of instance <ctrl_e> of block <ctrl> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 112. All outputs of instance <alua_e> of block <mux3_32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 114. All outputs of instance <alub_e> of block <mux3_32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 116. All outputs of instance <alu_e> of block <alu> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 118. All outputs of instance <reg_m> of block <reg_m> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127. All outputs of instance <ctrl_m> of block <ctrl> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 131. All outputs of instance <storeOpt> of block <storeOpt> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 133. All outputs of instance <dm_m> of block <dm> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 136. All outputs of instance <reg_w> of block <reg_w> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143. All outputs of instance <ctrl_w> of block <ctrl> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 147. All outputs of instance <bw_ext> of block <bw_ext> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 149. All outputs of instance <memreg_mux> of block <mux3_32> are unconnected in block <mips>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 154. All outputs of instance <hazard_sig> of block <hazard_sig> are unconnected in block <mips>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mips>.
+    Related source file is "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v".
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78: Output port <MemtoReg> of the instance <ctrl_d> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78: Output port <ALUctr> of the instance <ctrl_d> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78: Output port <ALUSrc> of the instance <ctrl_d> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78: Output port <RegWrite> of the instance <ctrl_d> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 78: Output port <MemWrite> of the instance <ctrl_d> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 98: Output port <RS_E> of the instance <reg_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 98: Output port <RT_E> of the instance <reg_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108: Output port <RegDst> of the instance <ctrl_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108: Output port <MemtoReg> of the instance <ctrl_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108: Output port <nPC_sel> of the instance <ctrl_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108: Output port <ExtOp> of the instance <ctrl_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 108: Output port <MemWrite> of the instance <ctrl_e> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <RegDst> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <MemtoReg> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <nPC_sel> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <ExtOp> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <ALUctr> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 127: Output port <ALUSrc> of the instance <ctrl_m> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <RegDst> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <nPC_sel> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <ExtOp> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <ALUctr> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <ALUSrc> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" line 143: Output port <MemWrite> of the instance <ctrl_w> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <mips> synthesized.
+
+Synthesizing Unit <hazard>.
+    Related source file is "D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v".
+        ADD = 6'b100000
+        ADDU = 6'b100001
+        AND = 6'b100100
+        NOR = 6'b100111
+        OR = 6'b100101
+        SLL = 6'b000000
+        SLLV = 6'b000100
+        SLT = 6'b101010
+        SLTU = 6'b101011
+        SRA = 6'b000011
+        SRAV = 6'b000111
+        SRL = 6'b000010
+        SRLV = 6'b000110
+        SUB = 6'b100010
+        SUBU = 6'b100011
+        XOR = 6'b100110
+        ADDI = 6'b001000
+        ADDIU = 6'b001001
+        ANDI = 6'b001100
+        ORI = 6'b001101
+        LUI = 6'b001111
+        SLTI = 6'b001010
+        SLTIU = 6'b001011
+        XORI = 6'b001110
+        LB = 6'b100000
+        LBU = 6'b100100
+        LH = 6'b100001
+        LHU = 6'b100101
+        LW = 6'b100011
+        SB = 6'b101000
+        SH = 6'b101001
+        SW = 6'b101011
+        BEQ = 6'b000100
+        BNE = 6'b000101
+        BGEZ = 6'b000001
+        BGEZAL = 6'b000001
+        BGTZ = 6'b000111
+        BLEZ = 6'b000110
+        BLTZ = 6'b000001
+        BLTZAL = 6'b000001
+        JAL = 6'b000011
+        J = 6'b000010
+        JR = 6'b001000
+        JALR = 6'b001001
+        REV = 6'b010100
+WARNING:Xst:647 - Input <ir<15:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ir<25:21>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <hazard> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mips.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   0  out of    296     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 34.52 secs
+ 
+--> 
+
+Total memory usage is 5318340 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :   24 (   0 filtered)
+

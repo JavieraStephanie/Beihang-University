@@ -1,0 +1,57 @@
+RegDst:
+RD: ADD, ADDU, AND, NOR, OR, SUB, SUBU, XOR
+RT: ADDI, ADDIU, ANDI, LB, LBU, LH, LUI, LW, ORI, XORI
+
+
+ForwardRSD/RTD for ALU
+
+0 = RData1
+1 = RegData
+2 = PC_M+8
+3 = AO_M = 
+4 = PC_E+8 = rs_d == 31 & res_E == jal & res_D == b | jr
+
+ForwardRSE/RTE for DM
+
+0 = RData1_E
+1 = RegData
+2 = PC_M+8
+3 = AO_M
+
+ForwardRTM
+0 = RData2_M
+1 = RegData
+
+
+
+
+RSD/RTD
+
+0 = RData1
+1 = RegData = Res_W == any & rs_D != 0 & A3_W == rs_D
+2 = AO_M    = Res_M == (addu|subu|ori|lui) & rs_D != 0 & A3_M == rs_D
+3 = PC_M+8  = Res_M == jal & rs_D != 0 & A3_M == rs_D
+4 = PC_E+8  = Res_E == jal & rs_D != 0 & A3_E == rs_D
+
+RSE/RTE
+
+0 = RData1_E
+1 = RegData
+2 = AO_M
+3 = PC_M+8
+
+RTM
+
+0 = RData2_M
+1 = RegData
+
+
+A3_E
+rt_E = RegDst == RT
+31 = RegDst == RA
+rd_E
+
+Res_D
+ALU = addu/subu/ori/lui
+DM = lw
+PC = jal

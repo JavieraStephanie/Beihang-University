@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-09T17:17:08</DateModified>
+  <DateModified>2019-07-22T02:54:18</DateModified>
   <ModuleName>buffer_tb</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/HW/JiSuanJiZuCheng/Verilog/test/iseconfig/buffer_tb.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/HW/JiSuanJiZuCheng/Verilog/test\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/test/iseconfig/buffer_tb.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/test\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-27T01:01:48</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

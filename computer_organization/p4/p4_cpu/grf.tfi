@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+grf instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .Reg1(Reg1), 
+    .Reg2(Reg2), 
+    .RegAddr(RegAddr), 
+    .RegWrite(RegWrite), 
+    .PC(PC), 
+    .RegData(RegData), 
+    .RData1(RData1), 
+    .RData2(RData2)
+    );
+
+

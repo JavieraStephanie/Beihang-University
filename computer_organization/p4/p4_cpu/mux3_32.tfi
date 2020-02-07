@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+mux3_32 instance_name (
+    .a(a), 
+    .b(b), 
+    .c(c), 
+    .select(select), 
+    .x(x)
+    );
+
+

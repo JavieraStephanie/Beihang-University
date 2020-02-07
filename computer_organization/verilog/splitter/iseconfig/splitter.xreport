@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-12-15T10:34:30</DateModified>
+  <DateModified>2019-07-18T16:49:43</DateModified>
   <ModuleName>splitter</ModuleName>
   <SummaryTimeStamp>2017-11-09T17:27:38</SummaryTimeStamp>
-  <SavedFilePath>D:/HW/JiSuanJiZuCheng/Verilog/splitter/iseconfig/splitter.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/HW/JiSuanJiZuCheng/Verilog/splitter\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/splitter/iseconfig/splitter.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/splitter\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-09T17:19:11</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

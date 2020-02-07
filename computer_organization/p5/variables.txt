@@ -1,0 +1,51 @@
+//(ALL CORRESPONDS) Signal Variables
+wire [1:0] RegDst_D, MemtoReg_D, ALUOp_D, NPCOp_D;
+wire ALUSrc_D, RegWrite_D, MemWrite_D, ExtOp_D;
+
+//(ALL CORRESPONDS) Instructions
+wire [31:0] IR_D		== Instr_D		== Reg_D, ctrl_D, nPC, GRF, EXT, Reg_E, Forward, Stop;
+	    IR_F		== Instr		== IM, Reg_D;
+	    IR_E		== Instr_E		== Reg_E, ctrl_E, Reg_M, Forward, Stop;
+	    IR_M		== Instr_M		== Reg_M, ctrl_M, Reg_W, Forward, Stop;
+	    IR_W		== Instr_W		== Reg_W, ctrl_W, Forward;
+wire [31:0] PC_D		== PC_D			== Reg_D, nPC, Reg_E;
+	    PC_F		== PC_F			== PC, IM, Reg_D, NPC;
+	    PC_E		== PC_E			== rd1_mux, rd2_mux, Reg_E, Reg_M;
+	    PC_M		== PC_M			== rd1_mux, rd2_mux, alua_mux, alub_mux, Reg_M, DM, Reg_W;
+	    PC_W		== PC_W			== grf, Reg_W, memreg_mux;
+wire [31:0] NewPC		== nPC			== PC, NPC;
+
+// Data
+wire [31:0] AO_M		== AO_M			== rd1_mux, rd2_mux, alua_mux, alub_mux, reg_M, DM, Reg_W;
+wire [31:0] AO_W		== AO_W			== Reg_W, memreg_mux;
+wire [31:0] DR_W		== DR_W			== Reg_W, memreg_mux;
+wire [31:0] RD1			== RD1			== rd1_mux, NPC;
+wire [31:0] RD2;
+wire [31:0] ReadData1		== RData1		== rd1_mux, grf, Reg_E;
+wire [31:0] ReadData2		== RData2		== rd2_mux, grf, Reg_E;
+wire [31:0] EXTOut		== EXTOutput		== EXT, Reg_E;
+
+wire [31:0] V1_E		== RData1_E		== Reg_E, alua_mux;
+wire [31:0] V2_E		== RData2_E		== Reg_E, alub_mux;
+wire [31:0] V2_M		== RData2_M		== Reg_M;
+wire [31:0] E32_E		== Extended		== Reg_E;
+wire [31:0] ALU_A		== ALUA			== alua_mux, ALU;
+wire [31:0] ALU_B		== ALUB			== alub_mux, Reg_M;
+wire [31:0] ALU_B_E32		== ALUB_E		== ALU;
+wire [31:0] ALUOut		== ALUOutput		== ALU, Reg_M;
+wire [4:0] WriteReg		== RWrite		== mux3_5, Reg_M;
+wire [31:0] WriteData		== RegData		== rd1_mux, rd2_mux, grf, alua_mux, alub_mux, memreg_mux;
+wire [31:0] WriteData_DM	== WData		== DM;
+wire [31:0] ReadData_DM		== RData		== DM, Reg_W;
+
+//(ALL CORRESPONDS) Registers
+wire [4:0] A1_E			== RS_E			== Reg_E;
+wire [4:0] A2_E			== RT_E			== Reg_E, mux3_5;
+wire [4:0] A3_E			== RD_E			== Reg_E, mux3_5;
+wire [4:0] A3_M			== RT_M			== Reg_M, Reg_W;
+wire [4:0] A3_W			== RegAddr		== grf, Reg_W;
+
+//(ALL CORRESPONDS) Others
+wire [2:0] RSEsel;
+wire Zero			== zero			== ALU;
+wire Stop			== delay		== PC, Reg_D, Reg_E, Stop;

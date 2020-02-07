@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-12-15T11:13:31</DateModified>
+  <DateModified>2019-07-18T17:42:18</DateModified>
   <ModuleName>string</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/HW/JiSuanJiZuCheng/Verilog/string/iseconfig/string.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/HW/JiSuanJiZuCheng/Verilog/string\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/string/iseconfig/string.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/string\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-10T00:00:07</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

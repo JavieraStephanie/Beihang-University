@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+ext instance_name (
+    .offset(offset), 
+    .extop(extop), 
+    .Output(Output), 
+    .Shifted(Shifted), 
+    .Shifted2(Shifted2)
+    );
+
+

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj p5_cpu -o "D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/p5/p5_cpu/bw_ext.tfi" -lib work "D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/p5/p5_cpu//bw_ext.v" -module bw_ext -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

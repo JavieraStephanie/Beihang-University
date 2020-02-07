@@ -1,0 +1,35 @@
+ALUctr
+0: Add
+1: Sub
+2: Or
+3: Nor
+4: Xor
+5: And
+6: SLL
+7: SLLV
+8: SRL
+9: SRLV
+10: SLT
+11: SLTU
+12: SRA
+13: SRAV
+14: REV
+
+DONE Instructions:
+(WORKS) beq, bne, blez, bgtz, bltz, bgez
+j, jal, jalr, jr
+sll, srl, sra, sllv, srlv, srav
+add, addu, sub, subu, slt, sltu, and, or, xor, nor
+addi, addiu, slti, sltiu, andi, ori, xori, lui
+lb, lbu, lh, lhu, lw
+sb, sh, sw
+
+
+PRIORITIES:
+(IN)bltzal
+(IN)bgezal
+
+seb
+seh
+rotr
+rotrv

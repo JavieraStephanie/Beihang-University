@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/HW/JiSuanJiZuCheng/Verilog/alu/alu.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/alu/alu.v&quot; into library work</arg>
 </msg>
 
 </messages>

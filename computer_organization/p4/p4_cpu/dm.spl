@@ -1,0 +1,14 @@
+[Inputs]
+clk
+reset
+MemWrite
+=A[4:0]=
+=WData[31:0]=
+=PC[31:0]=
+=addr[31:0]=
+[Outputs]
+=RData[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel dm
+

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ifu.v" Line 52: Signal &lt;<arg fmt="%s" index="1">mem</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 266: Signal &lt;<arg fmt="%s" index="1">Instr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 272: Signal &lt;<arg fmt="%s" index="1">Instr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 286: Signal &lt;<arg fmt="%s" index="1">Instr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\ctrl.v" Line 292: Signal &lt;<arg fmt="%s" index="1">Instr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 78: Assignment to <arg fmt="%s" index="1">ALUSrc_D</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 79: Assignment to <arg fmt="%s" index="1">MemtoReg_D</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 80: Assignment to <arg fmt="%s" index="1">ALUctr_D</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 100: Assignment to <arg fmt="%s" index="1">RS_E</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 108: Assignment to <arg fmt="%s" index="1">RegDst_E</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 109: Assignment to <arg fmt="%s" index="1">MemtoReg_E</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 110: Assignment to <arg fmt="%s" index="1">ExtOp_E</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 127: Assignment to <arg fmt="%s" index="1">RegDst_M</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 128: Assignment to <arg fmt="%s" index="1">MemtoReg_M</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 129: Assignment to <arg fmt="%s" index="1">ExtOp_M</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 143: Assignment to <arg fmt="%s" index="1">RegDst_W</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 144: Assignment to <arg fmt="%s" index="1">MemWrite_W</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v" Line 145: Assignment to <arg fmt="%s" index="1">ExtOp_W</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 99: Port <arg fmt="%s" index="1">TnewSrc</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 100: Port <arg fmt="%s" index="1">Tuse_rs</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 101: Port <arg fmt="%s" index="1">Tuse_rs</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 102: Port <arg fmt="%s" index="1">Tuse_rs</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 49: Assignment to <arg fmt="%s" index="1">rd_d</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 51: Assignment to <arg fmt="%s" index="1">rs_m</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 52: Assignment to <arg fmt="%s" index="1">rs_w</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 75: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 80: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 85: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 90: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 95: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 98: Assignment to <arg fmt="%s" index="1">j</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 101: Assignment to <arg fmt="%s" index="1">jal</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 111: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 112: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 115: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 118: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard.v" Line 125: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 100: Assignment to <arg fmt="%s" index="1">Tnew_ie</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 102: Assignment to <arg fmt="%s" index="1">Tnew_W</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\hazard_signal.v" Line 99: Input port <arg fmt="%s" index="1">TnewSrc[1]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">68</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">pc_f</arg>&gt; of block &lt;<arg fmt="%s" index="4">pc</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">70</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">im_f</arg>&gt; of block &lt;<arg fmt="%s" index="4">im</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">72</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">reg_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_d</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">78</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ctrl_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">ctrl</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">82</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alua_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">84</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alub_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">86</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">comp_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">comp</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">88</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">npc_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">npc</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">91</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">grf_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">grf</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">94</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ext_d</arg>&gt; of block &lt;<arg fmt="%s" index="4">ext</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">96</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">regdst_mux</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_5</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">reg_e</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_e</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">108</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ctrl_e</arg>&gt; of block &lt;<arg fmt="%s" index="4">ctrl</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">112</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alua_e</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">114</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alub_e</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">116</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alu_e</arg>&gt; of block &lt;<arg fmt="%s" index="4">alu</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">118</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">reg_m</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_m</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">127</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ctrl_m</arg>&gt; of block &lt;<arg fmt="%s" index="4">ctrl</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">131</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">storeOpt</arg>&gt; of block &lt;<arg fmt="%s" index="4">storeOpt</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">133</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">dm_m</arg>&gt; of block &lt;<arg fmt="%s" index="4">dm</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">136</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">reg_w</arg>&gt; of block &lt;<arg fmt="%s" index="4">reg_w</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">143</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ctrl_w</arg>&gt; of block &lt;<arg fmt="%s" index="4">ctrl</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">147</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">bw_ext</arg>&gt; of block &lt;<arg fmt="%s" index="4">bw_ext</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">149</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">memreg_mux</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux3_32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%d" index="2">154</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">hazard_sig</arg>&gt; of block &lt;<arg fmt="%s" index="4">hazard_sig</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">mips</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">MemtoReg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_d</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">ALUctr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_d</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">ALUSrc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_d</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">RegWrite</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_d</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">MemWrite</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_d</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">98</arg>: Output port &lt;<arg fmt="%s" index="3">RS_E</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">reg_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">98</arg>: Output port &lt;<arg fmt="%s" index="3">RT_E</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">reg_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">RegDst</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">MemtoReg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">nPC_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">ExtOp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">108</arg>: Output port &lt;<arg fmt="%s" index="3">MemWrite</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_e</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">RegDst</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">MemtoReg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">nPC_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">ExtOp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">ALUctr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">127</arg>: Output port &lt;<arg fmt="%s" index="3">ALUSrc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_m</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">RegDst</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">nPC_sel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">ExtOp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">ALUctr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">ALUSrc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\Tasks\Beihang University\HW\Beihang-University\computer_organization\p5\p5_cpu\mips.v</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">MemWrite</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ctrl_w</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ir&lt;15:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ir&lt;25:21&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+</messages>
+

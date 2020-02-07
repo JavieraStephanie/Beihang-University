@@ -1,0 +1,35 @@
+IFU:
+(DONE)Inputs: Shifted, nPC_sel, zero, clk, reset
+(DONE)Outputs: Instr
+
+Controller:
+(DONE)Inputs: Funct (Instr[5:0]), Opcode (Instr[31:26])
+(DONE)Outputs: RegDst, ALUSrc, MemtoReg[1:0], RegWrite, MemWrite, nPC_sel, ExtOp, ALUOp[1:0]
+
+Mux_RegAddr:
+(DONE)Inputs: Instr[20:16], Instr[15:11], RegDst
+(DONE)Outputs: RegAddr
+
+GRF:
+(DONE)Inputs: Reg1(Instr[25:21]), Reg2(Instr[20:16]), RegAddr, RegWrite, RegData, clk, reset
+(DONE)Outputs: RData1, RData2
+
+Mux_ALUSrc:
+(DONE)Inputs: RData2, EXTResult, ALUSrc
+(DONE)Outputs: MuxResult (for B in ALU)
+
+ALU:
+(DONE)Inputs: RData1, MuxResult, ALUOp
+(DONE)Outputs: zero, ALUResult
+
+DM:
+(DONE)Inputs: MemAddr(ALUResult[6:2]), Rdata2, MemWrite, clk, reset
+(DONE)Outputs: RData
+
+Mux_MemReg:
+(DONE)Inputs: ALUResult, RData, Shifted2, MemtoReg
+(DONE)Outputs: RegData
+
+EXT:
+(DONE)Inputs: Instr[15:0], ExtOp
+(DONE)Outputs: Shifted2, Shifted, EXTResult

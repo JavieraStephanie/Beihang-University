@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+ctrl instance_name (
+    .funct(funct), 
+    .opcode(opcode), 
+    .RegDst(RegDst), 
+    .ALUSrc(ALUSrc), 
+    .MemtoReg(MemtoReg), 
+    .RegWrite(RegWrite), 
+    .MemWrite(MemWrite), 
+    .nPC_sel(nPC_sel), 
+    .ExtOP(ExtOP), 
+    .ALUctr(ALUctr)
+    );
+
+

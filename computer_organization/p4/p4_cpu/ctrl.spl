@@ -1,0 +1,16 @@
+[Inputs]
+=funct[5:0]=
+=opcode[5:0]=
+[Outputs]
+RegDst
+ALUSrc
+RegWrite
+MemWrite
+nPC_sel
+ExtOP
+=MemtoReg[1:0]=
+=ALUctr[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ctrl
+

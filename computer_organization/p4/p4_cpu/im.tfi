@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+im instance_name (
+    .PC(PC), 
+    .Instr(Instr)
+    );
+
+

@@ -1,0 +1,207 @@
+Available Instr:
+* addu
+* subu
+* ori
+* lw
+* sw
+* beq
+* lui
+* j
+* jal
+* jr
+* nop
+
+//D Level -> Going to write to Reg
+//E Level -> Going to process ALU
+//M Level -> Going to write to Mem
+
+STALL:
+* b: uses rs and rt
+	BGEZ, BGEZAL, BGTZ, BLEZ, BLTZ, BLTZAL doesn't use rt
+* cal_r: uses rd, rs, rt
+	SLL doesn't use rs
+	CLO, CLZ doesn't use rt
+* cal_i: uses, rs, rt
+	LUI doesn't use rs
+* load: uses rt
+* store: uses rt
+* jalr: uses rs (opt. rd)
+* jr: uses rs
+
+//This is for all B|JR|JALR -> CAL_R because CAL_R will write the result to rd
+S1: Tuse_rs == 0 & Tnew_E == 1 & rs_d == rd_e //If processing rd, going to write rs but rs == rd
+
+//Since it's E so this is for B|JR|JALR -> B because they are using B data (means b_nort shouldn't be included?)
+S2: Tuse_rs == 0 & Tnew_E == 3 & rs_d == rt_e //If processing rt, going to write rs but rs == rt
+
+//Since it's M so this is for B|JR|JALR -> Store, Load because they are using rt data
+S3: Tuse_rs == 0 & Tnew_M == 2 & rs_d == rt_m //If processing rt, going to write rs but rs == rt
+
+//Since it's E so this is for B because B is using rt data, actually the same as T2, but this one the new one is calr, cali, load, store
+S4: Tuse_rs == 1 & Tnew_E == 3 & rs_d == rt_e //If processing rt, going to write rs, but rs == rt
+
+//This is for all B|JR|JALR -> CAL_I because CAL_I will write the result to rt
+S5: Tuse_rs == 0 & Tnew_E == 2 & rs_d == rt_e //If processing rt, going to write rs, but rs == rt
+
+//This is for all B -> CAL_R because CAL_R will write the result to rd
+T1: Tuse_rt == 0 & Tnew_E == 1 & rt_d == rd_e
+
+//Since it's E so this is for B -> B because they are using B data
+T2: Tuse_rt == 0 & Tnew_E == 3 & rt_d == rt_e
+
+//Since it's M so this is B -> Store, Load because they are using DM (rt)
+T3: Tuse_rt == 0 & Tnew_M == 2 & rt_d == rt_m
+
+//Since it's E so this is CAL_R -> B because using ALU 
+T4: Tuse_rt == 1 & Tnew_E == 3 & rt_d == rt_e
+
+//This is for all B -> CAL_I because CAL_I will write the result to rt
+T5: Tuse_rt == 0 & Tnew_E == 2 & rt_d == rt_e
+
+
+FORWARD:
+RSD/RTD:
+	0 = RData1/RData2
+	1 = RegData	//cal_r|cal_i|jal|load|clzo
+	2 = PC_M+8	//jal|bgezal|blezal
+	3 = ALUOutput	//cal_r|cal_i|clzo
+	4 = PC_E+8	//jal|bgezal|blezal
+
+RSE/RTE:
+	0 = RData1/RData2
+	1 = RegData	//cal_r|cal_i|jal|load|clzo
+	2 = PC_M+8	//jal|bgezal|blezal
+	3 = ALUOutput	//cal_r|cal_i|clzo
+
+RTM:
+	0 = RegData
+	1 = RData2	//cal_r|cal_i|jal|load
+
+
+- taddu -> tweak ALU
+- msub -> tweak mdu (Multiply and Subtract Word to Hi, Lo)
+31 - 26 = 011100
+15 - 11 = 00000
+10 - 6 = 00000
+5 - 0 = 000100
+MSUB rs, rt
+temp = (HI || LO) - (GPR[rs] * GPR[rt])
+HI = temp63...32
+LO = temp31...0
+
+- blezals -> tweak blez, add writing to reg 31 done
+BLEZ rs, offset
+I: target_offset = sign_extend(offset || 0^2)
+   condition = GPR[rs] <= 0^GPRLEN
+I+1: if condition then
+	PC = PC + target_offset
+     endif
+
+- blezalc | bgezalr -> tweak bgezal
+BGEZAL rs, offset ------------ SAME AS BLEZ BUT NEEDS TO WRITE TO REG[31]
+I: target_offset = sign_extend(offset || 0^2)
+   condition = GPR[rs] >= 0^GPRLEN
+   GPR[31] = PC + 8
+I+1: if condition then
+	PC = PC + target_offset
+     endif
+
+BLEZALS, BLEZALC, BGEZALR also based on JAL and BEQ
+JAL target
+I: GPR[31] = PC + 8
+I + 1: PC = PC GPRLEN-1...28 || instr_index || 0^2
+
+
+- jalr -> based on JAL and JR
+I: temp = GPR[rs]
+   GPR[rd] = PC + 8
+I+1: if Config1 CA = 0 then
+	PC = temp
+     else
+	PC = temp GPRLEN-1...1 || 0
+	ISAMode = temp0
+     endif
+
+JR rs
+I: temp = GPR[rs]
+I+1: if Config1CA = 0 then
+	PC = temp
+     else
+	PC = temp GPRLEN-1..1 || 0
+	ISAMode = temp0
+     endif
+
+BEQ rs, rt, offset -------------- EXACTLY THE SAME AS BLEZ OTHER THAN COND
+I: target_offset = sign_extend(offset || 0^2)
+   condition = (GPR[rs] = GPR[rt])
+I+1: if condition then
+	PC = PC + target_offset
+     endif
+
+- lwso
+- lhs
+- lwpl
+
+SH and SB refer to SW
+memory[GPR[base] + offset] = GPR[rt]
+
+vAddr = sign_extend(offset) + GPR[base]
+if vAddr1..0 != 0^2 then
+	SignalException(AddressError)
+endif
+(pAddr, CCA) = AddressTranslation (vAddr, DATA, STORE)
+dataword = GPR[rt]
+StoreMemory (CCA, WORD, dataword, pAddr, vAddr, DATA)
+
+- sh -> store half-word
+memory[GPR[base] + offset] = GPR[rt]
+
+vAddr = sign_extend(offset) + GPR[base]
+if vAddr0 != 0 then
+	SignalException(AddressError)
+endif
+(pAddr, CCA) = AddressTranslation (vAddr, DATA, STORE)
+pAddr = pAddr PSIZE-1..2 || (pAddr1 1..0 xor (ReverseEndian || 0))
+bytesel = vAddr1 1..0 xor (BigEndianCPU || 0)
+dataword = GPR[rt]31-8*bytesel..0 || 0^8*bytesel
+StoreMemory (CCA, HALFWORD, dataword, pAddr, vAddr, DATA)
+
+- sb -> store byte
+vAddr = sign_extend(offset) + GPR[base]
+(pAddr, CCA) = AddressTranslation (vAddr, DATA, STORE)
+pAddr = pAddr PSIZE-1..2 || (pAddr1..0 xor ReverseEndian^2)
+bytesel = vAddr1..0 xor BigEndianCPU^2
+dataword = GPR[rt]31-8*bytesel..0 || 0^8*bytesel
+StoreMemory (CCA, BYTE, dataword, pAddr, vAddr, DATA)
+
+
+BOTH CLZ and CLO are just similar to ADD or SUB
+- clz -> count leading zeros
+31 - 26 = 011100
+10 - 6 = 00000
+5 - 0 = 100000
+CLZ rd, rs
+temp = 32 (if all bits are 0)
+for (int i = 31; i >= 0; i = i - 1)
+{
+	if (GPR[rs]i == 1) {
+		temp = 31 - i;
+		break;
+	}
+}
+GPR[rd] = temp;
+
+- clo -> count leading ones
+31 - 26 = 011100
+10 - 6 = 00000
+5 - 0 = 100001
+CLO rd, rs
+temp = 32 (if all bits are 1)
+for (int i = 31; i >= 0 ; i = i - 1)
+{
+	if (GPR[rs]i == 0) {
+		temp = 31 - i;
+		break;
+	}
+}
+GPR[rd] = temp;

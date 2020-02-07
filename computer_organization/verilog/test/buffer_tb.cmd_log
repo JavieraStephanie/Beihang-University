@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/test/buffer_tb.xst" -ofn "D:/Tasks/Beihang University/HW/Beihang-University/computer_organization/verilog/test/buffer_tb.syr" 

@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+bw_ext instance_name (
+    .DMRes(DMRes), 
+    .Addr(Addr), 
+    .loadOp(loadOp), 
+    .BWExt(BWExt)
+    );
+
+
